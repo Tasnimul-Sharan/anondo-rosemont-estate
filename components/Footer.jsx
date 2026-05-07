@@ -169,7 +169,7 @@ export default function Footer() {
             <p>
               Copyright © {new Date().getFullYear()}{" "}
               <span className="font-semibold text-white">
-                Anondo Cityscapers Ltd
+                Anondo Rosemont Estate
               </span>
               . All rights reserved.
             </p>
@@ -204,13 +204,15 @@ function FooterTitle({ children }) {
 
 function FooterLink({ href, children }) {
   return (
-    <li className="group w-fit">
+    <li className="w-fit">
       <Link
         href={href}
-        className="relative inline-flex items-center gap-2 text-sm text-white/68 transition-colors duration-300 hover:text-white"
+        className="group relative inline-block text-sm text-white/68 transition-colors duration-300 hover:text-white"
       >
-        <span className="h-px w-0 bg-white/70 transition-all duration-500 group-hover:w-5" />
-        {children}
+        <span>{children}</span>
+
+        {/* Hover Underline Animation */}
+        <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white/80 transition-all duration-500 ease-out group-hover:w-full" />
       </Link>
     </li>
   );
