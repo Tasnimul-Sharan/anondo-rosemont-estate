@@ -1,5 +1,4 @@
 import "../styles/index.css";
-import "../styles/globals.css";
 import { useLenis } from "../Hooks/useLenis";
 import Layout from "@/components/Layout";
 import { Analytics } from "@vercel/analytics/react";

@@ -6,42 +6,51 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./Hooks/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     extend: {
       colors: {
-        primary: "#013f71",
-        secondary: "#0b7a3f",
-        tertiary: "#8A2BE2",
-        off_white: "#F9F9F9",
-        border_color: "#e5e7eb",
-        soft_black: "#1A1A1A",
+        primary: "#3e0607",
+        secondary: "#4a0a0a",
+        tertiary: "#5a0c0c",
+        rose_dark: "#670f0e",
+        rose_deep: "#721213",
 
-        ink: "#0a2730",
-        canopy: "#0f4c3f",
-        leaf: "#2f7d5c",
-        lagoon: "#5bb4bd",
-        ember: "#c8893c",
-        clay: "#9f6947",
-        mist: "#f4f6ef",
+        off_white: "#f8f3ec",
+        cream: "#f8f3ec",
+        border_color: "#e5e7eb",
+        soft_black: "#241818",
       },
+
       boxShadow: {
-        soft: "0 18px 45px rgba(10, 39, 48, 0.10)",
-        lift: "0 24px 70px rgba(10, 39, 48, 0.25)",
+        soft: "0 18px 45px rgba(74, 10, 10, 0.12)",
+        lift: "0 24px 70px rgba(74, 10, 10, 0.28)",
+        rosemont: "0 28px 80px rgba(62, 6, 7, 0.35)",
       },
+
       fontFamily: {
         serif: ["Georgia", "serif"],
       },
+
       keyframes: {
         ripple: {
-          "0%": { boxShadow: "0 0 0 0 rgba(34, 197, 94, 0.6)" },
-          "70%": { boxShadow: "0 0 0 30px rgba(34, 197, 94, 0)" },
-          "100%": { boxShadow: "0 0 0 0 rgba(34, 197, 94, 0)" },
+          "0%": {
+            boxShadow: "0 0 0 0 rgba(248, 243, 236, 0.45)",
+          },
+          "70%": {
+            boxShadow: "0 0 0 30px rgba(248, 243, 236, 0)",
+          },
+          "100%": {
+            boxShadow: "0 0 0 0 rgba(248, 243, 236, 0)",
+          },
         },
       },
+
       animation: {
         ripple: "ripple 2s infinite",
       },
     },
   },
+
   plugins: [],
 };

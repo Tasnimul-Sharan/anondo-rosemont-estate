@@ -178,154 +178,159 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${
+      className={`fixed left-0 top-0 z-50 w-full text-off_white transition-all duration-500 ${
         isScrolled
-          ? "bg-[#4a0a0a]/90 shadow-2xl shadow-black/25 backdrop-blur-xl text-off_white"
-          : "bg-transparent backdrop-blur-md"
+          ? "bg-primary shadow-2xl shadow-black/25"
+          : "bg-transparent shadow-none"
       }`}
     >
       {/* Top Info Bar */}
       <div
-        className={`hidden overflow-hidden border-b border-white/10 text-white transition-all duration-500 lg:block ${
+        className={`hidden overflow-hidden border-b border-off_white/10 text-off_white transition-all duration-500 lg:block ${
           isScrolled
             ? "max-h-0 py-0 opacity-0"
-            : "max-h-[58px] py-3 opacity-100"
+            : "max-h-[64px] py-4 opacity-100"
         }`}
       >
         <div className="custom-container mx-auto flex items-center justify-between gap-6 whitespace-nowrap text-sm">
-          <div className="flex flex-wrap items-center gap-6 text-white/82">
-            <div className="flex items-center gap-2 transition hover:text-[#f8f3ec]">
-              <FiPhoneCall className="text-[#f8f3ec]" />
+          <div className="flex flex-wrap items-center gap-6 text-off_white/82">
+            <div className="flex items-center gap-2 transition hover:text-off_white">
+              <FiPhoneCall className="text-off_white" />
               <span className="tracking-wide">+880 1331-115500</span>
             </div>
 
-            <span className="h-4 w-px bg-white/25" />
+            <span className="h-4 w-px bg-off_white/25" />
 
-            <div className="flex items-center gap-2 transition hover:text-[#f8f3ec]">
-              <FiMail className="text-[#f8f3ec]" />
+            <div className="flex items-center gap-2 transition hover:text-off_white">
+              <FiMail className="text-off_white" />
               <span className="tracking-wide">info@anondocityscapers.com</span>
             </div>
 
-            <span className="h-4 w-px bg-white/25" />
+            <span className="h-4 w-px bg-off_white/25" />
 
             <div className="flex items-center gap-2">
-              <FiClock className="text-[#f8f3ec]" />
+              <FiClock className="text-off_white" />
               <span>Sat – Thu · 10 AM – 6 PM</span>
             </div>
           </div>
 
           <div className="flex items-center gap-4 text-lg">
-            <Link
-              href="https://facebook.com/AnondoHousing"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <FaFacebookF className="cursor-pointer text-white/78 transition-all duration-300 hover:text-[#f8f3ec]" />
+            <Link href="https://facebook.com/AnondoHousing" target="_blank">
+              <FaFacebookF className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
             <Link
               href="https://linkedin.com/company/anondo-housing-society"
               target="_blank"
-              aria-label="LinkedIn"
             >
-              <FaLinkedinIn className="cursor-pointer text-white/78 transition-all duration-300 hover:text-[#f8f3ec]" />
+              <FaLinkedinIn className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
-            <Link
-              href="https://instagram.com/aphs_bd/"
-              target="_blank"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="cursor-pointer text-white/78 transition-all duration-300 hover:text-[#f8f3ec]" />
+            <Link href="https://instagram.com/aphs_bd/" target="_blank">
+              <FaInstagram className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
             <Link
               href="https://youtube.com/@AnondoHousingSocietyOfficial"
               target="_blank"
-              aria-label="YouTube"
             >
-              <FaYoutube className="cursor-pointer text-white/78 transition-all duration-300 hover:text-[#f8f3ec]" />
+              <FaYoutube className="text-off_white/78 transition hover:text-off_white" />
             </Link>
-
-            {/* <select
-              className="ml-3 border border-white/20 bg-[#f8f3ec] px-3 py-1 text-sm font-semibold text-[#4a0a0a] outline-none"
-              onChange={handleLanguageChange}
-              defaultValue=""
-              aria-label="Select Language"
-            >
-              <option value="">ভাষা</option>
-              <option value="en">English</option>
-              <option value="bn">Bangla</option>
-            </select> */}
           </div>
         </div>
       </div>
 
       {/* Main Navbar */}
-      <div className="border-b border-white/12">
-        <div className="custom-container mx-auto flex min-h-[88px] items-center justify-between gap-6">
-          {/* Logo */}
+      <div
+        className={`border-b transition-all duration-500 ${
+          isScrolled
+            ? "border-cream/15 bg-primary"
+            : "border-off_white/15 bg-transparent"
+        }`}
+      >
+        <div className="custom-container mx-auto flex min-h-[92px] items-center justify-between gap-6">
           <Link
             href="/anondo-rosemont-estate"
-            className="flex h-20 items-center overflow-hidden"
+            className="flex items-center overflow-hidden"
             aria-label="Anondo Rosemont Estate Home"
           >
-            <div className="relative flex items-center gap-4">
-              {/* <Image
-                src="/cityscapers.png"
-                alt="Anondo Cityscapers Logo"
-                width={1200}
-                height={1200}
-                priority
-                className="h-24 w-auto object-contain brightness-0 invert"
-              /> */}
-
-              {/* <span className="hidden h-10 w-px bg-white/20 sm:block" /> */}
-
-              <div className="hidden leading-none text-white sm:block">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/60">
-                  Anondo
-                </p>
-                <p className="mt-2 text-base font-semibold tracking-wide">
-                  Rosemont Estate
-                </p>
-              </div>
+            <div className="leading-none text-off_white">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-off_white/60">
+                Anondo
+              </p>
+              <p className="mt-2 text-base font-semibold tracking-wide">
+                Rosemont Estate
+              </p>
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <ul className="relative hidden items-center gap-4 text-[13px] font-semibold uppercase tracking-[0.13em] text-white/78 xl:flex 2xl:gap-6">
+          {/* <ul className="relative hidden h-[92px] items-center gap-4 text-[13px] font-semibold uppercase tracking-[0.13em] text-off_white/78 xl:flex 2xl:gap-6">
             {menuItems.map((item, i) => (
-              <li key={i} className="group relative py-9">
+              <li key={i} className="group relative flex h-full items-center">
                 <Link
                   href={item.path}
-                  className="flex items-center gap-1.5 transition duration-300 hover:text-white"
+                  className="flex h-full items-center gap-1.5 transition duration-300 hover:text-off_white"
                 >
                   {item.name}
 
                   {item.submenu && (
-                    <FiChevronRight className="rotate-90 text-sm text-white/55 transition duration-300 group-hover:text-white" />
+                    <FiChevronRight className="rotate-90 text-sm text-off_white/55 transition duration-300 group-hover:text-off_white" />
                   )}
                 </Link>
 
-                <span className="absolute bottom-7 left-0 h-px w-0 bg-[#f8f3ec] transition-all duration-500 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 h-px w-0 bg-off_white transition-all duration-500 group-hover:w-full" />
 
                 {item.submenu && (
-                  <ul className="invisible absolute left-0 top-full z-50 w-80 translate-y-5 overflow-hidden border border-white/12 bg-[#4a0a0a]/95 opacity-0 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <ul className="invisible absolute left-0 top-full z-50 w-80 translate-y-0 overflow-hidden border border-off_white/12 bg-primary/95 opacity-0 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 group-hover:visible group-hover:opacity-100">
                     {item.submenu.map((sub, j) => (
                       <li
                         key={j}
-                        className="group/item border-b border-white/10 last:border-b-0"
+                        className="group/item border-b border-off_white/10 last:border-b-0"
                       >
                         <Link
                           href={sub.path}
-                          className="flex items-center justify-between px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white/75 transition-all duration-300 hover:bg-[#f8f3ec] hover:text-[#4a0a0a]"
+                          className="flex items-center justify-between px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-off_white/75 transition-all duration-300 hover:bg-off_white hover:text-primary"
                         >
-                          <span className="relative">
-                            {sub.name}
-                            <span className="absolute -bottom-1 left-0 h-px w-0 bg-current transition-all duration-300 group-hover/item:w-full" />
-                          </span>
+                          <span>{sub.name}</span>
+                          <FiChevronRight className="translate-x-[-8px] text-lg opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:opacity-100" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul> */}
 
+          <ul className="relative hidden h-[92px] items-center gap-4 text-[13px] font-semibold uppercase tracking-[0.13em] text-off_white/78 xl:flex 2xl:gap-6">
+            {menuItems.map((item, i) => (
+              <li key={i} className="group relative flex h-full items-center">
+                <Link
+                  href={item.path}
+                  className="flex h-full items-center gap-1.5 transition duration-300 hover:text-off_white"
+                >
+                  {item.name}
+
+                  {item.submenu && (
+                    <FiChevronRight className="rotate-90 text-sm text-off_white/55 transition duration-300 group-hover:text-off_white" />
+                  )}
+                </Link>
+
+                {/* text er niche hover line */}
+                <span className="absolute bottom-6 left-0 h-px w-0 bg-off_white transition-all duration-500 group-hover:w-full" />
+
+                {item.submenu && (
+                  <ul className="invisible absolute left-0 top-full z-50 w-80 overflow-hidden border border-cream/15 bg-primary/95 opacity-0 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 group-hover:visible group-hover:opacity-100">
+                    {item.submenu.map((sub, j) => (
+                      <li
+                        key={j}
+                        className="group/item border-b border-off_white/10 last:border-b-0"
+                      >
+                        <Link
+                          href={sub.path}
+                          className="flex items-center justify-between px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-off_white/75 transition-all duration-300 hover:bg-off_white hover:text-primary"
+                        >
+                          <span>{sub.name}</span>
                           <FiChevronRight className="translate-x-[-8px] text-lg opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:opacity-100" />
                         </Link>
                       </li>
@@ -336,24 +341,57 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Desktop CTA */}
+          {/* <ul className="relative hidden items-center gap-4 text-[13px] font-semibold uppercase tracking-[0.13em] text-off_white/78 xl:flex 2xl:gap-6">
+            {menuItems.map((item, i) => (
+              <li key={i} className="group relative py-7">
+                <Link
+                  href={item.path}
+                  className="flex items-center gap-1.5 transition duration-300 hover:text-off_white"
+                >
+                  {item.name}
+
+                  {item.submenu && (
+                    <FiChevronRight className="rotate-90 text-sm text-off_white/55 transition duration-300 group-hover:text-off_white" />
+                  )}
+                </Link>
+
+                <span className="absolute bottom-5 left-0 h-px w-0 bg-off_white transition-all duration-500 group-hover:w-full" />
+
+                {item.submenu && (
+                  <ul className="invisible absolute left-0 top-full z-50 w-80 translate-y-5 overflow-hidden border border-off_white/12 bg-primary/95 opacity-0 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                    {item.submenu.map((sub, j) => (
+                      <li
+                        key={j}
+                        className="group/item border-b border-off_white/10 last:border-b-0"
+                      >
+                        <Link
+                          href={sub.path}
+                          className="flex items-center justify-between px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-off_white/75 transition-all duration-300 hover:bg-off_white hover:text-primary"
+                        >
+                          <span>{sub.name}</span>
+                          <FiChevronRight className="translate-x-[-8px] text-lg opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:opacity-100" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul> */}
+
           <div className="hidden xl:block">
             <Link href="/anondo-rosemont-estate/contact">
-              <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-white/25 bg-[#f8f3ec] px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#4a0a0a] shadow-xl shadow-black/15 transition duration-500 hover:text-white">
-                <span className="absolute inset-0 bg-[#4a0a0a] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <span className="absolute -left-16 top-0 h-full w-10 skew-x-[-18deg] bg-white/30 transition-all duration-700 ease-out group-hover:left-[120%]" />
-
+              <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-off_white/25 bg-off_white px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-primary shadow-xl shadow-black/15 transition duration-500 hover:text-off_white">
+                <span className="absolute inset-0 bg-secondary opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <span className="relative z-10">Book Visit</span>
-
                 <span className="relative z-10 h-px w-8 origin-left scale-x-50 bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
               </button>
             </Link>
           </div>
 
-          {/* Mobile Button */}
           <button
             type="button"
-            className="z-50 border border-white/20 bg-[#f8f3ec] p-3 text-2xl text-[#4a0a0a] xl:hidden"
+            className="z-50 border border-off_white/20 bg-off_white p-3 text-2xl text-primary xl:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
