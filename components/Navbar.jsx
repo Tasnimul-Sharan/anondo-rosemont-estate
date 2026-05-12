@@ -20,7 +20,7 @@ const menuItems = [
   },
   {
     name: "The Estate",
-    path: "/anondo-rosemont-estate/the-estate",
+    path: "/the-estate",
   },
   {
     name: "Master Plan",

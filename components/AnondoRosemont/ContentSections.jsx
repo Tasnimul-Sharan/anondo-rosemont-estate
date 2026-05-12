@@ -199,33 +199,6 @@ export function ContentSections({
                 </div>
               </div>
             </div>
-
-            {/* <article>
-              <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
-                <span className="h-px w-10 bg-current" />
-                Chairman
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight text-[#4a0a0a] md:text-6xl">
-                Chairman's Foreword
-              </h2>
-
-              <div className="mt-8 grid gap-5 border-l border-[#4a0a0a]/25 pl-6">
-                {chairman.paragraphs.map((paragraph) => (
-                  <p key={paragraph} className="leading-8 text-[#6b5d57]">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-
-              {chairman.signature && (
-                <div className="mt-8 border-t border-[#4a0a0a]/15 pt-6">
-                  <p className="font-extrabold text-[#4a0a0a]">
-                    {chairman.signature}
-                  </p>
-                </div>
-              )}
-            </article> */}
             <article>
               <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
                 <span className="h-px w-10 bg-current" />
