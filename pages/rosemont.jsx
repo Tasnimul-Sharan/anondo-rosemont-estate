@@ -2,7 +2,7 @@
 
 import { CommunityFacilitiesSection } from "@/components/AnondoRosemont/CommunityFacilitiesSection";
 import { ContactBlock } from "@/components/AnondoRosemont/ContactBlock";
-import { ContentSections } from "@/components/AnondoRosemont/ContentSections";
+import RosemontBlogsSection from "@/components/AnondoRosemont/RosemontBlogsSection";
 import FeaturedVillas from "@/components/AnondoRosemont/FeaturedVillas";
 import { FeatureGrid } from "@/components/AnondoRosemont/FeatureGrid";
 import { Header } from "@/components/AnondoRosemont/Header";
@@ -41,8 +41,9 @@ export default function RosemontEstate() {
       <SecurityInfrastructure />
       <InvestmentOpportunity />
       {/* <MasterPlanPage /> */}
+      <RosemontBlogsSection />
       <ContactBlock />
-      <ContentSections />
     </div>
   );
 }
+

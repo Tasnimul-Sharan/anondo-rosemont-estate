@@ -1,422 +1,143 @@
-// "use client";
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import { AiOutlineTag } from "react-icons/ai";
-// import { FaQuoteLeft, FaRegCheckCircle, FaReply } from "react-icons/fa";
-
-// export default function NoticeDetails({ blogsData }) {
-//   const { blogPost, socialIcons } = blogsData;
-
-//   return (
-//     <div className="max-w-6xl mx-auto md:px-0 px-6 space-y-8 py-20">
-//       <div className="rounded-2xl overflow-hidden">
-//         <Image
-//           src={blogPost.image}
-//           alt={blogPost.title}
-//           width={1400}
-//           height={1200}
-//           priority
-//           className="w-full h-full object-cover"
-//         />
-//       </div>
-//       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
-//         {blogPost.title}
-//       </h1>
-//       <p className="text-center text-gray-600 max-w-3xl mx-auto leading-relaxed">
-//         {blogPost.description}
-//       </p>
-//       <p className="text-center text-sm text-gray-500">{blogPost.date}</p>
-//       <hr className="border-gray-200" />
-//       <div className="flex justify-center items-center gap-3">
-//         {blogsData.socialIcons.map(({ icon: Icon, link }, index) => {
-//           const currentUrl = `https://anondocityscapers.com/notice/${blogsData.slug}`;
-//           return (
-//             <a
-//               key={index}
-//               href={link(currentUrl, blogPost.title)}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:border-transparent hover:text-white transition-all transform duration-500"
-//             >
-//               <Icon className="w-4 h-4" />
-//             </a>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// }
-
-// "use client";
-
-// import Image from "next/image";
-// import { FaCheckCircle } from "react-icons/fa";
-
-// export default function BlogDetails({ blogsData }) {
-//   const { blogPost, sections } = blogsData;
-
-//   return (
-//     <section className="bg-gray-50 py-20">
-//       <div className="max-w-6xl mx-auto px-6">
-//         {/* Image */}
-//         <div className="rounded-3xl overflow-hidden shadow-lg mb-12">
-//           <Image
-//             src={blogPost.image}
-//             alt={blogPost.title}
-//             width={1400}
-//             height={800}
-//             className="w-full h-[400px] object-cover"
-//           />
-//         </div>
-
-//         {/* Title */}
-//         <div className="text-center mb-12">
-//           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-//             {blogPost.title}
-//           </h1>
-//           <p className="text-gray-500 max-w-2xl mx-auto">
-//             {blogPost.description}
-//           </p>
-//           <p className="text-sm text-gray-400 mt-2">{blogPost.date}</p>
-//         </div>
-
-//         {/* Sections */}
-//         <div className="space-y-10">
-//           {sections.map((section, index) => (
-//             <div
-//               key={index}
-//               className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300"
-//             >
-//               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-//                 {section.title}
-//               </h2>
-
-//               {/* Paragraph */}
-//               {section.content && (
-//                 <p className="text-gray-600 leading-relaxed">
-//                   {section.content}
-//                 </p>
-//               )}
-
-//               {/* List */}
-//               {section.list && (
-//                 <ul className="mt-4 space-y-2">
-//                   {section.list.map((item, i) => (
-//                     <li
-//                       key={i}
-//                       className="flex items-center gap-3 text-gray-600"
-//                     >
-//                       <FaCheckCircle className="text-primary" />
-//                       {item}
-//                     </li>
-//                   ))}
-//                 </ul>
-//               )}
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* Tags */}
-//         <div className="mt-12 flex flex-wrap gap-3 justify-center">
-//           {blogPost.postTags.map((tag, index) => (
-//             <span
-//               key={index}
-//               className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm"
-//             >
-//               {tag}
-//             </span>
-//           ))}
-//         </div>
-//         {/* Social Share */}
-//         <div className="flex justify-center items-center gap-3 mb-10">
-//           {blogsData.socialIcons?.map(({ icon: Icon, link }, index) => {
-//             const currentUrl = `https://anondocityscapers.com/notice/${blogsData.slug}`;
-
-//             return (
-//               <a
-//                 key={index}
-//                 href={link(currentUrl, blogPost.title)}
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-transparent transition-all duration-300"
-//               >
-//                 <Icon />
-//               </a>
-//             );
-//           })}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// "use client";
-
-// import Image from "next/image";
-// import { AiOutlineTag } from "react-icons/ai";
-// import { FaCheckCircle, FaQuoteLeft, FaRegCheckCircle } from "react-icons/fa";
-
-// export default function BlogDetails({ blogsData, socialIcons }) {
-//   const { blogPost } = blogsData;
-
-//   const currentUrl = `https://anondocityscapers.com/blogs/${blogsData.slug}`;
-
-//   return (
-//     <section className="bg-gray-50 py-20">
-//       <div className="max-w-6xl mx-auto px-6">
-//         {/* 🔥 Main Image */}
-//         <div className="rounded-3xl overflow-hidden shadow-lg mb-10">
-//           <Image
-//             src={blogPost.image}
-//             alt={blogPost.title}
-//             width={1400}
-//             height={800}
-//             className="w-full h-[400px] object-cover"
-//           />
-//         </div>
-
-//         {/* 🔥 Header */}
-//         <div className="text-center mb-10">
-//           <p className="text-sm text-gray-500 mb-2">
-//             <span className="text-primary font-medium">Written by:</span>{" "}
-//             {blogPost.author} • {blogPost.date}
-//           </p>
-
-//           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-//             {blogPost.title}
-//           </h1>
-
-//           <p className="text-gray-600 max-w-2xl mx-auto">
-//             {blogPost.description}
-//           </p>
-//         </div>
-
-//         {/* 🔥 Social Share (TOP like premium sites) */}
-//         <div className="flex justify-center items-center gap-3 mb-12">
-//           {socialIcons?.map(({ icon: Icon, link }, index) => (
-//             <a
-//               key={index}
-//               href={link(currentUrl, blogPost.title)}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-transparent transition-all duration-300"
-//             >
-//               <Icon />
-//             </a>
-//           ))}
-//         </div>
-
-//         {/* 🔥 Checklist */}
-//         <div className="bg-white rounded-2xl p-6 shadow-sm mb-10">
-//           <div className="space-y-3 text-gray-700">
-//             {blogPost.checklist.map((item, idx) => (
-//               <div key={idx} className="flex items-center gap-3">
-//                 <FaRegCheckCircle className="text-primary" />
-//                 <span>{item}</span>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-
-//         {/* 🔥 Sub Images */}
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-//           {blogPost.subImages.map((img, i) => (
-//             <div
-//               key={i}
-//               className="overflow-hidden rounded-2xl shadow-sm hover:shadow-lg transition duration-300"
-//             >
-//               <Image
-//                 src={img}
-//                 alt={`sub-img-${i}`}
-//                 width={1200}
-//                 height={1200}
-//                 className="w-full h-full object-cover hover:scale-105 transition duration-500"
-//               />
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* 🔥 Sub Content */}
-//         {blogPost.subContent && (
-//           <div className="bg-white rounded-2xl p-8 shadow-sm mb-10 space-y-4">
-//             {Array.isArray(blogPost.subContent) ? (
-//               blogPost.subContent.map((para, idx) => (
-//                 <div key={idx} className="flex items-start gap-3">
-//                   <FaCheckCircle className="text-primary mt-1" />
-//                   <p className="text-gray-700">{para}</p>
-//                 </div>
-//               ))
-//             ) : (
-//               <div className="flex items-start gap-3">
-//                 <FaCheckCircle className="text-primary mt-1" />
-//                 <p className="text-gray-700">{blogPost.subContent}</p>
-//               </div>
-//             )}
-//           </div>
-//         )}
-
-//         {/* 🔥 Quote */}
-//         <blockquote className="bg-primary/10 text-gray-800 p-8 rounded-2xl relative border-l-4 border-primary mb-10">
-//           <FaQuoteLeft className="text-primary text-2xl absolute -top-4 left-4" />
-//           <p className="italic text-lg">{blogPost.quote}</p>
-//         </blockquote>
-
-//         {/* 🔥 Tags + Bottom Share */}
-//         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-t pt-6">
-//           {/* Tags */}
-//           <div className="flex flex-wrap items-center gap-2">
-//             <AiOutlineTag className="text-primary text-xl" />
-//             {blogPost.postTags.map((tag, i) => (
-//               <span
-//                 key={i}
-//                 className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm"
-//               >
-//                 {tag}
-//               </span>
-//             ))}
-//           </div>
-
-//           {/* Bottom Share */}
-//           <div className="flex items-center gap-2">
-//             <span className="text-gray-600">Share:</span>
-//             {socialIcons?.map(({ icon: Icon, link }, index) => (
-//               <a
-//                 key={index}
-//                 href={link(currentUrl, blogPost.title)}
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white transition"
-//               >
-//                 <Icon className="w-4 h-4" />
-//               </a>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { AiOutlineTag } from "react-icons/ai";
 import { FaCheckCircle } from "react-icons/fa";
 
 export default function BlogDetails({ blogsData }) {
   const { blogPost, sections, socialIcons } = blogsData;
-
-  const currentUrl = `https://anondocityscapers.com/blogs/${blogsData.slug}`;
+  const currentUrl = "https://anondorosemontestate.com/blogs/" + blogsData.slug;
 
   return (
-    <section className="bg-gray-50 py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* 🔥 Main Image */}
-        <div className="rounded-3xl overflow-hidden shadow-lg mb-10">
-          <Image
-            src={blogPost.image}
-            alt={blogPost.title}
-            width={1400}
-            height={800}
-            className="w-full h-[400px] object-cover"
-          />
-        </div>
+    <section className="overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
+      <div className="mx-auto max-w-[1200px] px-5">
+        <div className="grid overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-2xl shadow-[#4a0a0a]/10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative min-h-[420px] bg-[#4a0a0a] lg:min-h-[620px]">
+            <Image
+              src={blogPost.image}
+              alt={blogPost.title}
+              fill
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(74,10,10,0.08)_0%,rgba(74,10,10,0.88)_100%)]" />
+            <div className="absolute bottom-0 left-0 right-0 p-7 text-white md:p-10">
+              <p className="mb-5 inline-flex border border-white/20 bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.2em] text-white/75 backdrop-blur-md">
+                {blogPost.category || "Rosemont Journal"}
+              </p>
+              <h2 className="text-3xl font-semibold leading-tight md:text-5xl">
+                {blogPost.title}
+              </h2>
+            </div>
+          </div>
 
-        {/* 🔥 Header */}
-        <div className="text-center mb-10">
-          <p className="text-sm text-gray-500 mb-2">
-            <span className="text-primary font-medium">Written by:</span>{" "}
-            {blogPost.author} • {blogPost.date}
-          </p>
+          <div className="p-7 md:p-10 lg:p-12">
+            <p className="inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]/55">
+              <span className="h-px w-10 bg-current" />
+              Rosemont Insight
+            </p>
+            <h1 className="mt-5 text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+              {blogPost.title}
+            </h1>
+            <p className="mt-5 leading-8 text-[#6b5d57]">
+              {blogPost.description}
+            </p>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {blogPost.title}
-          </h1>
+            <div className="mt-8 grid gap-4 border-y border-[#4a0a0a]/15 py-6 sm:grid-cols-3">
+              <div>
+                <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#4a0a0a]/45">
+                  Author
+                </p>
+                <p className="mt-2 font-semibold text-[#4a0a0a]">{blogPost.author}</p>
+              </div>
+              <div>
+                <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#4a0a0a]/45">
+                  Published
+                </p>
+                <p className="mt-2 font-semibold text-[#4a0a0a]">{blogPost.date}</p>
+              </div>
+              <div>
+                <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#4a0a0a]/45">
+                  Read Time
+                </p>
+                <p className="mt-2 font-semibold text-[#4a0a0a]">
+                  {blogPost.readTime || "4 min read"}
+                </p>
+              </div>
+            </div>
 
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            {blogPost.description}
-          </p>
-        </div>
-
-        {/* 🔥 Social Share TOP */}
-        {/* <div className="flex justify-center items-center gap-3 mb-12">
-          {socialIcons?.map(({ icon: Icon, link }, index) => (
-            <a
-              key={index}
-              href={link(currentUrl, blogPost.title)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-transparent transition-all duration-300"
+            <Link
+              href="/blogs"
+              className="group mt-8 inline-flex items-center gap-4 bg-[#4a0a0a] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition duration-500 hover:bg-[#241818]"
             >
-              <Icon />
-            </a>
-          ))}
-        </div> */}
+              Back to Journal
+              <span className="h-px w-12 origin-left scale-x-[0.35] bg-current transition-transform duration-700 group-hover:scale-x-100" />
+            </Link>
+          </div>
+        </div>
 
-        {/* 🔥 Sections (MAIN MERGE PART) */}
-        <div className="space-y-8 mb-12">
+        <div className="mt-10 grid gap-7">
           {sections.map((section, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition duration-300"
+            <article
+              key={section.title}
+              className="group border border-[#4a0a0a]/15 bg-white p-7 shadow-xl shadow-[#4a0a0a]/10 md:p-10"
             >
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              <div className="mb-7 flex items-center justify-between gap-6">
+                <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]/45">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <span className="h-px w-24 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 group-hover:scale-x-100" />
+              </div>
+
+              <h2 className="text-2xl font-semibold leading-tight text-[#4a0a0a] md:text-4xl">
                 {section.title}
               </h2>
 
-              {/* Paragraph */}
               {section.content && (
-                <p className="text-gray-600 leading-relaxed">
+                <p className="mt-5 max-w-4xl leading-8 text-[#6b5d57]">
                   {section.content}
                 </p>
               )}
 
-              {/* List */}
               {section.list && (
-                <ul className="mt-4 space-y-2">
-                  {section.list.map((item, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-3 text-gray-600"
-                    >
-                      <FaCheckCircle className="text-primary" />
-                      {item}
+                <ul className="mt-7 grid gap-3 md:grid-cols-3">
+                  {section.list.map((item) => (
+                    <li key={item} className="flex gap-3 leading-7 text-[#6b5d57]">
+                      <FaCheckCircle className="mt-1 shrink-0 text-[#4a0a0a]" />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               )}
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* 🔥 Tags + Bottom Share */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-t pt-6">
-          {/* Tags */}
+        <div className="mt-10 flex flex-col gap-6 border-t border-[#4a0a0a]/15 pt-7 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap items-center gap-2">
-            <AiOutlineTag className="text-primary text-xl" />
-            {blogPost.postTags.map((tag, i) => (
+            <AiOutlineTag className="text-xl text-[#4a0a0a]" />
+            {blogPost.postTags.map((tag) => (
               <span
-                key={i}
-                className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm"
+                key={tag}
+                className="border border-[#4a0a0a]/15 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.14em] text-[#4a0a0a]"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          {/* Bottom Share */}
-          <div className="flex items-center gap-2">
-            <span className="text-gray-600">Share:</span>
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-semibold text-[#6b5d57]">Share</span>
             {socialIcons?.map(({ icon: Icon, link }, index) => (
               <a
                 key={index}
                 href={link(currentUrl, blogPost.title)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-primary hover:text-white transition"
+                className="flex h-10 w-10 items-center justify-center border border-[#4a0a0a]/15 bg-white text-[#4a0a0a] transition duration-300 hover:bg-[#4a0a0a] hover:text-white"
               >
-                <Icon className="w-4 h-4" />
+                <Icon className="h-4 w-4" />
               </a>
             ))}
           </div>

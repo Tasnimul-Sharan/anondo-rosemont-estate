@@ -2,21 +2,18 @@
 
 import Head from "next/head";
 import HeroSection from "@/components/HeroSection";
-import RosemontBlogsSection from "@/components/AnondoRosemont/RosemontBlogsSection";
+import EstateRemainingSections from "@/components/AnondoRosemont/EstateRemainingSections";
 
-const siteUrl = "https://anondorosemontestate.com";
-const pageUrl = siteUrl + "/blogs";
-
-export default function BlogsPage() {
+export default function EstateDetailsPage() {
   const meta = {
-    title: "Rosemont Journal | Anondo Rosemont Estate Blogs",
+    title: "Complete Estate Narrative | Anondo Rosemont Estate",
     description:
-      "Read premium insights about Anondo Rosemont Estate, including master planning, duplex villa living, lifestyle amenities, NRB investment, security, and long-term estate value.",
+      "Explore the complete story of Anondo Rosemont Estate, including master plan, villa living, landscape, security, investment, NRB opportunity, developer credibility, and generational legacy.",
     keywords:
-      "Anondo Rosemont Estate blogs, Rosemont Estate insights, duplex villa Bangladesh, Purbachal villa investment, NRB property Bangladesh, master planned estate Bangladesh",
+      "Anondo Rosemont Estate details, Rosemont master plan, villa living Bangladesh, Purbachal real estate, NRB property investment, secure villa estate Bangladesh",
     author: "Anondo Rosemont Estate",
-    url: pageUrl,
-    image: siteUrl + "/og/anondo-rosemont-estate-og.jpg",
+    url: "https://anondorosemontestate.com/estate-details",
+    image: "https://anondorosemontestate.com/og/anondo-rosemont-estate-og.jpg",
   };
 
   return (
@@ -26,7 +23,6 @@ export default function BlogsPage() {
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
         <meta name="author" content={meta.author} />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={meta.url} />
 
         <meta property="og:site_name" content="Anondo Rosemont Estate" />
@@ -35,7 +31,6 @@ export default function BlogsPage() {
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={meta.image} />
-        <meta property="og:image:alt" content="Anondo Rosemont Estate blog insights" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
@@ -45,13 +40,13 @@ export default function BlogsPage() {
 
       <HeroSection
         hero={{
-          title: "Rosemont Journal",
-          subtitle: "Stories of planning, villa living, and estate value",
+          title: "Complete Estate Narrative",
+          subtitle: "Anondo Rosemont Estate",
           backgroundImage: "/10 katha villa/MAHI Final.jpeg",
         }}
       />
 
-      <RosemontBlogsSection page />
+      <EstateRemainingSections />
     </div>
   );
 }

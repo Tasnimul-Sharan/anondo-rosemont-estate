@@ -21,6 +21,16 @@ const menuItems = [
   {
     name: "The Estate",
     path: "/the-estate",
+    submenu: [
+      {
+        name: "Estate Story",
+        path: "/the-estate",
+      },
+      {
+        name: "Complete Narrative",
+        path: "/estate-details",
+      },
+    ],
   },
   {
     name: "Master Plan",
@@ -61,6 +71,10 @@ const menuItems = [
         path: "/anondo-rosemont-estate/developer",
       },
     ],
+  },
+  {
+    name: "Blogs",
+    path: "/blogs",
   },
   {
     name: "Gallery",
@@ -533,3 +547,4 @@ export default function Navbar() {
     </header>
   );
 }
+

@@ -15,7 +15,7 @@ import NrbOpportunity from "@/components/AnondoRosemont/NrbOpportunity";
 import { SecurityInfrastructure } from "@/components/AnondoRosemont/SecurityInfrastructure";
 import InvestmentOpportunity from "@/components/AnondoRosemont/InvestmentOpportunity";
 import { ContactBlock } from "@/components/AnondoRosemont/ContactBlock";
-import { ContentSections } from "@/components/AnondoRosemont/ContentSections";
+import RosemontBlogsSection from "@/components/AnondoRosemont/RosemontBlogsSection";
 
 const siteUrl = "https://anondocityscapers.com";
 const pageUrl = `${siteUrl}/anondo-rosemont-estate`;
@@ -213,9 +213,10 @@ export default function AnondoRosemontEstatePage() {
         <NrbOpportunity />
         <SecurityInfrastructure />
         <InvestmentOpportunity />
+        <RosemontBlogsSection />
         <ContactBlock />
-        <ContentSections />
       </main>
     </>
   );
 }
+
