@@ -1,118 +1,3 @@
-// "use client";
-
-// import {
-//   FaPhoneAlt,
-//   FaMapMarkedAlt,
-//   FaFileAlt,
-//   FaLaptop,
-//   FaStamp,
-//   FaCheckCircle,
-// } from "react-icons/fa";
-
-// const steps = [
-//   {
-//     title: "Consultation",
-//     desc: "WhatsApp / Zoom discussion from anywhere in the world",
-//     icon: <FaPhoneAlt />,
-//   },
-//   {
-//     title: "Choose Plot",
-//     desc: "Select your preferred land with full guidance",
-//     icon: <FaMapMarkedAlt />,
-//   },
-//   {
-//     title: "Verify Documents",
-//     desc: "Complete legal verification and transparency",
-//     icon: <FaFileAlt />,
-//   },
-//   {
-//     title: "Online Booking",
-//     desc: "Secure your plot remotely without hassle",
-//     icon: <FaLaptop />,
-//   },
-//   {
-//     title: "Registration",
-//     desc: "Official legal registration in Bangladesh",
-//     icon: <FaStamp />,
-//   },
-//   {
-//     title: "Ownership",
-//     desc: "You become the verified legal owner",
-//     icon: <FaCheckCircle />,
-//   },
-// ];
-
-// export default function BuyingProcessSection() {
-//   return (
-//     <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative">
-//       <div className="max-w-6xl mx-auto px-4">
-//         {/* Title */}
-//         <h2 className="text-3xl md:text-5xl font-bold text-center mb-20">
-//           Simple 6-Step Buying Process
-//         </h2>
-
-//         {/* Vertical Line */}
-//         <div className="absolute left-1/2 top-40 bottom-0 w-[2px] bg-primary/20 transform -translate-x-1/2 hidden md:block"></div>
-
-//         <div className="space-y-16">
-//           {steps.map((step, index) => {
-//             const isLeft = index % 2 === 0;
-
-//             return (
-//               <div
-//                 key={index}
-//                 className={`relative flex items-center ${
-//                   isLeft ? "justify-start" : "justify-end"
-//                 }`}
-//               >
-//                 {/* Card */}
-//                 <div
-//                   className={`w-full md:w-[45%] p-6 rounded-2xl border bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 ${
-//                     isLeft ? "mr-auto text-right" : "ml-auto text-left"
-//                   }`}
-//                 >
-//                   {/* Step + Icon */}
-//                   <div
-//                     className={`flex items-center gap-3 mb-3 ${
-//                       isLeft ? "justify-end" : "justify-start"
-//                     }`}
-//                   >
-//                     {!isLeft && (
-//                       <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
-//                         {step.icon}
-//                       </div>
-//                     )}
-
-//                     <h3 className="text-lg font-semibold text-gray-800">
-//                       {step.title}
-//                     </h3>
-
-//                     {isLeft && (
-//                       <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
-//                         {step.icon}
-//                       </div>
-//                     )}
-//                   </div>
-
-//                   {/* Description */}
-//                   <p className="text-gray-500 text-sm leading-relaxed">
-//                     {step.desc}
-//                   </p>
-//                 </div>
-
-//                 {/* Center Circle */}
-//                 <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full font-bold shadow-lg z-10">
-//                   {index + 1}
-//                 </div>
-//               </div>
-//             );
-//           })}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import {
@@ -127,105 +12,112 @@ import {
 const steps = [
   {
     title: "Consultation",
-    desc: "WhatsApp / Zoom discussion from anywhere in the world",
+    desc: "WhatsApp or Zoom discussion from anywhere in the world.",
     icon: <FaPhoneAlt />,
   },
   {
-    title: "Choose Plot",
-    desc: "Select your preferred land with full guidance",
+    title: "Choose Property",
+    desc: "Select your preferred villa or plot category with expert guidance.",
     icon: <FaMapMarkedAlt />,
   },
   {
-    title: "Verify Documents",
-    desc: "Complete legal verification and transparency",
+    title: "Document Review",
+    desc: "Review ownership papers, project details, and legal documentation.",
     icon: <FaFileAlt />,
   },
   {
-    title: "Online Booking",
-    desc: "Secure your plot remotely without hassle",
+    title: "Remote Booking",
+    desc: "Reserve your property from abroad with a structured support process.",
     icon: <FaLaptop />,
   },
   {
-    title: "Registration",
-    desc: "Official legal registration in Bangladesh",
+    title: "Registration Support",
+    desc: "Receive guidance for official legal registration in Bangladesh.",
     icon: <FaStamp />,
   },
   {
-    title: "Ownership",
-    desc: "You become the verified legal owner",
+    title: "Ownership Handover",
+    desc: "Become the verified owner of a Rosemont property in Bangladesh.",
     icon: <FaCheckCircle />,
   },
 ];
 
 export default function BuyingProcessSection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-20">
-          Simple 6-Step Buying Process
-        </h2>
+    <section className="relative overflow-hidden bg-white py-24 text-soft_black">
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-off_white to-transparent" />
 
-        {/* Center Line */}
-        <div className="absolute left-1/2 top-40 bottom-0 w-[2px] bg-primary/20 transform -translate-x-1/2 hidden md:block"></div>
+      <div className="custom-container relative z-10 mx-auto">
+        <div className="mx-auto mb-20 max-w-4xl text-center">
+          <p className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+            <span className="h-px w-10 bg-primary" />
+            Buying Journey
+            <span className="h-px w-10 bg-primary" />
+          </p>
+
+          <h2 className="text-3xl font-semibold leading-tight text-primary md:text-5xl">
+            Simple 6-Step NRB Buying Process
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-soft_black/70 md:text-lg">
+            From consultation to ownership, the Rosemont team supports NRB
+            investors with a clear and structured property acquisition process.
+          </p>
+        </div>
+
+        <div className="absolute left-1/2 top-[260px] hidden h-[calc(100%-280px)] w-px -translate-x-1/2 bg-primary/18 md:block" />
 
         <div className="space-y-16">
           {steps.map((step, index) => {
-            const isLeft = index % 2 === 0; // ✅ FIX HERE
+            const isLeft = index % 2 === 0;
 
             return (
               <div
-                key={index}
+                key={step.title}
                 className={`relative flex items-center ${
                   isLeft ? "justify-start" : "justify-end"
                 }`}
               >
-                {/* Card */}
                 <div
-                  className={`relative w-full md:w-[47%] p-7 rounded-2xl border bg-white/80 backdrop-blur-md shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 ${
+                  className={`relative w-full border border-primary/12 bg-off_white/80 p-7 shadow-soft backdrop-blur-md transition duration-500 hover:-translate-y-1 hover:shadow-rosemont md:w-[47%] ${
                     isLeft ? "mr-auto text-right" : "ml-auto text-left"
                   }`}
                 >
-                  {/* Connector Line */}
                   <div
-                    className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-[2px] bg-primary/30 ${
-                      isLeft
-                        ? "right-[-40px] w-[40px]"
-                        : "left-[-40px] w-[40px]"
+                    className={`hidden absolute top-1/2 h-px w-10 -translate-y-1/2 bg-primary/35 md:block ${
+                      isLeft ? "right-[-40px]" : "left-[-40px]"
                     }`}
-                  ></div>
+                  />
 
-                  {/* Header */}
                   <div
-                    className={`flex items-center gap-3 mb-3 ${
+                    className={`mb-4 flex items-center gap-4 ${
                       isLeft ? "justify-end" : "justify-start"
                     }`}
                   >
                     {!isLeft && (
-                      <div className="w-11 h-11 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <div className="flex h-12 w-12 items-center justify-center bg-primary/10 text-primary">
                         {step.icon}
-                      </div>   
+                      </div>
                     )}
 
-                    <h3 className="text-lg md:text-xl font-semibold text-gray-800">
+                    <h3 className="text-xl font-semibold text-primary">
                       {step.title}
                     </h3>
 
                     {isLeft && (
-                      <div className="w-11 h-11 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <div className="flex h-12 w-12 items-center justify-center bg-primary/10 text-primary">
                         {step.icon}
                       </div>
                     )}
                   </div>
 
-                  {/* Description */}
-                  <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+                  <p className="text-sm leading-7 text-soft_black/65 md:text-base">
                     {step.desc}
                   </p>
                 </div>
 
-                {/* Center Circle */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full font-semibold shadow-lg z-10">
-                  {index + 1}
+                <div className="absolute left-1/2 z-10 flex h-12 w-12 -translate-x-1/2 items-center justify-center border border-off_white bg-primary text-sm font-bold text-off_white shadow-rosemont">
+                  {String(index + 1).padStart(2, "0")}
                 </div>
               </div>
             );

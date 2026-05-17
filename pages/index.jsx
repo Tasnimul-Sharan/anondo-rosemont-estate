@@ -206,7 +206,6 @@ export default function AnondoRosemontEstatePage() {
         <LifestyleExperience />
         <FeaturedVillas />
         <MainMasterPlanSection />
-        {/* <LifestyleAmenities /> */}
         <CommunityFacilitiesSection />
         <SustainableLiving />
         <ResidentialComponentsPage />

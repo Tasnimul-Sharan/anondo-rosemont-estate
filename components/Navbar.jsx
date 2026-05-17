@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
@@ -34,11 +34,11 @@ const menuItems = [
   },
   {
     name: "Master Plan",
-    path: "/anondo-rosemont-estate/master-plan",
+    path: "/master-plan",
   },
   {
     name: "Villas",
-    path: "/anondo-rosemont-estate/villas-residences",
+    path: "/villas-residences",
   },
   {
     name: "Lifestyle",
@@ -64,11 +64,11 @@ const menuItems = [
     submenu: [
       {
         name: "Investment & NRB",
-        path: "/anondo-rosemont-estate/investment-nrb",
+        path: "/investment-nrb",
       },
       {
         name: "Developer",
-        path: "/anondo-rosemont-estate/developer",
+        path: "/developer",
       },
     ],
   },

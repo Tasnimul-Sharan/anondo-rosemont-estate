@@ -1,4 +1,6 @@
 "use client";
+
+import Head from "next/head";
 import HeroSection from "@/components/HeroSection";
 import BuyingProcessSection from "@/components/NRB/BuyingProcessSection";
 import DocumentsSection from "@/components/NRB/DocumentsSection";
@@ -7,50 +9,59 @@ import LeadCaptureCard from "@/components/NRB/LeadCaptureCard";
 import NRBHeroSection from "@/components/NRB/NRBHeroSection";
 import NRBSupportSection from "@/components/NRB/NRBSupportSection";
 import NRBTrustSection from "@/components/NRB/NRBTrustSection";
-import StickyCTA from "@/components/NRB/StickyCTA";
 import VideoSection from "@/components/NRB/VideoSection";
-import Head from "next/head";
 
 export default function NRBPage() {
   const meta = {
     title:
-      "NRB | Anondo Cityscapers - Modern & Secure Residential Community in Bangladesh",
+      "NRB Investment | Anondo Rosemont Estate - Secure Villa & Land Ownership in Bangladesh",
     description:
-      "Anondo Cityscapers offers a modern, secure, and well-planned residential community in Bangladesh with quality housing, reliable utilities, green spaces, and a peaceful living environment for families and investors.",
+      "Anondo Rosemont Estate offers NRB investors a secure opportunity to own land and duplex villas near Purbachal, Bangladesh, with legal documentation support, verified ownership process, and a premium gated estate lifestyle.",
     keywords:
-      "Anondo Cityscapers, housing society Bangladesh, residential housing project Bangladesh, modern housing society, secure residential area, apartment housing Bangladesh, land development project Bangladesh, gated community Bangladesh, real estate Bangladesh, housing project Dhaka",
+      "NRB investment Bangladesh, Anondo Rosemont Estate NRB, NRB property investment Bangladesh, buy land in Bangladesh from abroad, villa investment Bangladesh, duplex villa near Purbachal, secure land ownership Bangladesh, Bangladeshi expatriate property investment, NRB real estate Bangladesh, Anondo Cityscapers",
     author: "Anondo Cityscapers",
     url: "https://anondocityscapers.com/nrb",
-    image: "https://anondocityscapers.com/og/home-og.jpg",
+    image: "https://anondocityscapers.com/og/anondo-rosemont-nrb-og.jpg",
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden bg-off_white text-soft_black">
       <Head>
         <title>{meta.title}</title>
         <meta name="title" content={meta.title} />
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
         <meta name="author" content={meta.author} />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={meta.url} />
+
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Anondo Cityscapers" />
         <meta property="og:url" content={meta.url} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={meta.image} />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={meta.url} />
-        <meta property="twitter:title" content={meta.title} />
-        <meta property="twitter:description" content={meta.description} />
-        <meta property="twitter:image" content={meta.image} />
+        <meta
+          property="og:image:alt"
+          content="Anondo Rosemont Estate NRB Investment"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={meta.url} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
+
+        <meta name="theme-color" content="#3e0607" />
       </Head>
+
       <HeroSection
         hero={{
-          title: "NRB - Non-Resident Bangladeshi",
-          backgroundImage: "/about-bg.jpeg",
+          title: "NRB Investment Opportunity",
+          backgroundImage: "/10 katha villa/MAHI Final.jpeg",
         }}
       />
+
       <NRBHeroSection />
       <NRBTrustSection />
       <BuyingProcessSection />
@@ -59,7 +70,6 @@ export default function NRBPage() {
       <NRBSupportSection />
       <FAQSection />
       <LeadCaptureCard />
-      {/* <StickyCTA /> */}
     </div>
   );
 }

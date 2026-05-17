@@ -140,12 +140,12 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="mt-7 rounded-2xl border border-white/12 bg-white/8 p-4 backdrop-blur-md">
+            <div className="mt-7 rounded-2xl border border-off_white/15 bg-white/8 p-4 backdrop-blur-md">
               <p className="mb-3 text-sm leading-6 text-white/72">
                 Enter your email and receive the latest news from us.
               </p>
 
-              <div className="flex overflow-hidden rounded-full border border-white/15 bg-black/15">
+              <div className="flex overflow-hidden rounded-xl border border-white/15 bg-black/15">
                 <input
                   type="email"
                   placeholder="email@example.com"
@@ -164,7 +164,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-14 border-t border-white/12 pt-6">
+        <div className="mt-14 border-t border-off_white/20 pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-white/58 md:flex-row md:text-left">
             <p>
               Copyright © {new Date().getFullYear()}{" "}
