@@ -10,7 +10,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhoneCall, FiArrowUpRight } from "react-icons/fi";
 import { PiMapPinBold } from "react-icons/pi";
-import Image from "next/image";
 import Link from "next/link";
 
 const quickLinks = [
@@ -39,14 +38,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.25fr_0.75fr_0.9fr_1.25fr] xl:gap-14">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block">
-              <Image
-                src="/cityscapers.png"
-                alt="Anondo Cityscapers Logo"
-                width={210}
-                height={170}
-                className="mb-5 h-auto w-[190px] object-contain"
-              />
+            <Link
+              href="/anondo-rosemont-estate"
+              className="mb-5 inline-block text-white"
+            >
+              <span className="block text-xs font-semibold uppercase tracking-[0.28em] text-white/58">
+                Anondo
+              </span>
+              <span className="mt-2 block text-2xl font-semibold leading-tight tracking-wide text-white md:text-3xl">
+                Rosemont Estate
+              </span>
+              <span className="mt-4 block h-px w-16 bg-white/70" />
             </Link>
 
             <p className="max-w-sm text-base leading-8 text-white/72">
@@ -132,10 +134,10 @@ export default function Footer() {
                   <HiOutlineMail size={20} />
                 </span>
                 <Link
-                  href="mailto:info@anondocityscapers.com"
+                  href="mailto:info@anondorosemontestate.com"
                   className="transition-colors duration-300 hover:text-white"
                 >
-                  info@anondocityscapers.com
+                  info@anondorosemontestate.com
                 </Link>
               </div>
             </div>
@@ -163,7 +165,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="mt-14 border-t border-off_white/20 pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-white/58 md:flex-row md:text-left">
             <p>

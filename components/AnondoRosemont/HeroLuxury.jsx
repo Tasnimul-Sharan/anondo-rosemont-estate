@@ -138,11 +138,11 @@
 
 import Image from "next/image";
 
-const estateHighlights = [
-  { value: "807", label: "Bigha Estate" },
-  { value: "60 ft", label: "Grand Avenue" },
-  { value: "Villa", label: "Only Township" },
-];
+// const estateHighlights = [
+//   { value: "807", label: "Bigha Estate" },
+//   { value: "60 ft", label: "Grand Avenue" },
+//   { value: "Villa", label: "Only Township" },
+// ];
 
 export default function HeroLuxury() {
   return (
@@ -224,8 +224,8 @@ export default function HeroLuxury() {
             </div>
           </div>
 
-          <div className="hidden border border-off_white/16 bg-secondary/55 p-5 shadow-rosemont backdrop-blur-xl lg:block">
-            <div className="border border-off_white/18 p-6">
+          <div className="hidden border border-off_white/20 bg-secondary/55 p-5 shadow-rosemont backdrop-blur-xl lg:block">
+            <div className="border border-off_white/20 p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-off_white/62">
                 Estate Signature
               </p>
@@ -241,7 +241,7 @@ export default function HeroLuxury() {
         </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 z-20">
+      {/* <div className="absolute inset-x-0 bottom-0 z-20">
         <div className="custom-container mx-auto">
           <div className="grid border border-off_white/14 bg-secondary/86 backdrop-blur-xl sm:grid-cols-3">
             {estateHighlights.map((item) => (
@@ -264,7 +264,7 @@ export default function HeroLuxury() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -217,7 +217,9 @@ export default function Navbar() {
 
             <div className="flex items-center gap-2 transition hover:text-off_white">
               <FiMail className="text-off_white" />
-              <span className="tracking-wide">info@anondocityscapers.com</span>
+              <span className="tracking-wide">
+                info@anondorosemontestate.com
+              </span>
             </div>
 
             <span className="h-4 w-px bg-off_white/25" />
@@ -547,4 +549,3 @@ export default function Navbar() {
     </header>
   );
 }
-
