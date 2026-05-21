@@ -1,31 +1,30 @@
 "use client";
-import ContactSection from "@/components/ContactSection";
-import HeroSection from "@/components/HeroSection";
+
 import Head from "next/head";
-import EventMap from "@/components/EventMap";
+import HeroSection from "@/components/HeroSection";
 import ContactPageSection from "@/components/ContactPageSection";
+
 export default function ContactPage() {
   const meta = {
-    title:
-      "Contact Us | Anondo Cityscapers – Inquiries for Residential Housing Projects in Bangladesh",
+    title: "Contact | Anondo Rosemont Estate",
     description:
-      "Contact Anondo Cityscapers for inquiries about residential housing projects, plot or apartment ownership, booking details, site visits, and general information. We are here to help you find secure and modern living solutions in Bangladesh.",
+      "Contact Anondo Rosemont Estate for villa details, plot availability, booking guidance, brochure requests, and site visit scheduling.",
     keywords:
-      "Contact Anondo Cityscapers, housing contact Bangladesh, real estate contact Bangladesh, apartment booking contact, plot purchase inquiry, housing project contact, residential housing Bangladesh",
-    author: "Anondo Cityscapers",
+      "Anondo Rosemont Estate contact, Rosemont Estate booking, villa enquiry Bangladesh, Purbachal villa contact",
+    author: "Anondo Rosemont Estate",
     url: "https://anondocityscapers.com/contact",
-    image: "https://anondocityscapers.com/contact/contact-og.jpg",
+    image: "https://anondocityscapers.com/og/anondo-rosemont-estate-og.jpg",
   };
 
   return (
-    <div className="w-full relative">
+    <div className="relative w-full">
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
         <meta name="author" content={meta.author} />
         <link rel="canonical" href={meta.url} />
-        <meta property="og:site_name" content="Anondo Cityscapers" />
+        <meta property="og:site_name" content="Anondo Rosemont Estate" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={meta.url} />
         <meta property="og:title" content={meta.title} />
@@ -36,14 +35,14 @@ export default function ContactPage() {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
+
       <HeroSection
         hero={{
           title: "Contact",
-          backgroundImage: "/contact-bg.jpeg",
+          backgroundImage: "/10 katha villa/MAHI Final.jpeg",
         }}
       />
       <ContactPageSection />
-      {/* <EventMap /> */}
     </div>
   );
 }

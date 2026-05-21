@@ -49,22 +49,6 @@ h3 {
   }
 }
 
-/* @keyframes ripple {
-  0% {
-    box-shadow: rgba(9, 136, 62, 0.4) 0 0 0 0;
-  }
-  70% {
-    box-shadow: rgba(9, 136, 62, 0) 0 0 0 10px;
-  }
-  100% {
-    box-shadow: rgba(9, 136, 62, 0) 0 0 0 0;
-  }
-}
-
-.ripple {
-  animation: ripple 1.5s infinite;
-} */
-
 .slick-dots {
   position: absolute;
   top: 50%;
@@ -180,26 +164,9 @@ h3 {
   transition: -webkit-text-stroke 0.3s ease, color 0.3s ease;
 }
 
-/* .slick-track {
-  overflow: visible !important;
-} */
-
-/* .slick-list {
-  overflow: visible !important;
-} */
-
-/* .slick-slide > div {
-  overflow: visible !important;
-} */
-
 .slick-list {
   overflow: visible !important;
 }
-/* .slick-slide {
-  padding: 0 8px;
-} */
-
-/* FIX: Show only 1 image — no overflow */
 .slick-list {
   overflow: hidden !important;
 }
@@ -207,11 +174,6 @@ h3 {
 .slick-slide {
   overflow: hidden !important;
 }
-
-/* .slick-slide > div {
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-} */
 
 .service-item:hover .font-outline {
   -webkit-text-stroke: 1.5px #f99b24;

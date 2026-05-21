@@ -1,50 +1,68 @@
+"use client";
+
 import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+
 export const useLenis = () => {
   useEffect(() => {
-    const lenis = new Lenis({
-      smooth: true,
-      duration: 1.2,
-      easing: (t) => 1 - Math.pow(1 - t, 3),
-      direction: "vertical",
-      gestureDirection: "vertical",
-      smoothTouch: true,
-      touchMultiplier: 1.2,
+    let lenis;
+    let rafId;
+    let cancelled = false;
+    let started = false;
+
+    const startLenis = async () => {
+      if (started) return;
+      started = true;
+
+      const Lenis = (await import("lenis")).default;
+
+      if (cancelled) return;
+
+      lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => 1 - Math.pow(1 - t, 3),
+        smoothWheel: true,
+        gestureOrientation: "vertical",
+        syncTouch: false,
+        touchMultiplier: 1.5,
+        anchors: true,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        rafId = requestAnimationFrame(raf);
+      }
+
+      rafId = requestAnimationFrame(raf);
+    };
+
+    const startOnIntent = () => {
+      startLenis();
+    };
+
+    window.addEventListener("wheel", startOnIntent, {
+      once: true,
+      passive: true,
     });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+    window.addEventListener("touchstart", startOnIntent, {
+      once: true,
+      passive: true,
+    });
+    window.addEventListener("keydown", startOnIntent, { once: true });
 
     return () => {
-      lenis.destroy();
+      cancelled = true;
+
+      window.removeEventListener("wheel", startOnIntent);
+      window.removeEventListener("touchstart", startOnIntent);
+      window.removeEventListener("keydown", startOnIntent);
+
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+
+      if (lenis) {
+        lenis.destroy();
+      }
     };
   }, []);
 };
-
-// import { useEffect } from "react";
-// import Lenis from "@studio-freight/lenis";
-
-// export const useLenis = () => {
-//   useEffect(() => {
-//     const lenis = new Lenis({
-//       duration: 1.2,
-//       smoothWheel: true,
-//     });
-
-//     let animationFrameId;
-
-//     function raf(time) {
-//       lenis.raf(time);
-//       animationFrameId = requestAnimationFrame(raf);
-//     }
-
-//     animationFrameId = requestAnimationFrame(raf);
-
-//     return () => {
-//       cancelAnimationFrame(animationFrameId);
-//       lenis.destroy();
-//     };
-//   }, []);
-// };

@@ -16,7 +16,7 @@ import {
 const menuItems = [
   {
     name: "Home",
-    path: "/anondo-rosemont-estate",
+    path: "/",
   },
   {
     name: "The Estate",
@@ -46,15 +46,15 @@ const menuItems = [
     submenu: [
       {
         name: "Lifestyle & Amenities",
-        path: "/anondo-rosemont-estate/lifestyle-amenities",
+        path: "/lifestyle-amenities",
       },
       {
         name: "Community Facilities",
-        path: "/anondo-rosemont-estate/community-facilities",
+        path: "/community-facilities",
       },
       {
         name: "Strategic Location",
-        path: "/anondo-rosemont-estate/location",
+        path: "/location",
       },
     ],
   },
@@ -78,11 +78,11 @@ const menuItems = [
   },
   {
     name: "Gallery",
-    path: "/anondo-rosemont-estate/gallery",
+    path: "/gallery",
   },
   {
     name: "Contact",
-    path: "/anondo-rosemont-estate/contact",
+    path: "/contact",
   },
 ];
 
@@ -231,23 +231,23 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4 text-lg">
-            <Link href="https://facebook.com/AnondoHousing" target="_blank">
+            <Link href="https://facebook.com/" target="_blank">
               <FaFacebookF className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
             <Link
-              href="https://linkedin.com/company/anondo-housing-society"
+              href="https://linkedin.com/"
               target="_blank"
             >
               <FaLinkedinIn className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
-            <Link href="https://instagram.com/aphs_bd/" target="_blank">
+            <Link href="https://instagram.com/" target="_blank">
               <FaInstagram className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
             <Link
-              href="https://youtube.com/@AnondoHousingSocietyOfficial"
+              href="https://youtube.com/"
               target="_blank"
             >
               <FaYoutube className="text-off_white/78 transition hover:text-off_white" />
@@ -266,7 +266,7 @@ export default function Navbar() {
       >
         <div className="custom-container mx-auto flex min-h-[92px] items-center justify-between gap-6">
           <Link
-            href="/anondo-rosemont-estate"
+            href="/"
             className="flex items-center overflow-hidden"
             aria-label="Anondo Rosemont Estate Home"
           >

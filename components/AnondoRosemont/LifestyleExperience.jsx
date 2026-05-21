@@ -31,7 +31,7 @@ export default function LifestyleExperience() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(56,10,10,0.18)_0%,rgba(56,10,10,0.58)_100%)]" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(56,10,10,0.52)_0%,rgba(56,10,10,0.12)_100%)]" />
 
-            <div className="absolute bottom-0 left-0 max-w-md border-t border-r border-white/18 bg-[#4a0a0a]/82 p-7 backdrop-blur-md md:p-9">
+            <div className="absolute bottom-0 left-0 max-w-md border-t border-r border-white/20 bg-[#4a0a0a]/82 p-7 backdrop-blur-md md:p-9">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-white/90">
                 Lifestyle Experience
               </p>

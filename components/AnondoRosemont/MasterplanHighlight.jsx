@@ -145,7 +145,7 @@ export default function MasterplanHighlight() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#4a0a0a]/50" />
+        <div className="absolute inset-0 bg-[#4a0a0a]/20" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(56,10,10,0.78)_0%,rgba(56,10,10,0.52)_42%,rgba(56,10,10,0.18)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#4a0a0a] to-transparent" />
       </div>

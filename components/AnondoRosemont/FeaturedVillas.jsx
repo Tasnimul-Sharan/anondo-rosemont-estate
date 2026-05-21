@@ -1,9 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { FiCheckCircle } from "react-icons/fi";
 
 const villas = [
   {
+    slug: "the-classic",
     name: "The Classic",
     size: "5 Katha Duplex",
     image: "/5 katha villa/5-katha.jpg",
@@ -17,6 +20,7 @@ const villas = [
     ],
   },
   {
+    slug: "the-premium",
     name: "The Premium",
     size: "10 Katha Duplex",
     image: "/10 katha villa/10-katha.jpg",
@@ -29,6 +33,7 @@ const villas = [
     ],
   },
   {
+    slug: "the-estate",
     name: "The Estate",
     size: "20 Katha Villa",
     image: "/20 katha villa/20-katha.jpg",
@@ -61,15 +66,19 @@ export default function FeaturedVillas() {
             </h2>
           </div>
 
-          <button className="group inline-flex w-fit items-center gap-4 border border-[#4a0a0a]/20 bg-white/60 px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a] shadow-sm transition duration-300 hover:bg-[#4a0a0a] hover:text-white">
+          <Link
+            href="/villas-residences"
+            className="group inline-flex w-fit items-center gap-4 border border-[#4a0a0a]/20 bg-white/60 px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a] shadow-sm transition duration-300 hover:bg-[#4a0a0a] hover:text-white"
+          >
             View All
             <span className="h-px w-10 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-[transform,background-color] duration-700 ease-out group-hover:scale-x-100 group-hover:bg-white" />
-          </button>
+          </Link>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
           {villas.map((villa, index) => (
             <article
+              id={villa.slug}
               key={villa.name}
               className="group overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#4a0a0a]/18"
             >
@@ -112,16 +121,20 @@ export default function FeaturedVillas() {
                       key={spec}
                       className="flex gap-3 text-sm leading-6 text-[#5f4f4a] md:text-base"
                     >
-                      <span className="mt-[9px] h-1.5 w-1.5 shrink-0 bg-[#4a0a0a]" />
+                      <FiCheckCircle className="mt-1 shrink-0 text-[#4a0a0a]" size={18} />
                       <span>{spec}</span>
                     </li>
                   ))}
                 </ul>
 
-                <button className="mt-8 inline-flex items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a]">
+                <Link
+                  href={`/villas-residences#${villa.slug}`}
+                  className="mt-8 inline-flex items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a]"
+                  aria-label={`Explore ${villa.name} ${villa.size}`}
+                >
                   Explore Villa
                   <span className="h-px w-10 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100" />
-                </button>
+                </Link>
               </div>
             </article>
           ))}
