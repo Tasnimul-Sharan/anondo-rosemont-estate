@@ -5,8 +5,8 @@ import Image from "next/image";
 const lifestyleHighlights = [
   "807 Bigha Master Planned Estate",
   "Duplex Villas on Every Plot",
-  "12 Bigha Central Park",
-  "12 Bigha Scenic Lake",
+  "Central Park",
+  "Scenic Lake",
   "Grand Sports Complex",
   "Community Farming Zone",
   "Adjacent to Anondo Baari Wellness Center",
@@ -56,7 +56,7 @@ export default function LifestyleExperience() {
               </p>
 
               <h3 className="text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
-                Wellness, Water Views, and Spaces Made for Generations
+                Wellness and Spaces Made for Generations
               </h3>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-[#6b5d55] md:text-lg">

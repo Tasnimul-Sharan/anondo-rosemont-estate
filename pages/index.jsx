@@ -205,12 +205,12 @@ export default function AnondoRosemontEstatePage() {
         <MasterplanHighlight />
         <LifestyleExperience />
         <FeaturedVillas />
-        <MainMasterPlanSection />
+        {/* <MainMasterPlanSection /> */}
         <CommunityFacilitiesSection />
         <SustainableLiving />
-        <ResidentialComponentsPage />
+        {/* <ResidentialComponentsPage /> */}
         <NrbOpportunity />
-        <SecurityInfrastructure />
+        {/* <SecurityInfrastructure /> */}
         <InvestmentOpportunity />
         <RosemontBlogsSection />
         <ContactBlock />
@@ -218,4 +218,3 @@ export default function AnondoRosemontEstatePage() {
     </>
   );
 }
-
