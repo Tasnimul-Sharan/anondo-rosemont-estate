@@ -14,16 +14,25 @@ import Link from "next/link";
 
 const quickLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "The Estate", href: "/the-estate" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
-  { name: "Project", href: "/project" },
-  { name: "Terms & Conditions", href: "/terms-and-conditions" },
+  // { name: "Terms & Conditions", href: "/terms-and-conditions" },
 ];
 
-const projects = [
-  { name: "Anondo Bhubon", link: "/anondo-bhubon" },
-  { name: "Anondo Parkcity", link: "/anondo-parkcity" },
-  { name: "Anondo Rosemont Estate", link: "/anondo-rosemont-estate" },
+const estateLinks = [
+  { name: "Master Plan", href: "/master-plan" },
+  { name: "Villas & Residences", href: "/villas-residences" },
+  { name: "Lifestyle & Amenities", href: "/lifestyle-amenities" },
+  { name: "Community Facilities", href: "/community-facilities" },
+  { name: "Strategic Location", href: "/location" },
+  { name: "Investment & NRB", href: "/investment-nrb" },
+];
+
+const estateStats = [
+  { value: "807", label: "Bigha Estate" },
+  { value: "3", label: "Villa Types" },
 ];
 
 export default function Footer() {
@@ -38,10 +47,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.25fr_0.75fr_0.9fr_1.25fr] xl:gap-14">
           {/* Brand */}
           <div>
-            <Link
-              href="/anondo-rosemont-estate"
-              className="mb-5 inline-block text-white"
-            >
+            <Link href="/" className="mb-5 inline-block text-white">
               <span className="block text-xs font-semibold uppercase tracking-[0.28em] text-white/58">
                 Anondo
               </span>
@@ -52,30 +58,26 @@ export default function Footer() {
             </Link>
 
             <p className="max-w-sm text-base leading-8 text-white/72">
-              Luxury living redefined through visionary townships, premium
-              communities, and future-ready real estate developments.
+              A premium low-density duplex villa estate near Purbachal, shaped
+              for elegance, privacy, landscape, and long-term family legacy.
             </p>
 
             <div className="mt-7 flex items-center gap-3">
               <SocialIcon
                 icon={<FaFacebookF />}
-                href="https://www.facebook.com/AnondoHousing"
-              />
-              <SocialIcon
-                icon={<FaXTwitter />}
-                href="https://twitter.com/AnondoPolice"
+                href="https://www.facebook.com/"
               />
               <SocialIcon
                 icon={<FaLinkedinIn />}
-                href="https://www.linkedin.com/company/anondo-housing-society"
+                href="https://www.linkedin.com/"
               />
               <SocialIcon
                 icon={<FaYoutube />}
-                href="https://www.youtube.com/@AnondoHousingSocietyOfficial"
+                href="https://www.youtube.com/"
               />
               <SocialIcon
                 icon={<FaInstagram />}
-                href="https://www.instagram.com/aphs_bd/"
+                href="https://www.instagram.com/anondorosemontestate/"
               />
             </div>
           </div>
@@ -91,15 +93,23 @@ export default function Footer() {
             </ul>
           </FooterColumn>
 
-          {/* Projects */}
-          <FooterColumn title="Projects">
+          {/* Estate Links */}
+          <FooterColumn title="Estate Links">
             <ul className="space-y-3">
-              {projects.map((item) => (
-                <FooterLink key={item.name} href={item.link}>
+              {estateLinks.map((item) => (
+                <FooterLink key={item.name} href={item.href}>
                   {item.name}
                 </FooterLink>
               ))}
             </ul>
+
+            {/* <Link
+              href="/contact"
+              className="group mt-7 inline-flex items-center gap-4 border border-white/18 bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#4a0a0a] transition duration-300 hover:bg-white/88"
+            >
+              Book Visit
+              <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link> */}
           </FooterColumn>
 
           {/* Contact */}
@@ -142,12 +152,12 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="mt-7 rounded-2xl border border-off_white/15 bg-white/8 p-4 backdrop-blur-md">
+            <div className="mt-7 border border-off_white/15 bg-white/8 p-4 backdrop-blur-md">
               <p className="mb-3 text-sm leading-6 text-white/72">
                 Enter your email and receive the latest news from us.
               </p>
 
-              <div className="flex overflow-hidden rounded-xl border border-white/15 bg-black/15">
+              <div className="flex overflow-hidden border border-white/15 bg-black/15">
                 <input
                   type="email"
                   placeholder="email@example.com"

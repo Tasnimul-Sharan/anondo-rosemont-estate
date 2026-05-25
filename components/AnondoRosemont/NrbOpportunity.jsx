@@ -3,8 +3,8 @@ import { nrbOpportunity } from "@/data/rosemontSite";
 export default function NrbOpportunity() {
   return (
     <section className="bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[1400px] px-5">
-        <div className="grid overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-2xl shadow-[#4a0a0a]/12 lg:grid-cols-[0.86fr_1.14fr]">
+      <div className="mx-auto custom-container">
+        <div className="grid overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-2xl shadow-[#4a0a0a]/15 lg:grid-cols-[0.86fr_1.14fr]">
           <div className="bg-[#4a0a0a] p-7 text-white md:p-10 lg:p-12">
             <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-white/70">
               <span className="h-px w-10 bg-current" />

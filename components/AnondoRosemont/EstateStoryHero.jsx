@@ -38,7 +38,7 @@ export default function EstateStoryHero() {
         <div className="mt-14 grid border border-[#4a0a0a]/15 bg-white shadow-2xl shadow-[#4a0a0a]/10 md:grid-cols-3">
           {[
             ["807", "Bigha Estate"],
-            ["60 ft", "Grand Avenue"],
+            ["80 ft", "Grand Avenue"],
             ["Villa", "Only Township"],
           ].map(([value, label]) => (
             <div

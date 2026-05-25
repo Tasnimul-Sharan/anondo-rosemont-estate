@@ -18,7 +18,7 @@ export default function RosemontPageHero({
         className="object-cover object-[72%_center] md:object-right"
       />
 
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(62,6,7,0.84)_0%,rgba(74,10,10,0.58)_46%,rgba(74,10,10,0.18)_100%)]" />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(62,6,7,0.84)_0%,rgba(74,10,10,0.58)_46%,rgba(74,10,10,0.18)_100%)]" /> */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(36,24,24,0.08)_0%,rgba(62,6,7,0.84)_100%)]" />
 
       <div className="custom-container relative z-10 mx-auto pb-16 md:pb-20">
