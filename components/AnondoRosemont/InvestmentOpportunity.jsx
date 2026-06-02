@@ -1,162 +1,4 @@
-// import Image from "next/image";
-
-// const investmentStats = [
-//   { value: "807", label: "Bigha Master Plan" },
-//   { value: "Villa", label: "Built Property Model" },
-//   { value: "NRB", label: "Secure Ownership" },
-// ];
-
-// const investmentPillars = [
-//   {
-//     title: "The Value of Land Ownership",
-//     text: "Rosemont combines permanent land ownership with a fully constructed villa, creating both lifestyle value and long-term asset strength.",
-//   },
-//   {
-//     title: "Villa Community Advantage",
-//     text: "Low-density estate living, architectural harmony, green surroundings, and premium amenities make villa communities highly desirable.",
-//   },
-//   {
-//     title: "Purbachal Growth Potential",
-//     text: "Located near the expanding Purbachal corridor, Rosemont benefits from future infrastructure, connectivity, and regional appreciation.",
-//   },
-//   {
-//     title: "A Secure Investment",
-//     text: "A gated estate environment, developer-built villas, organized planning, and strong infrastructure reduce uncertainty for investors and NRBs.",
-//   },
-// ];
-
-// const investmentAdvantages = [
-//   "Large-scale master planning over 807 bigha",
-//   "Prime location near Purbachal New Town",
-//   "Low-density villa community design",
-//   "High-quality residential infrastructure",
-//   "Comprehensive lifestyle amenities",
-//   "Secure gated environment",
-//   "Strong developer reputation",
-//   "Ideal for homeowners and NRB investors",
-// ];
-
-// export default function InvestmentOpportunity() {
-//   return (
-//     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-//       <div className="absolute right-0 top-0 hidden h-full w-[32%] bg-[#5a0c0c] lg:block" />
-
-//       <div className="relative z-10 mx-auto max-w-[1400px] px-5">
-//         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-//           <div>
-//             <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#5a0c0c]">
-//               <span className="h-px w-10 bg-current" />
-//               Investment Opportunity
-//             </p>
-
-//             <h2 className="max-w-3xl text-4xl font-semibold leading-[1.02] text-[#5a0c0c] md:text-6xl">
-//               A Secure Investment for the Future
-//             </h2>
-//           </div>
-
-//           <p className="max-w-3xl text-base leading-8 text-[#6b5d57] md:text-lg lg:text-white/75">
-//             Anondo Rosemont Estate represents a rare opportunity to invest in a
-//             carefully planned villa community near Purbachal. It combines land
-//             ownership, developer-built residences, secure infrastructure, and
-//             long-term growth potential.
-//           </p>
-//         </div>
-
-//         <div className="mt-14 grid border border-[#5a0c0c]/15 bg-white shadow-2xl shadow-[#5a0c0c]/12 lg:grid-cols-[0.9fr_1.1fr]">
-//           <div className="relative min-h-[520px] overflow-hidden bg-[#5a0c0c]">
-//             <Image
-//               src="/10 katha villa/MAHI Final.jpeg"
-//               alt="Anondo Rosemont Estate investment"
-//               fill
-//               sizes="(max-width: 1024px) 100vw, 45vw"
-//               className="object-cover"
-//             />
-
-//             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(56,10,10,0.18)_0%,rgba(56,10,10,0.88)_100%)]" />
-
-//             <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-10">
-//               <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.24em] text-white/60">
-//                 Land. Villa. Legacy.
-//               </p>
-
-//               <h3 className="max-w-md text-3xl font-semibold leading-tight md:text-5xl">
-//                 Real estate value shaped by planning, privacy, and permanence.
-//               </h3>
-
-//               <div className="mt-10 grid border border-white/15 bg-white/10 backdrop-blur-md sm:grid-cols-3">
-//                 {investmentStats.map((stat) => (
-//                   <div
-//                     key={stat.label}
-//                     className="border-b border-white/15 p-5 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"
-//                   >
-//                     <p className="text-3xl font-bold">{stat.value}</p>
-//                     <p className="mt-2 text-xs font-extrabold uppercase tracking-[0.18em] text-white/58">
-//                       {stat.label}
-//                     </p>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-
-//           <div className="p-7 md:p-10">
-//             <div className="grid gap-5 md:grid-cols-2">
-//               {investmentPillars.map((item, index) => (
-//                 <article
-//                   key={item.title}
-//                   className="group border border-[#5a0c0c]/15 bg-[#f8f3ec] p-6 transition duration-500 hover:-translate-y-1 hover:bg-[#5a0c0c] hover:text-white"
-//                 >
-//                   <div className="mb-7 flex items-center justify-between gap-5">
-//                     <span className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#5a0c0c]/45 transition group-hover:text-white/50">
-//                       {String(index + 1).padStart(2, "0")}
-//                     </span>
-
-//                     <span className="h-px w-14 origin-left scale-x-[0.35] bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
-//                   </div>
-
-//                   <h4 className="text-xl font-semibold leading-tight">
-//                     {item.title}
-//                   </h4>
-
-//                   <p className="mt-4 leading-8 text-[#6b5d57] transition group-hover:text-white/72">
-//                     {item.text}
-//                   </p>
-//                 </article>
-//               ))}
-//             </div>
-
-//             <div className="mt-8 border-t border-[#5a0c0c]/15 pt-8">
-//               <h3 className="text-2xl font-semibold text-[#5a0c0c]">
-//                 Key Investment Advantages
-//               </h3>
-
-//               <ul className="mt-6 grid gap-3 md:grid-cols-2">
-//                 {investmentAdvantages.map((item) => (
-//                   <li
-//                     key={item}
-//                     className="flex gap-3 leading-7 text-[#6b5d57]"
-//                   >
-//                     <span className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#5a0c0c]" />
-//                     <span>{item}</span>
-//                   </li>
-//                 ))}
-//               </ul>
-
-//               <button className="group mt-8 inline-flex items-center gap-4 bg-[#5a0c0c] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition duration-300 hover:bg-[#241818]">
-//                 Why Invest
-//                 <span className="h-px w-12 origin-left scale-x-[0.35] bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const investmentStats = [
@@ -241,12 +83,31 @@ const whyInvestDetails = [
 export default function InvestmentOpportunity() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
+
   return (
     <>
       <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-        <div className="absolute right-0 top-0 hidden h-full w-[32%] bg-[#5a0c0c] lg:block" />
+        {/* <div className="absolute right-0 top-0 hidden h-full w-[32%] bg-[#5a0c0c] lg:block" /> */}
 
-        <div className="relative z-10 mx-auto max-w-[1400px] px-5">
+        <div className="relative z-10 mx-auto max-w-[1400px] px-6">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
             <div>
               <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#5a0c0c]">
@@ -259,7 +120,7 @@ export default function InvestmentOpportunity() {
               </h2>
             </div>
 
-            <p className="max-w-3xl text-base leading-8 text-[#6b5d57] md:text-lg lg:bg-[linear-gradient(90deg,#6b5d57_0%,#6b5d57_51%,rgba(255,255,255,0.78)_47%,rgba(255,255,255,0.78)_100%)] lg:bg-clip-text lg:text-transparent">
+            <p className="max-w-3xl text-base leading-8 text-[#6b5d57] md:text-lg">
               Anondo Rosemont Estate represents a rare opportunity to invest in
               a carefully planned villa community near Purbachal. It combines
               land ownership, developer-built residences, secure infrastructure,
@@ -348,6 +209,7 @@ export default function InvestmentOpportunity() {
                 </ul>
 
                 <button
+                  type="button"
                   onClick={() => setOpen(true)}
                   className="group mt-8 inline-flex items-center gap-4 bg-[#5a0c0c] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition duration-300 hover:bg-[#241818]"
                 >
@@ -361,8 +223,20 @@ export default function InvestmentOpportunity() {
       </section>
 
       {open && (
-        <div className="fixed inset-0 z-[999] overflow-y-auto bg-[#241818]/70 px-5 py-8 backdrop-blur-sm">
-          <div className="mx-auto max-w-[1200px] overflow-hidden border border-white/15 bg-[#f8f3ec] shadow-2xl shadow-black/30">
+        <div
+          className="fixed inset-0 z-[999] bg-[#241818]/70 px-4 py-6 backdrop-blur-sm md:px-5 md:py-8"
+          onClick={() => setOpen(false)}
+          role="presentation"
+          data-lenis-prevent="true"
+        >
+          <div
+            className="mx-auto max-h-[calc(100vh-3rem)] max-w-[1200px] overflow-y-auto overscroll-contain border border-white/15 bg-[#f8f3ec] shadow-2xl shadow-black/30 md:max-h-[calc(100vh-4rem)]"
+            onClick={(event) => event.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="why-invest-title"
+            data-lenis-prevent="true"
+          >
             <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
               <div className="bg-[#5a0c0c] p-7 text-white md:p-10">
                 <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-white/70">
@@ -370,7 +244,10 @@ export default function InvestmentOpportunity() {
                   Why Invest
                 </p>
 
-                <h3 className="text-3xl font-semibold leading-tight md:text-5xl">
+                <h3
+                  id="why-invest-title"
+                  className="text-3xl font-semibold leading-tight md:text-5xl"
+                >
                   Rosemont is built for lifestyle, legacy, and long-term asset
                   confidence.
                 </h3>
@@ -382,6 +259,7 @@ export default function InvestmentOpportunity() {
                 </p>
 
                 <button
+                  type="button"
                   onClick={() => setOpen(false)}
                   className="group mt-10 inline-flex items-center gap-4 border border-white/25 px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:bg-white hover:text-[#5a0c0c]"
                 >

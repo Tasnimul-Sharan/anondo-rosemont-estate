@@ -14,7 +14,7 @@ const villas = [
       "Total: 2,750 sft",
       "Ground: 1,350 sft",
       "First: 1,400 sft",
-      "25 ft road frontage",
+      // "25 ft road frontage",
       "Landscaped lawn",
       "Elegant family design",
     ],
@@ -121,7 +121,10 @@ export default function FeaturedVillas() {
                       key={spec}
                       className="flex gap-3 text-sm leading-6 text-[#5f4f4a] md:text-base"
                     >
-                      <FiCheckCircle className="mt-1 shrink-0 text-[#4a0a0a]" size={18} />
+                      <FiCheckCircle
+                        className="mt-1 shrink-0 text-[#4a0a0a]"
+                        size={18}
+                      />
                       <span>{spec}</span>
                     </li>
                   ))}

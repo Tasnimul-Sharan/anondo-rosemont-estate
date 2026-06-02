@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { communityFacilities, estateImage } from "@/data/rosemontSite";
+import { communityFacilities } from "@/data/rosemontSite";
 
 const primaryFacilities = communityFacilities.slice(0, 3);
 const religiousFacilities = communityFacilities.slice(3);
@@ -7,39 +7,17 @@ const religiousFacilities = communityFacilities.slice(3);
 export function CommunityFacilitiesSection() {
   return (
     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-      <div className="absolute left-0 top-0 hidden h-full w-[34%] bg-[#4a0a0a] lg:block" />
-
-      <div className="relative z-10 mx-auto max-w-[1400px] px-5">
+      <div className="relative z-10 custom-container mx-auto">
         <div className="grid gap-10 pb-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a] lg:text-white">
+            <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
               <span className="h-px w-10 bg-current" />
               Community Facilities
             </p>
 
-            <div
-              className="relative max-w-3xl"
-              style={{
-                "--redTextClip":
-                  "calc(34vw - max(20px, calc((100vw - 1400px) / 2 + 20px)))",
-              }}
-            >
-              {/* Base text: visible outside the red background */}
-              <h2 className="text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
-                Everyday essentials planned inside a complete estate community.
-              </h2>
-
-              {/* White overlay: visible only on the red background area */}
-              <h2
-                aria-hidden="true"
-                className="absolute left-0 top-0 hidden text-3xl font-semibold leading-tight text-white md:text-5xl lg:block"
-                style={{
-                  clipPath: "inset(0 calc(100% - var(--redTextClip)) 0 0)",
-                }}
-              >
-                Everyday essentials planned inside a complete estate community.
-              </h2>
-            </div>
+            <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+              Everyday essentials planned inside a complete estate community.
+            </h2>
           </div>
 
           <p className="max-w-3xl text-base leading-8 text-[#6b5d57] md:text-lg">
@@ -48,8 +26,6 @@ export function CommunityFacilitiesSection() {
             complete and connected residential environment.
           </p>
         </div>
-
-        <div className="h-px w-full bg-[#4a0a0a]/15 lg:bg-[linear-gradient(90deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.18)_34%,rgba(56,10,10,0.15)_34%,rgba(56,10,10,0.15)_100%)]" />
 
         <div className="mt-12 grid overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-2xl shadow-[#4a0a0a]/10 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="relative min-h-[560px] overflow-hidden bg-[#4a0a0a] lg:min-h-[640px]">

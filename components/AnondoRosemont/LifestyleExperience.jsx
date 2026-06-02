@@ -10,6 +10,7 @@ const lifestyleHighlights = [
   "Grand Sports Complex",
   "Community Farming Zone",
   "Adjacent to Anondo Baari Wellness Center",
+  "Community Gardening Space",
 ];
 
 export default function LifestyleExperience() {

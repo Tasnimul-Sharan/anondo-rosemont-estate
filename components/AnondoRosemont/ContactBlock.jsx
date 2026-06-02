@@ -21,7 +21,7 @@
 //               <br />
 //               Phone: +880 0000 000000
 //               <br />
-//               Email: info@anondorosemont.com
+//               Email: info@anondorosemontestate.com
 //             </p>
 //           </div>
 
@@ -131,7 +131,7 @@
 //                       Email
 //                     </p>
 //                     <p className="mt-2 break-words leading-7 text-white/82">
-//                       info@anondorosemont.com
+//                       info@anondorosemontestate.com
 //                     </p>
 //                   </div>
 //                 </div>
@@ -238,7 +238,7 @@ const contactDetails = [
     "Printers Building, 11–12th Floor, 5 Rajuk Avenue, Motijheel, 1000 Dhaka",
   ],
   ["Phone", "+880 1331-115500"],
-  ["Email", "info@anondorosemont.com"],
+  ["Email", "info@anondorosemontestate.com"],
 ];
 
 const inputClass =

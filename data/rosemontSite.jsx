@@ -118,7 +118,7 @@ export const roadNetwork = [
 ];
 
 export const designFeatures = [
-  "Elevated plots and houses 18 to 24 inches above road level",
+  "Elevated plots and houses 24 to 36 inches above road level",
   "Open front lawn concept with no front boundary walls",
   "Pillar-based plot demarcation system",
   "Rear and partial side privacy boundary walls",
@@ -132,15 +132,15 @@ export const lifestyleAmenities = [
     text: "Indoor sports courts, badminton and table tennis facilities, gymnasium, multi-purpose courts, outdoor training areas, and seating for community tournaments.",
   },
   {
-    title: "12 Bigha Central Park",
+    title: "Central Park",
     text: "Walking and jogging tracks, open lawns, shaded pavilions, landscaped gardens, children's activity zones, and event spaces.",
   },
   {
-    title: "12 Bigha Estate Lake",
+    title: "Natural Lake",
     text: "Scenic walking promenades, sitting areas, viewing decks, waterfront gardens, sunset viewpoints, and refreshing natural atmosphere.",
   },
   {
-    title: "Three Community Playgrounds",
+    title: "Community Playgrounds",
     text: "Dedicated open spaces where children can play freely, participate in outdoor sports, and build healthy neighborhood friendships.",
   },
   {

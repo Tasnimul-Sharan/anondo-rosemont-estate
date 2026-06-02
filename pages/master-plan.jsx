@@ -30,7 +30,7 @@ export default function MasterPlanRoute() {
         copy="A disciplined estate plan shaped around villa zones, generous road networks, landscaped open spaces, community facilities, and long-term infrastructure."
       />
       <MainMasterPlanSection />
-      <MasterPlanPage />
+      {/* <MasterPlanPage /> */}
     </main>
   );
 }

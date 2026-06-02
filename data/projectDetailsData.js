@@ -26,7 +26,7 @@ export const projectDetailsData = {
           title: "Master Planning & Infrastructure",
           list: [
             "807 Bigha master planned estate",
-            "60 ft & 40 ft wide grand roads",
+            "80 ft & 40 ft wide grand roads",
             "25 ft internal residential roads",
             "Plots elevated 18–24 inches",
             "Organized villa clusters for privacy",

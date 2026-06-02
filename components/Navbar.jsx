@@ -26,10 +26,10 @@ const menuItems = [
         name: "Estate Story",
         path: "/the-estate",
       },
-      {
-        name: "Complete Narrative",
-        path: "/estate-details",
-      },
+      // {
+      //   name: "Complete Narrative",
+      //   path: "/estate-details",
+      // },
     ],
   },
   {
@@ -66,10 +66,10 @@ const menuItems = [
         name: "Investment & NRB",
         path: "/investment-nrb",
       },
-      {
-        name: "Developer",
-        path: "/developer",
-      },
+      // {
+      //   name: "Developer",
+      //   path: "/developer",
+      // },
     ],
   },
   {
@@ -80,10 +80,10 @@ const menuItems = [
     name: "Gallery",
     path: "/gallery",
   },
-  {
-    name: "Contact",
-    path: "/contact",
-  },
+  // {
+  //   name: "Contact",
+  //   path: "/contact",
+  // },
 ];
 
 export default function Navbar() {
@@ -235,10 +235,7 @@ export default function Navbar() {
               <FaFacebookF className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
-            <Link
-              href="https://linkedin.com/"
-              target="_blank"
-            >
+            <Link href="https://linkedin.com/" target="_blank">
               <FaLinkedinIn className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
@@ -246,10 +243,7 @@ export default function Navbar() {
               <FaInstagram className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
-            <Link
-              href="https://youtube.com/"
-              target="_blank"
-            >
+            <Link href="https://youtube.com/" target="_blank">
               <FaYoutube className="text-off_white/78 transition hover:text-off_white" />
             </Link>
           </div>
@@ -399,7 +393,7 @@ export default function Navbar() {
             <Link href="/anondo-rosemont-estate/contact">
               <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-off_white/25 bg-off_white px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-primary shadow-xl shadow-black/15 transition duration-500 hover:text-off_white">
                 <span className="absolute inset-0 bg-secondary opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <span className="relative z-10">Book Visit</span>
+                <span className="relative z-10">Contact Us</span>
                 <span className="relative z-10 h-px w-8 origin-left scale-x-50 bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
               </button>
             </Link>
@@ -471,7 +465,7 @@ export default function Navbar() {
             onClick={closeMobileMenu}
           >
             <button className="group inline-flex w-full items-center justify-center gap-4 bg-[#f8f3ec] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#4a0a0a]">
-              Book Site Visit
+              Contact Us
               <span className="h-px w-12 origin-left scale-x-50 bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
             </button>
           </Link>

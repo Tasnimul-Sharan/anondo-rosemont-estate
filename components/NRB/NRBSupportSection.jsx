@@ -29,7 +29,7 @@ const supports = [
 export default function NRBSupportSection() {
   return (
     <section className="relative overflow-hidden bg-off_white py-24 text-soft_black">
-      <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-primary lg:block" />
+      {/* <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-primary lg:block" /> */}
       <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-primary/10 blur-[100px]" />
       <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-secondary/10 blur-[110px]" />
 

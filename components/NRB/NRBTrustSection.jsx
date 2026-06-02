@@ -23,7 +23,7 @@ const features = [
 export default function NRBTrustSection() {
   return (
     <section className="relative overflow-hidden bg-off_white py-24 text-soft_black">
-      <div className="absolute left-0 top-0 hidden h-full w-[28%] bg-primary lg:block" />
+      <div className="absolute left-0 top-0 hidden h-full w-[28%] bg- lg:block" />
 
       <div className="custom-container relative z-10 mx-auto">
         <div className="mx-auto max-w-4xl text-center">
