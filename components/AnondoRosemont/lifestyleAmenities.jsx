@@ -184,12 +184,12 @@ const lifestyleAmenities = [
     image: "/10 katha villa/MAHI Final.jpeg",
   },
   {
-    title: "12 Bigha Estate Lake",
+    title: "Estate Lake",
     text: "Scenic walking promenades, sitting areas, viewing decks, waterfront gardens, sunset viewpoints, and refreshing natural atmosphere.",
     image: "/10 katha villa/MAHI Final.jpeg",
   },
   {
-    title: "Three Community Playgrounds",
+    title: "Community Playgrounds",
     text: "Dedicated open spaces where children can play freely, participate in outdoor sports, and build healthy neighborhood friendships.",
     image: "/10 katha villa/MAHI Final.jpeg",
   },

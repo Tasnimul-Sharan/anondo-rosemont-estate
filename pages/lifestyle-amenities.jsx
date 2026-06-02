@@ -9,8 +9,8 @@ export default function LifestyleAmenitiesRoute() {
     title: "Lifestyle & Amenities | Anondo Rosemont Estate",
     description:
       "Discover Rosemont lifestyle amenities including central park, estate lake, sports complex, clubhouse, playgrounds, and community farming space.",
-    url: "https://anondocityscapers.com/lifestyle-amenities",
-    image: "https://anondocityscapers.com/og/anondo-rosemont-estate-og.jpg",
+    url: "https://anondorosemontestate.com/lifestyle-amenities",
+    image: "https://anondorosemontestate.com/og/anondo-rosemont-estate-og.jpg",
   };
 
   return (

@@ -78,7 +78,7 @@ export default function FeaturedVillas() {
         <div className="grid gap-6 lg:grid-cols-3">
           {villas.map((villa, index) => (
             <article
-              id={villa.slug}
+              id={`${villa.slug}-card`}
               key={villa.name}
               className="group overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#4a0a0a]/18"
             >
@@ -131,7 +131,7 @@ export default function FeaturedVillas() {
                 </ul>
 
                 <Link
-                  href={`/villas-residences#${villa.slug}`}
+                  href={`/villas-residences/${villa.slug}`}
                   className="mt-8 inline-flex items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a]"
                   aria-label={`Explore ${villa.name} ${villa.size}`}
                 >

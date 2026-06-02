@@ -184,7 +184,7 @@ export default function InvestmentOpportunity() {
                       {item.title}
                     </h4>
 
-                    <p className="mt-4 leading-8 text-[#6b5d57] transition group-hover:text-white/72">
+                    <p className="mt-4 leading-8 text-[#6b5d57] transition group-hover:text-white/75">
                       {item.text}
                     </p>
                   </article>

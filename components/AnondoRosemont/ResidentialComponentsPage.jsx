@@ -2,6 +2,33 @@
 
 import { residentialComponents } from "@/data/rosemontSite";
 
+const residentialComponentMeta = {
+  "The Rosemont Villa Living Concept": {
+    slug: "villa-living-concept",
+    eyebrow: "Concept",
+  },
+  "5 Katha Villa Residences": {
+    slug: "5-katha-villa-residences",
+    eyebrow: "5 Katha",
+  },
+  "10 Katha Villa Residences": {
+    slug: "10-katha-villa-residences",
+    eyebrow: "10 Katha",
+  },
+  "20 Katha Signature Estates": {
+    slug: "20-katha-signature-estates",
+    eyebrow: "20 Katha",
+  },
+  "Garage and Private Driveway Facilities": {
+    slug: "garage-private-driveway",
+    eyebrow: "Garage",
+  },
+  "Garden and Landscape Design": {
+    slug: "garden-landscape-design",
+    eyebrow: "Landscape",
+  },
+};
+
 // import { residentialComponents } from "@/data/rosemontSite";
 // import { ListSection } from "./ListSection";
 
@@ -45,22 +72,29 @@ export default function ResidentialComponentsPage() {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
-          {residentialComponents.map((item, index) => (
-            <article
-              key={item.title}
-              className={`group border border-[#4a0a0a]/15 p-7 shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#4a0a0a]/18 ${
-                index === 0
-                  ? "bg-[#4a0a0a] text-white lg:col-span-2"
-                  : "bg-white/80 text-[#241818]"
-              }`}
-            >
+          {residentialComponents.map((item, index) => {
+            const meta = residentialComponentMeta[item.title] || {
+              slug: item.title.toLowerCase().replaceAll(" ", "-"),
+              eyebrow: String(index + 1).padStart(2, "0"),
+            };
+
+            return (
+              <article
+                id={meta.slug}
+                key={item.title}
+                className={`group scroll-mt-28 border border-[#4a0a0a]/15 p-7 shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#4a0a0a]/18 ${
+                  index === 0
+                    ? "bg-[#4a0a0a] text-white lg:col-span-2"
+                    : "bg-white/80 text-[#241818]"
+                }`}
+              >
               <div className="mb-8 flex items-center justify-between gap-6">
                 <p
                   className={`text-xs font-extrabold uppercase tracking-[0.22em] ${
                     index === 0 ? "text-white/55" : "text-[#4a0a0a]/55"
                   }`}
                 >
-                  {item.eyebrow}
+                  {meta.eyebrow}
                 </p>
                 <span className="h-px w-20 origin-left scale-x-[0.35] bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
               </div>
@@ -98,8 +132,9 @@ export default function ResidentialComponentsPage() {
                   </li>
                 ))}
               </ul>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

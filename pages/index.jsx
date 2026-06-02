@@ -3,21 +3,16 @@
 import Head from "next/head";
 
 import HeroLuxury from "@/components/AnondoRosemont/HeroLuxury";
+import HomeRosemontShowcase from "@/components/AnondoRosemont/HomeRosemontShowcase";
+import { CommunityFacilitiesSection } from "@/components/AnondoRosemont/CommunityFacilitiesSection";
+import InvestmentOpportunity from "@/components/AnondoRosemont/InvestmentOpportunity";
+import RosemontBlogsSection from "@/components/AnondoRosemont/RosemontBlogsSection";
+import { ContactBlock } from "@/components/AnondoRosemont/ContactBlock";
 import MasterplanHighlight from "@/components/AnondoRosemont/MasterplanHighlight";
 import LifestyleExperience from "@/components/AnondoRosemont/LifestyleExperience";
 import FeaturedVillas from "@/components/AnondoRosemont/FeaturedVillas";
-import { MainMasterPlanSection } from "@/components/AnondoRosemont/MainMasterPlanSection";
-// import { LifestyleAmenities } from "@/components/AnondoRosemont/LifestyleAmenities";
-import { CommunityFacilitiesSection } from "@/components/AnondoRosemont/CommunityFacilitiesSection";
-import SustainableLiving from "@/components/AnondoRosemont/SustainableLiving";
-import ResidentialComponentsPage from "@/components/AnondoRosemont/ResidentialComponentsPage";
-import NrbOpportunity from "@/components/AnondoRosemont/NrbOpportunity";
-import { SecurityInfrastructure } from "@/components/AnondoRosemont/SecurityInfrastructure";
-import InvestmentOpportunity from "@/components/AnondoRosemont/InvestmentOpportunity";
-import { ContactBlock } from "@/components/AnondoRosemont/ContactBlock";
-import RosemontBlogsSection from "@/components/AnondoRosemont/RosemontBlogsSection";
 
-const siteUrl = "https://anondocityscapers.com";
+const siteUrl = "https://anondorosemontestate.com";
 const pageUrl = `${siteUrl}/anondo-rosemont-estate`;
 
 const meta = {
@@ -111,7 +106,7 @@ const schemaGraph = {
         "@type": "WebSite",
         "@id": `${siteUrl}#website`,
         url: siteUrl,
-        name: "Anondo Cityscapers",
+        name: "Anondo Rosemont Estate",
         publisher: {
           "@id": `${siteUrl}#organization`,
         },
@@ -202,15 +197,11 @@ export default function AnondoRosemontEstatePage() {
 
       <main className="w-full overflow-hidden">
         <HeroLuxury />
+        <HomeRosemontShowcase />
         <MasterplanHighlight />
         <LifestyleExperience />
         <FeaturedVillas />
-        {/* <MainMasterPlanSection /> */}
         <CommunityFacilitiesSection />
-        <SustainableLiving />
-        {/* <ResidentialComponentsPage /> */}
-        <NrbOpportunity />
-        {/* <SecurityInfrastructure /> */}
         <InvestmentOpportunity />
         {/* <RosemontBlogsSection /> */}
         <ContactBlock />

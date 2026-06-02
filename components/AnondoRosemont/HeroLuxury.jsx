@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroLuxury() {
   return (
@@ -45,19 +46,25 @@ export default function HeroLuxury() {
           </div>
 
           <div className="mt-16 flex flex-col justify-start gap-4 sm:flex-row md:mt-24 max-w-2xl">
-            <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden bg-off_white px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-secondary shadow-rosemont transition duration-500 hover:text-off_white">
+            <Link
+              href="/the-estate"
+              className="group relative inline-flex items-center justify-center gap-4 overflow-hidden bg-off_white px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-secondary shadow-rosemont transition duration-500 hover:text-off_white"
+            >
               <span className="absolute inset-0 bg-secondary opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="absolute -left-16 top-0 h-full w-10 skew-x-[-18deg] bg-off_white/35 transition-all duration-700 ease-out group-hover:left-[120%]" />
               <span className="relative z-10">Explore</span>
               <span className="relative z-10 block h-px w-12 origin-left scale-x-50 bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
-            </button>
+            </Link>
 
-            <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-off_white/45 bg-secondary/28 px-8 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-off_white backdrop-blur-sm transition duration-500 hover:border-off_white/30">
+            <Link
+              href="/contact"
+              className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-off_white/45 bg-secondary/28 px-8 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-off_white backdrop-blur-sm transition duration-500 hover:border-off_white/30"
+            >
               <span className="absolute inset-0 bg-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="absolute -left-20 top-0 h-full w-14 skew-x-[-18deg] bg-off_white/10 transition-all duration-700 ease-out group-hover:left-[120%]" />
               <span className="relative z-10">Brochure</span>
               <span className="relative z-10 h-px w-6 origin-left scale-x-75 bg-current transition-transform duration-700 ease-out group-hover:scale-x-125" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
