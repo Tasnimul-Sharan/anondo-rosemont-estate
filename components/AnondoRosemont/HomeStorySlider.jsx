@@ -56,7 +56,7 @@ export default function HomeStorySlider() {
     arrows: true,
     autoplay: true,
     autoplaySpeed: 5200,
-    dots: true,
+    // dots: true,
     fade: true,
     infinite: true,
     pauseOnHover: true,
@@ -65,18 +65,18 @@ export default function HomeStorySlider() {
     slidesToScroll: 1,
     nextArrow: <ArrowButton direction="next" />,
     prevArrow: <ArrowButton direction="prev" />,
-    appendDots: (dots) => (
-      <div className="absolute bottom-7 left-0 right-0 z-20">
-        <ul className="flex items-center justify-center gap-3">{dots}</ul>
-      </div>
-    ),
-    customPaging: () => (
-      <button
-        type="button"
-        aria-label="Go to slide"
-        className="block h-2.5 w-2.5 rounded-full border border-white/60 bg-white/25 transition"
-      />
-    ),
+    // appendDots: (dots) => (
+    //   <div className="absolute bottom-7 left-0 right-0 z-20">
+    //     <ul className="flex items-center justify-center gap-3">{dots}</ul>
+    //   </div>
+    // ),
+    // customPaging: () => (
+    //   <button
+    //     type="button"
+    //     aria-label="Go to slide"
+    //     className="block h-2.5 w-2.5 rounded-full border border-white/60 bg-white/25 transition"
+    //   />
+    // ),
   };
 
   return (
