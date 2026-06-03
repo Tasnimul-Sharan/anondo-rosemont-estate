@@ -57,7 +57,7 @@ export default function HeroLuxury() {
             </Link>
 
             <Link
-              href="/contact"
+              href="/ROSEMONT BROCHURE.pdf"
               className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-off_white/45 bg-secondary/28 px-8 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-off_white backdrop-blur-sm transition duration-500 hover:border-off_white/30"
             >
               <span className="absolute inset-0 bg-primary opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

@@ -20,6 +20,10 @@ const villaPages = [
     size: "10 Katha Duplex",
     detailTitle: "10 Katha Villa Residences",
     image: "/10 katha villa/10-katha.jpg",
+    detailImages: [
+      "/10 katha villa/10-katha-detail-1.png",
+      "/10 katha villa/10-katha-detail-2.png",
+    ],
     intro:
       "A larger villa format with expanded landscape opportunity, avenue frontage, and optional private leisure planning.",
   },
@@ -191,6 +195,43 @@ export default function VillaDetailsPage({
         </div>
       </section>
 
+      {villa.detailImages?.length > 0 && (
+        <section className="bg-[#f8f3ec] pb-16 md:pb-24 lg:pb-32">
+          <div className="custom-container mx-auto">
+            <div className="mb-10 border-b border-[#4a0a0a]/15 pb-8">
+              <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+                <span className="h-px w-10 bg-current" />
+                Villa Plans
+              </p>
+              <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+                10 Katha luxury villa layout and setback details.
+              </h2>
+            </div>
+
+            <div className="grid gap-8">
+              {villa.detailImages.map((image, index) => (
+                <div
+                  key={image}
+                  className="overflow-hidden border border-[#4a0a0a]/15 bg-white p-3 shadow-2xl shadow-[#4a0a0a]/10 md:p-5"
+                >
+                  <div className="relative aspect-[3/2] w-full overflow-hidden bg-[#4a0a0a]/5">
+                    <Image
+                      src={image}
+                      alt={`${villa.name} ${villa.size} plan detail ${
+                        index + 1
+                      }`}
+                      fill
+                      sizes="100vw"
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="bg-[#4a0a0a] py-16 text-white md:py-24">
         <div className="custom-container mx-auto">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
@@ -217,15 +258,28 @@ export default function VillaDetailsPage({
               <Link
                 key={item.slug}
                 href={`/villas-residences/${item.slug}`}
-                className="group border border-white/15 bg-white/8 p-7 transition duration-500 hover:bg-white hover:text-[#4a0a0a]"
+                className="group overflow-hidden border border-white/15 bg-white/8 transition duration-500 hover:-translate-y-1 hover:bg-white hover:text-[#4a0a0a]"
               >
-                <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-white/55 transition group-hover:text-[#4a0a0a]/55">
-                  {item.size}
-                </p>
-                <h3 className="mt-3 text-2xl font-semibold">{item.name}</h3>
-                <p className="mt-4 leading-7 text-white/65 transition group-hover:text-[#6b5d57]">
-                  {item.intro}
-                </p>
+                <div className="relative h-[260px] overflow-hidden bg-[#241818]">
+                  <Image
+                    src={item.image}
+                    alt={`${item.name} ${item.size}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(74,10,10,0.02)_0%,rgba(74,10,10,0.55)_100%)]" />
+                </div>
+
+                <div className="p-7">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-white/55 transition group-hover:text-[#4a0a0a]/55">
+                    {item.size}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold">{item.name}</h3>
+                  <p className="mt-4 leading-7 text-white/65 transition group-hover:text-[#6b5d57]">
+                    {item.intro}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>

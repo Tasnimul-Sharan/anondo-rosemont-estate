@@ -1,3 +1,5 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "../styles/index.css";
 import { useLenis } from "../Hooks/useLenis";
 import Layout from "@/components/Layout";

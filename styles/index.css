@@ -81,6 +81,39 @@ h3 {
   color: #f99b24;
 }
 
+.rosemont-story-slider .slick-dots {
+  position: static;
+  transform: none;
+  display: flex !important;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.rosemont-story-slider .slick-dots li {
+  height: auto;
+  width: auto;
+  margin: 0;
+}
+
+.rosemont-story-slider .slick-dots li button {
+  height: 10px;
+  width: 10px;
+  padding: 0;
+}
+
+.rosemont-story-slider .slick-dots li button::before {
+  display: none;
+}
+
+.rosemont-story-slider .slick-dots li.slick-active button {
+  width: 34px;
+  border-color: #f8f3ec;
+  border-radius: 999px;
+  background: #f8f3ec;
+}
+
 .menu-item {
   position: relative;
 }

@@ -3,6 +3,7 @@
 import Head from "next/head";
 
 import HeroLuxury from "@/components/AnondoRosemont/HeroLuxury";
+import HomeStorySlider from "@/components/AnondoRosemont/HomeStorySlider";
 import HomeRosemontShowcase from "@/components/AnondoRosemont/HomeRosemontShowcase";
 import { CommunityFacilitiesSection } from "@/components/AnondoRosemont/CommunityFacilitiesSection";
 import InvestmentOpportunity from "@/components/AnondoRosemont/InvestmentOpportunity";
@@ -198,6 +199,7 @@ export default function AnondoRosemontEstatePage() {
       <main className="w-full overflow-hidden">
         <HeroLuxury />
         <HomeRosemontShowcase />
+        <HomeStorySlider />
         <MasterplanHighlight />
         <LifestyleExperience />
         <FeaturedVillas />

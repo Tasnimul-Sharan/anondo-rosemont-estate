@@ -66,13 +66,13 @@ export default function FeaturedVillas() {
             </h2>
           </div>
 
-          <Link
+          {/* <Link
             href="/villas-residences"
             className="group inline-flex w-fit items-center gap-4 border border-[#4a0a0a]/20 bg-white/60 px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a] shadow-sm transition duration-300 hover:bg-[#4a0a0a] hover:text-white"
           >
             View All
             <span className="h-px w-10 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-[transform,background-color] duration-700 ease-out group-hover:scale-x-100 group-hover:bg-white" />
-          </Link>
+          </Link> */}
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">

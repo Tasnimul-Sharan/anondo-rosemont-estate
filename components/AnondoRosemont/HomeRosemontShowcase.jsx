@@ -220,9 +220,7 @@ function ArchitecturalStatement() {
                 key={label}
                 className="border-b border-[#4a0a0a]/12 p-5 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"
               >
-                <p className="text-3xl font-semibold text-[#4a0a0a]">
-                  {value}
-                </p>
+                <p className="text-3xl font-semibold text-[#4a0a0a]">{value}</p>
                 <p className="mt-2 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#6b5d57]">
                   {label}
                 </p>

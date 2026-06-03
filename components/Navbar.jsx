@@ -59,19 +59,23 @@ const menuItems = [
     ],
   },
   {
-    name: "Investment",
-    path: "#",
-    submenu: [
-      {
-        name: "Investment & NRB",
-        path: "/investment-nrb",
-      },
-      // {
-      //   name: "Developer",
-      //   path: "/developer",
-      // },
-    ],
+    name: "NRB Investment",
+    path: "/investment-nrb",
   },
+  // {
+  //   name: "Investment",
+  //   path: "#",
+  //   submenu: [
+  //     {
+  //       name: "Investment & NRB",
+  //       path: "/investment-nrb",
+  //     },
+  //     {
+  //       name: "Developer",
+  //       path: "/developer",
+  //     },
+  //   ],
+  // },
   {
     name: "Blogs",
     path: "/blogs",
@@ -250,7 +254,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Main Navbar */}
       <div
         className={`border-b transition-all duration-500 ${
           isScrolled
