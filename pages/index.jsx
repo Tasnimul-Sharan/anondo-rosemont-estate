@@ -197,9 +197,9 @@ export default function AnondoRosemontEstatePage() {
       </Head>
 
       <main className="w-full overflow-hidden">
-        <HeroLuxury />
-        <HomeRosemontShowcase />
+        {/* <HeroLuxury /> */}
         <HomeStorySlider />
+        <HomeRosemontShowcase />
         <MasterplanHighlight />
         <LifestyleExperience />
         <FeaturedVillas />

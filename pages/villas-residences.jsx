@@ -31,7 +31,7 @@ export default function VillasResidencesRoute() {
         copy="Choose from 5 katha, 10 katha, and 20 katha villa formats, each planned for land ownership, architectural harmony, gardens, and estate living."
       />
       <FeaturedVillas />
-      <ResidentialComponentsPage />
+      {/* <ResidentialComponentsPage /> */}
       <ContactBlock />
     </main>
   );

@@ -393,8 +393,8 @@ export default function Navbar() {
           </ul> */}
 
           <div className="hidden xl:block">
-            <Link href="/anondo-rosemont-estate/contact">
-              <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-off_white/25 bg-off_white px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-primary shadow-xl shadow-black/15 transition duration-500 hover:text-off_white">
+            <Link href="/contact">
+              <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-off_white/20 bg-off_white px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-primary shadow-xl shadow-black/15 transition duration-500 hover:text-off_white">
                 <span className="absolute inset-0 bg-secondary opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <span className="relative z-10">Contact Us</span>
                 <span className="relative z-10 h-px w-8 origin-left scale-x-50 bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
@@ -464,7 +464,7 @@ export default function Navbar() {
         {/* Mobile CTA */}
         <div className="mt-10">
           <Link
-            href="/anondo-rosemont-estate/contact"
+            href="/contact"
             onClick={closeMobileMenu}
           >
             <button className="group inline-flex w-full items-center justify-center gap-4 bg-[#f8f3ec] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#4a0a0a]">

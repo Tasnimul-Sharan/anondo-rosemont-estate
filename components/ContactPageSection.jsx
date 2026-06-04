@@ -70,7 +70,7 @@ export default function ContactPageSection() {
 
   return (
     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-      <div className="absolute right-0 top-0 hidden h-full w-[30%] bg-[#670f0e] lg:block" />
+      {/* <div className="absolute right-0 top-0 hidden h-full w-[30%] bg-[#670f0e] lg:block" /> */}
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-5">
         <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">

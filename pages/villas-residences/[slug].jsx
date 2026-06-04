@@ -180,17 +180,39 @@ export default function VillaDetailsPage({
           </div>
 
           <div className="grid gap-6">
-            {[concept, garage, landscape].map((item) => (
-              <article
-                key={item.title}
-                className="border border-[#4a0a0a]/15 bg-white/80 p-7 transition duration-500 hover:-translate-y-1 hover:bg-white md:p-8"
-              >
-                <h3 className="text-2xl font-semibold leading-tight text-[#4a0a0a]">
-                  {item.title}
-                </h3>
-                <p className="mt-4 leading-8 text-[#6b5d57]">{item.text}</p>
-              </article>
-            ))}
+            {[concept, garage, landscape].map((item) => {
+              const shouldShowItems =
+                item.title === "Garage and Private Driveway Facilities" ||
+                item.title === "Garden and Landscape Design";
+
+              return (
+                <article
+                  key={item.title}
+                  className="border border-[#4a0a0a]/15 bg-white/80 p-7 transition duration-500 hover:-translate-y-1 hover:bg-white md:p-8"
+                >
+                  <h3 className="text-2xl font-semibold leading-tight text-[#4a0a0a]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 leading-8 text-[#6b5d57]">{item.text}</p>
+
+                  {shouldShowItems && (
+                    <ul className="mt-6 grid gap-3">
+                      {item.items.map((point) => (
+                        <li
+                          key={point}
+                          className="flex gap-3 text-sm leading-7 text-[#6b5d57] md:text-base"
+                        >
+                          <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#4a0a0a]/8 text-[#4a0a0a]">
+                            <FiCheckCircle size={15} />
+                          </span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

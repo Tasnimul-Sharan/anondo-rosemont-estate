@@ -16,18 +16,18 @@ export default function ChairmanForeword() {
 
           <div className="relative min-h-[560px] overflow-hidden bg-[#4a0a0a] shadow-2xl shadow-[#4a0a0a]/20">
             <Image
-              src="/gazi-md-mozammel-haque.jpeg"
+              src="/gazi-md-mozammel-haque-1.jpeg"
               alt="Chairman of Anondo Rosemont Estate"
               fill
               sizes="(max-width: 1024px) 100vw, 44vw"
               className="object-cover"
             />
 
-            <div className="absolute inset-x-0 bottom-0 bg-[#4a0a0a]/88 p-7 text-white backdrop-blur-md">
+            <div className="absolute inset-x-0 -bottom-3 bg-[#4a0a0a]/82 px-6 pb-5 pt-4 text-white backdrop-blur-md">
               <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-white/55">
                 Chairman
               </p>
-              <p className="mt-3 text-2xl font-semibold">
+              <p className="mt-2 text-2xl font-semibold">
                 Gazi Md. Mozammel Hoque
               </p>
               <p className="mt-1 text-white/65">Anondo Rosemont Estate</p>

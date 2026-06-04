@@ -8,19 +8,20 @@ import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 const slides = [
   {
     eyebrow: "Anondo Rosemont Estate",
-    title: "A new address for graceful estate living.",
+    title: "Where Elegance Becomes Heritage",
     subtitle: "Land, villas, landscape, and legacy in one planned community",
     text: "Rosemont brings spacious duplex homes, open lawns, calm avenues, and natural surroundings together for families who want permanence beyond ordinary city living.",
     image: "/rosemont-hero.png",
-    href: "/the-estate",
-    cta: "Estate Story",
+    href: "/ROSEMONT BROCHURE.pdf",
+    cta: "Download Brochure",
+    newTab: true,
   },
   {
     eyebrow: "A New Chapter of Estate Living",
     title: "True luxury is space to live, breathe, and belong.",
     subtitle: "807 bigha of planned openness",
     text: "In a world where cities rise higher and homes grow smaller, Rosemont offers land, gardens, water, avenues, and a calmer residential rhythm.",
-    image: "/10 katha villa/MAHI Final.jpeg",
+    image: "/5 katha villa/ChatGPT Image May 2, 2026, 12_28_36 PM (1).jpg",
     href: "/master-plan",
     cta: "View Master Plan",
   },
@@ -29,7 +30,7 @@ const slides = [
     title: "Elegant duplex villas built for generations.",
     subtitle: "5, 10, and 20 katha villa categories",
     text: "Developer-built villas maintain architectural harmony across the estate, with landscaped lawns, privacy planning, and refined family living.",
-    image: "/other/lifestyle-experience.png",
+    image: "/20 katha villa/ChatGPT Image May 2, 2026, 12_39_41 PM (5).jpg",
     href: "/villas-residences",
     cta: "Explore Villas",
   },
@@ -118,6 +119,8 @@ export default function HomeStorySlider() {
 
                   <Link
                     href={slide.href}
+                    target={slide.newTab ? "_blank" : undefined}
+                    rel={slide.newTab ? "noopener noreferrer" : undefined}
                     className="group mt-10 inline-flex items-center gap-4 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-[#4a0a0a] transition duration-300 hover:bg-[#f8f3ec]"
                   >
                     {slide.cta}
