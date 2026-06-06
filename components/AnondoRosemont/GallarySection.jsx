@@ -42,34 +42,43 @@ export default function GallarySection({ images = [] }) {
         </div>
 
         {images.length > 0 ? (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {images.map((image, index) => (
               <button
                 key={image.src}
                 type="button"
                 onClick={() => setCurrentIndex(index)}
-                className="group relative aspect-[4/3] overflow-hidden border border-[#4a0a0a]/15 bg-white text-left shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#4a0a0a]/15"
+                className="group overflow-hidden border border-[#4a0a0a]/15 bg-white text-left shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#4a0a0a]/15"
                 aria-label={`Open ${image.title}`}
               >
-                <Image
-                  src={image.src}
-                  alt={image.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                />
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#efe4d8]">
+                  <Image
+                    src={image.src}
+                    alt={image.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                  />
 
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(74,10,10,0.02)_0%,rgba(74,10,10,0.78)_100%)] opacity-70 transition duration-500 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-[#4a0a0a]/0 transition duration-500 group-hover:bg-[#4a0a0a]/10" />
 
-                <div className="absolute left-5 top-5 border border-white/25 bg-white/15 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md">
-                  {String(index + 1).padStart(2, "0")}
+                  <div className="absolute left-4 top-4 border border-white/30 bg-[#4a0a0a]/75 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between gap-4 p-5 text-white">
-                  <span className="text-sm font-semibold uppercase tracking-[0.16em]">
-                    {image.title}
-                  </span>
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-white/25 bg-white/15 text-lg backdrop-blur-md transition duration-500 group-hover:bg-white group-hover:text-[#4a0a0a]">
+                <div className="flex items-center justify-between gap-4 border-t border-[#4a0a0a]/10 p-5">
+                  <div>
+                    <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[0.22em] text-[#4a0a0a]/45">
+                      Rosemont Gallery
+                    </p>
+                    <h3 className="text-lg font-semibold leading-tight text-[#4a0a0a]">
+                      {image.title}
+                    </h3>
+                  </div>
+
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-[#4a0a0a]/15 bg-[#f8f3ec] text-lg text-[#4a0a0a] transition duration-500 group-hover:bg-[#4a0a0a] group-hover:text-white">
                     <FiEye />
                   </span>
                 </div>

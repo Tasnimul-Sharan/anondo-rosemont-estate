@@ -1,16 +1,16 @@
 import Head from "next/head";
 import RosemontPageHero from "@/components/AnondoRosemont/RosemontPageHero";
 import FeaturedVillas from "@/components/AnondoRosemont/FeaturedVillas";
-import ResidentialComponentsPage from "@/components/AnondoRosemont/ResidentialComponentsPage";
-import { ContactBlock } from "@/components/AnondoRosemont/ContactBlock";
+import VillaPremiumCTA from "@/components/AnondoRosemont/VillaPremiumCTA";
 
 export default function VillasResidencesRoute() {
   const meta = {
     title: "Villas & Residences | Anondo Rosemont Estate",
     description:
       "Explore 5 katha, 10 katha, and 20 katha duplex villa residences at Anondo Rosemont Estate.",
-    url: "https://anondocityscapers.com/villas-residences",
-    image: "https://anondocityscapers.com/og/anondo-rosemont-estate-og.jpg",
+    url: "https://www.anondorosemontestate.com/villas-residences",
+    image:
+      "https://www.anondorosemontestate.com/og/anondo-rosemont-estate-og.jpg",
   };
 
   return (
@@ -31,8 +31,7 @@ export default function VillasResidencesRoute() {
         copy="Choose from 5 katha, 10 katha, and 20 katha villa formats, each planned for land ownership, architectural harmony, gardens, and estate living."
       />
       <FeaturedVillas />
-      {/* <ResidentialComponentsPage /> */}
-      <ContactBlock />
+      <VillaPremiumCTA />
     </main>
   );
 }

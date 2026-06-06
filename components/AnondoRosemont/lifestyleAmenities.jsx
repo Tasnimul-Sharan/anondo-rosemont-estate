@@ -181,27 +181,27 @@ const lifestyleAmenities = [
   {
     title: "Grand Sports Complex",
     text: "Indoor sports courts, badminton and table tennis facilities, gymnasium, multi-purpose courts, outdoor training areas, and seating for community tournaments.",
-    image: "/10 katha villa/MAHI Final.jpeg",
+    image: "/lifestyle/sports-complex.jpg",
   },
   {
     title: "Estate Lake",
     text: "Scenic walking promenades, sitting areas, viewing decks, waterfront gardens, sunset viewpoints, and refreshing natural atmosphere.",
-    image: "/10 katha villa/MAHI Final.jpeg",
+    image: "/lifestyle/canel-lake.jpg",
   },
   {
     title: "Community Playgrounds",
     text: "Dedicated open spaces where children can play freely, participate in outdoor sports, and build healthy neighborhood friendships.",
-    image: "/10 katha villa/MAHI Final.jpeg",
+    image: "/lifestyle/sports-playground.jpg",
   },
   {
     title: "Clubhouse and Social Center",
     text: "A planned community hub with banquet hall, lounges, cafe space, fitness and wellness facilities, meeting rooms, and event areas.",
-    image: "/10 katha villa/MAHI Final.jpeg",
+    image: "/lifestyle/club-house.png",
   },
   {
     title: "Community Farming Space",
     text: "A dedicated zone for vegetables, fruits, flowers, and herbal plants that reconnects residents with the agricultural heritage of Bangladesh.",
-    image: "/10 katha villa/MAHI Final.jpeg",
+    image: "/lifestyle/community-farming-space.jpg",
   },
 ];
 
@@ -230,7 +230,7 @@ export function LifestyleAmenities() {
               key={`${item.title}-${index}`}
               className="group overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#4a0a0a]/20"
             >
-              <div className="relative h-[280px] overflow-hidden bg-[#4a0a0a]">
+              <div className="relative h-[280px] overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.title}

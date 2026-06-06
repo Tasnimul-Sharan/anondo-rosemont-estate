@@ -4,12 +4,35 @@ import Head from "next/head";
 import HeroSection from "@/components/HeroSection";
 import GallarySection from "@/components/AnondoRosemont/GallarySection";
 
-const galleryDir = path.join(process.cwd(), "public", "gallary");
+const galleryDir = path.join(process.cwd(), "public", "gallery");
 const imageFilePattern = /\.(jpe?g|png|webp|avif)$/i;
 
-function getImageTitle(index) {
-  return `Rosemont Gallery ${String(index + 1).padStart(2, "0")}`;
-}
+const titledGalleryImages = [
+  { file: "grand-entry-gate.jpg", title: "Grand Entry Gate" },
+  { file: "masterplan.jpg", title: "Estate Master Plan" },
+  { file: "80-feet-wide-road.jpg", title: "80 Feet Wide Road" },
+  { file: "canel-lake.jpg", title: "Canal Lake Lifestyle View" },
+  { file: "sports-complex.jpg", title: "Sports Complex" },
+  { file: "sports-complex-details.jpg", title: "Sports Complex Details" },
+  { file: "sports-playground.jpg", title: "Sports Playground" },
+  { file: "community-farming-space.jpg", title: "Community Farming Space" },
+  { file: "community-spaces.jpg", title: "Community Spaces" },
+  { file: "club-house.png", title: "Clubhouse and Social Center" },
+  { file: "anondo-rosemont-get-together.jpg", title: "Get Together Plaza" },
+  { file: "fresco-plaza.jpg", title: "Fresco Plaza" },
+  { file: "rosemont-fresco-plaza.jpg", title: "Rosemont Fresco Plaza" },
+  { file: "rosemont-fresco-plaza-1.jpg", title: "Fresco Plaza Day View" },
+  { file: "rosemont-fresco-plaza-2.jpg", title: "Fresco Plaza Evening View" },
+  {
+    file: "rosemont-fresco-plaza-interior.jpg",
+    title: "Fresco Plaza Interior",
+  },
+  {
+    file: "rosemont-fresco-plaza-interior-1.jpg",
+    title: "Fresco Plaza Lounge",
+  },
+  { file: "rosemont-plaza.jpg", title: "Rosemont Plaza" },
+];
 
 export async function getStaticProps() {
   let files = [];
@@ -30,10 +53,13 @@ export async function getStaticProps() {
     files = [];
   }
 
-  const images = files.map((file, index) => ({
-    src: `/gallary/${encodeURIComponent(file)}`,
-    title: getImageTitle(index),
-  }));
+  const availableFiles = new Set(files);
+  const images = titledGalleryImages
+    .filter((image) => availableFiles.has(image.file))
+    .map((image) => ({
+      src: `/gallery/${encodeURIComponent(image.file)}`,
+      title: image.title,
+    }));
 
   return {
     props: {
@@ -50,8 +76,9 @@ export default function RosemontGalleryPage({ images }) {
     keywords:
       "Anondo Rosemont Estate gallery, Rosemont Estate photos, villa gallery Bangladesh, Purbachal estate gallery",
     author: "Anondo Rosemont Estate",
-    url: "https://anondocityscapers.com/anondo-rosemont-estate/gallery",
-    image: "https://anondocityscapers.com/og/anondo-rosemont-estate-og.jpg",
+    url: "https://www.anondorosemontestate.com/gallery",
+    image:
+      "https://www.anondorosemontestate.com/og/anondo-rosemont-estate-og.jpg",
   };
 
   return (
@@ -77,7 +104,8 @@ export default function RosemontGalleryPage({ images }) {
       <HeroSection
         hero={{
           title: "Rosemont Gallery",
-          backgroundImage: images?.[0]?.src || "/10 katha villa/MAHI Final.jpeg",
+          backgroundImage:
+            images?.[0]?.src || "/10 katha villa/MAHI Final.jpeg",
         }}
       />
       <GallarySection images={images} />

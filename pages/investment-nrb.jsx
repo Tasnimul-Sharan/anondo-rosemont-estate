@@ -20,8 +20,8 @@ export default function NRBPage() {
     keywords:
       "NRB investment Bangladesh, Anondo Rosemont Estate NRB, NRB property investment Bangladesh, buy land in Bangladesh from abroad, villa investment Bangladesh, duplex villa near Purbachal, secure land ownership Bangladesh, Bangladeshi expatriate property investment, NRB real estate Bangladesh, Anondo Cityscapers",
     author: "Anondo Cityscapers",
-    url: "https://anondocityscapers.com/nrb",
-    image: "https://anondocityscapers.com/og/anondo-rosemont-nrb-og.jpg",
+    url: "https://www.anondorosemontestate.com/nrb",
+    image: "https://www.anondorosemontestate.com/og/anondo-rosemont-nrb-og.jpg",
   };
 
   return (

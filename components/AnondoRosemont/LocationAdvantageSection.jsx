@@ -45,17 +45,17 @@ const locationHighlights = [
 export default function LocationAdvantageSection() {
   return (
     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-      <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-[#4a0a0a] lg:block" />
+      {/* <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-[#4a0a0a] lg:block" /> */}
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-5">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a] lg:text-white">
+            <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
               <span className="h-px w-10 bg-current" />
               Strategic Location
             </p>
 
-            <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl lg:text-white">
+            <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
               Peaceful estate living beside a future growth corridor.
             </h2>
           </div>

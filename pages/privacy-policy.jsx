@@ -4,14 +4,15 @@ import Head from "next/head";
 import PrivacyPolicyPageSection from "@/components/PrivacyPolicyPageSection";
 export default function ProjectLotteryPolicy() {
   const meta = {
-    title: "Privacy Policy | Anondo Cityscapers – Your Trusted Housing Project in Bangladesh",
+    title:
+      "Privacy Policy | Anondo Cityscapers – Your Trusted Housing Project in Bangladesh",
     description:
       "Learn about the privacy policy of Anondo Cityscapers. Understand how we collect, use, and protect your personal information.",
     keywords:
       "Anondo Cityscapers privacy policy, housing project privacy Bangladesh, personal data protection, residential project policy, housing society data handling",
     author: "Anondo Cityscapers",
-    url: "https://anondocityscapers.com/privacy-policy",
-    image: "https://anondocityscapers.com/privacy/privacy-og.jpg",
+    url: "https://www.anondorosemontestate.com/privacy-policy",
+    image: "https://www.anondorosemontestate.com/privacy/privacy-og.jpg",
   };
 
   return (

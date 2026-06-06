@@ -330,7 +330,6 @@
 import Image from "next/image";
 import {
   designFeatures,
-  estateImage,
   masterPlanMetrics,
 } from "@/data/rosemontSite";
 
@@ -385,7 +384,7 @@ const roadHighlights = [
 export function MainMasterPlanSection() {
   return (
     <section className="bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-      <div className="mx-auto max-w-[1400px] px-5">
+      <div className="mx-auto custom-container">
         <div className="grid gap-10 border-b border-[#4a0a0a]/15 pb-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
           <div>
             <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
@@ -445,11 +444,11 @@ export function MainMasterPlanSection() {
           <div className="grid lg:grid-rows-[1.05fr_auto]">
             <div className="relative min-h-[390px] overflow-hidden bg-[#4a0a0a]">
               <Image
-                src={estateImage}
-                alt="Anondo Rosemont Estate master plan villa environment"
+                src="/lifestyle/rosemont-master-plan.jpg"
+                alt="Anondo Rosemont Estate master plan overview"
                 fill
                 sizes="(max-width: 1024px) 100vw, 62vw"
-                className="object-cover transition duration-700 hover:scale-105"
+                className="object-cover object-center transition duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(56,10,10,0.02)_0%,rgba(56,10,10,0.68)_100%)]" />
               <div className="absolute bottom-0 left-0 right-0 p-7 text-white md:p-10">

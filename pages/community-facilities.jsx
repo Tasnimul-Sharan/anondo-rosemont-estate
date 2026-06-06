@@ -2,14 +2,16 @@ import Head from "next/head";
 import RosemontPageHero from "@/components/AnondoRosemont/RosemontPageHero";
 import { CommunityFacilitiesSection } from "@/components/AnondoRosemont/CommunityFacilitiesSection";
 import { ContactBlock } from "@/components/AnondoRosemont/ContactBlock";
+import VillaPremiumCTA from "@/components/AnondoRosemont/VillaPremiumCTA";
 
 export default function CommunityFacilitiesRoute() {
   const meta = {
     title: "Community Facilities | Anondo Rosemont Estate",
     description:
       "Explore Rosemont community facilities planned for education, healthcare, commercial convenience, and inclusive worship spaces.",
-    url: "https://anondocityscapers.com/community-facilities",
-    image: "https://anondocityscapers.com/og/anondo-rosemont-estate-og.jpg",
+    url: "https://www.anondorosemontestate.com/community-facilities",
+    image:
+      "https://www.anondorosemontestate.com/og/anondo-rosemont-estate-og.jpg",
   };
 
   return (
@@ -31,7 +33,7 @@ export default function CommunityFacilitiesRoute() {
         image="/other/community-facilities.png"
       />
       <CommunityFacilitiesSection />
-      <ContactBlock />
+      <VillaPremiumCTA />
     </main>
   );
 }

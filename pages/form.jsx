@@ -10,8 +10,8 @@ export default function FormPage() {
     keywords:
       "Anondo Cityscapers application form, housing application Bangladesh, apartment booking form Bangladesh, plot ownership application, residential housing application, real estate application Bangladesh",
     author: "Anondo Cityscapers",
-    url: "https://anondocityscapers.com/form",
-    image: "https://anondocityscapers.com/og/application-og.jpg",
+    url: "https://www.anondorosemontestate.com/form",
+    image: "https://www.anondorosemontestate.com/og/application-og.jpg",
   };
 
   return (

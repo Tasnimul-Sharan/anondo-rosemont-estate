@@ -4,15 +4,14 @@ import Head from "next/head";
 import CareerPageSection from "@/components/CareerPageSection";
 export default function CareerOpportunitiesPage() {
   const meta = {
-    title:
-      "Career Opportunities | Anondo Cityscapers – Join Our Housing Team",
+    title: "Career Opportunities | Anondo Cityscapers – Join Our Housing Team",
     description:
       "Explore career opportunities at Anondo Cityscapers. Join our team in residential project development, engineering, sales, marketing, administration, and site operations. Build your career with a trusted housing organization in Bangladesh.",
     keywords:
       "Anondo Cityscapers careers, housing jobs Bangladesh, real estate jobs Bangladesh, construction jobs Bangladesh, engineering jobs housing, sales marketing jobs real estate, site supervisor jobs Bangladesh",
     author: "Anondo Cityscapers",
-    url: "https://anondocityscapers.com/career",
-    image: "https://anondocityscapers.com/career/career-og.jpg",
+    url: "https://www.anondorosemontestate.com/career",
+    image: "https://www.anondorosemontestate.com/career/career-og.jpg",
   };
 
   return (

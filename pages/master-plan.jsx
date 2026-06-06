@@ -8,8 +8,9 @@ export default function MasterPlanRoute() {
     title: "Master Plan | Anondo Rosemont Estate",
     description:
       "Explore the 807 bigha Anondo Rosemont Estate master plan with villa zones, wide avenues, elevated plots, green spaces, lake, park, and estate infrastructure.",
-    url: "https://anondocityscapers.com/master-plan",
-    image: "https://anondocityscapers.com/og/anondo-rosemont-estate-og.jpg",
+    url: "https://www.anondorosemontestate.com/master-plan",
+    image:
+      "https://www.anondorosemontestate.com/og/anondo-rosemont-estate-og.jpg",
   };
 
   return (

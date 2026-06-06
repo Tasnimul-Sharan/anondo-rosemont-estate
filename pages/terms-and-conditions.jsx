@@ -11,8 +11,8 @@ export default function TermsAndConditionPage() {
     keywords:
       "Anondo Cityscapers terms and conditions, housing project rules, apartment booking policies, plot ownership terms, residential project guidelines, housing society regulations Bangladesh",
     author: "Anondo Cityscapers",
-    url: "https://anondocityscapers.com/terms-and-conditions",
-    image: "https://anondocityscapers.com/terms/terms-og.jpg",
+    url: "https://www.anondorosemontestate.com/terms-and-conditions",
+    image: "https://www.anondorosemontestate.com/terms/terms-og.jpg",
   };
 
   return (

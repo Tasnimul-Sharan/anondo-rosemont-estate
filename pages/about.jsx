@@ -18,8 +18,8 @@ export default function AboutPage() {
     keywords:
       "About Anondo Cityscapers, housing society Bangladesh, residential community Bangladesh, real estate development Bangladesh, housing project company Bangladesh, trusted housing developer, gated community Bangladesh, modern housing society",
     author: "Anondo Cityscapers",
-    url: "https://anondocityscapers.com/about",
-    image: "https://anondocityscapers.com/about/about-og.jpg",
+    url: "https://www.anondorosemontestate.com/about",
+    image: "https://www.anondorosemontestate.com/about/about-og.jpg",
   };
 
   return (

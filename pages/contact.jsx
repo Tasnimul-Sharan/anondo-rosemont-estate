@@ -12,8 +12,9 @@ export default function ContactPage() {
     keywords:
       "Anondo Rosemont Estate contact, Rosemont Estate booking, villa enquiry Bangladesh, Purbachal villa contact",
     author: "Anondo Rosemont Estate",
-    url: "https://anondocityscapers.com/contact",
-    image: "https://anondocityscapers.com/og/anondo-rosemont-estate-og.jpg",
+    url: "https://www.anondorosemontestate.com/contact",
+    image:
+      "https://www.anondorosemontestate.com/og/anondo-rosemont-estate-og.jpg",
   };
 
   return (
