@@ -88,7 +88,7 @@ export default function VillaDetailsPage({
         <meta name="description" content={metaDescription} />
       </Head>
 
-      <section className="relative min-h-[78vh] overflow-hidden bg-[#4a0a0a] text-white">
+      <section className="relative min-h-[78vh] overflow-hidden bg-secondary text-white">
         <Image
           src={villa.image}
           alt={`${villa.name} ${villa.size}`}
@@ -128,7 +128,7 @@ export default function VillaDetailsPage({
 
       <section className="relative z-20 bg-[#f8f3ec] pb-16 md:pb-24">
         <div className="custom-container mx-auto -mt-12">
-          <div className="grid overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-2xl shadow-[#4a0a0a]/12 md:grid-cols-4">
+          <div className="grid overflow-hidden border border-secondary/15 bg-white shadow-2xl shadow-secondary/12 md:grid-cols-4">
             {keyFacts.map((fact) => {
               const [label, value] = fact.includes(":")
                 ? fact.split(/:(.*)/).filter(Boolean)
@@ -137,12 +137,12 @@ export default function VillaDetailsPage({
               return (
                 <div
                   key={fact}
-                  className="border-b border-[#4a0a0a]/12 p-6 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
+                  className="border-b border-secondary/12 p-6 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
                 >
-                  <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#4a0a0a]/45">
+                  <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-secondary/45">
                     {label}
                   </p>
-                  <p className="mt-2 text-2xl font-semibold text-[#4a0a0a]">
+                  <p className="mt-2 text-2xl font-semibold text-secondary">
                     {value || "Included"}
                   </p>
                 </div>
@@ -154,13 +154,13 @@ export default function VillaDetailsPage({
 
       <section className="bg-[#f8f3ec] pb-16 md:pb-24 lg:pb-32">
         <div className="custom-container mx-auto grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="border border-[#4a0a0a]/15 bg-white p-7 shadow-xl shadow-[#4a0a0a]/8 md:p-10">
-            <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+          <div className="border border-secondary/15 bg-white p-7 shadow-xl shadow-secondary/8 md:p-10">
+            <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
               <span className="h-px w-10 bg-current" />
               Villa Details
             </p>
 
-            <h2 className="text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+            <h2 className="text-3xl font-semibold leading-tight text-secondary md:text-5xl">
               {details.title}
             </h2>
 
@@ -170,7 +170,7 @@ export default function VillaDetailsPage({
               {details.items.map((item) => (
                 <li key={item} className="flex gap-3 leading-7 text-[#6b5d57]">
                   <FiCheckCircle
-                    className="mt-1 shrink-0 text-[#4a0a0a]"
+                    className="mt-1 shrink-0 text-secondary"
                     size={18}
                   />
                   <span>{item}</span>
@@ -188,9 +188,9 @@ export default function VillaDetailsPage({
               return (
                 <article
                   key={item.title}
-                  className="border border-[#4a0a0a]/15 bg-white/80 p-7 transition duration-500 hover:-translate-y-1 hover:bg-white md:p-8"
+                  className="border border-secondary/15 bg-white/80 p-7 transition duration-500 hover:-translate-y-1 hover:bg-white md:p-8"
                 >
-                  <h3 className="text-2xl font-semibold leading-tight text-[#4a0a0a]">
+                  <h3 className="text-2xl font-semibold leading-tight text-secondary">
                     {item.title}
                   </h3>
                   <p className="mt-4 leading-8 text-[#6b5d57]">{item.text}</p>
@@ -202,7 +202,7 @@ export default function VillaDetailsPage({
                           key={point}
                           className="flex gap-3 text-sm leading-7 text-[#6b5d57] md:text-base"
                         >
-                          <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#4a0a0a]/8 text-[#4a0a0a]">
+                          <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary/8 text-secondary">
                             <FiCheckCircle size={15} />
                           </span>
                           <span>{point}</span>
@@ -220,12 +220,12 @@ export default function VillaDetailsPage({
       {villa.detailImages?.length > 0 && (
         <section className="bg-[#f8f3ec] pb-16 md:pb-24 lg:pb-32">
           <div className="custom-container mx-auto">
-            <div className="mb-10 border-b border-[#4a0a0a]/15 pb-8">
-              <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+            <div className="mb-10 border-b border-secondary/15 pb-8">
+              <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
                 <span className="h-px w-10 bg-current" />
                 Villa Plans
               </p>
-              <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+              <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-secondary md:text-5xl">
                 10 Katha luxury villa layout and setback details.
               </h2>
             </div>
@@ -234,9 +234,9 @@ export default function VillaDetailsPage({
               {villa.detailImages.map((image, index) => (
                 <div
                   key={image}
-                  className="overflow-hidden border border-[#4a0a0a]/15 bg-white p-3 shadow-2xl shadow-[#4a0a0a]/10 md:p-5"
+                  className="overflow-hidden border border-secondary/15 bg-white p-3 shadow-2xl shadow-secondary/10 md:p-5"
                 >
-                  <div className="relative aspect-[3/2] w-full overflow-hidden bg-[#4a0a0a]/5">
+                  <div className="relative aspect-[3/2] w-full overflow-hidden bg-secondary/5">
                     <Image
                       src={image}
                       alt={`${villa.name} ${villa.size} plan detail ${
@@ -254,7 +254,7 @@ export default function VillaDetailsPage({
         </section>
       )}
 
-      <section className="bg-[#4a0a0a] py-16 text-white md:py-24">
+      <section className="bg-secondary py-16 text-white md:py-24">
         <div className="custom-container mx-auto">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <div>
@@ -268,7 +268,7 @@ export default function VillaDetailsPage({
 
             <Link
               href="/contact"
-              className="group inline-flex w-fit items-center gap-4 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-[#4a0a0a] transition duration-300 hover:bg-[#f8f3ec]"
+              className="group inline-flex w-fit items-center gap-4 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-secondary transition duration-300 hover:bg-[#f8f3ec]"
             >
               Book Visit
               <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -280,7 +280,7 @@ export default function VillaDetailsPage({
               <Link
                 key={item.slug}
                 href={`/villas-residences/${item.slug}`}
-                className="group overflow-hidden border border-white/15 bg-white/8 transition duration-500 hover:-translate-y-1 hover:bg-white hover:text-[#4a0a0a]"
+                className="group overflow-hidden border border-white/15 bg-white/8 transition duration-500 hover:-translate-y-1 hover:bg-white hover:text-secondary"
               >
                 <div className="relative h-[260px] overflow-hidden bg-[#241818]">
                   <Image
@@ -294,7 +294,7 @@ export default function VillaDetailsPage({
                 </div>
 
                 <div className="p-7">
-                  <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-white/55 transition group-hover:text-[#4a0a0a]/55">
+                  <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-white/55 transition group-hover:text-secondary/55">
                     {item.size}
                   </p>
                   <h3 className="mt-3 text-2xl font-semibold">{item.name}</h3>

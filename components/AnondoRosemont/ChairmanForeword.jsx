@@ -12,9 +12,9 @@ export default function ChairmanForeword() {
     <div className="bg-white py-16 md:py-24 lg:py-32">
       <div className="mx-auto grid max-w-[1200px] gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div className="relative">
-          <div className="absolute -left-5 -top-5 hidden h-full w-full border border-[#4a0a0a]/15 lg:block" />
+          <div className="absolute -left-5 -top-5 hidden h-full w-full border border-secondary/15 lg:block" />
 
-          <div className="relative min-h-[560px] overflow-hidden bg-[#4a0a0a] shadow-2xl shadow-[#4a0a0a]/20">
+          <div className="relative min-h-[560px] overflow-hidden bg-secondary shadow-2xl shadow-secondary/20">
             <Image
               src="/gazi-md-mozammel-haque-1.jpeg"
               alt="Chairman of Anondo Rosemont Estate"
@@ -23,7 +23,7 @@ export default function ChairmanForeword() {
               className="object-cover"
             />
 
-            <div className="absolute inset-x-0 -bottom-3 bg-[#4a0a0a]/82 px-6 pb-5 pt-4 text-white backdrop-blur-md">
+            <div className="absolute inset-x-0 -bottom-3 bg-secondary/82 px-6 pb-5 pt-4 text-white backdrop-blur-md">
               <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-white/55">
                 Chairman
               </p>
@@ -36,16 +36,16 @@ export default function ChairmanForeword() {
         </div>
 
         <article>
-          <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+          <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
             <span className="h-px w-10 bg-current" />
             Chairman
           </p>
 
-          <h2 className="text-4xl font-semibold leading-tight text-[#4a0a0a] md:text-6xl">
+          <h2 className="text-4xl font-semibold leading-tight text-secondary md:text-6xl">
             Chairman&apos;s Foreword
           </h2>
 
-          <div className="mt-8 grid gap-5 border-l border-[#4a0a0a]/25 pl-6">
+          <div className="mt-8 grid gap-5 border-l border-secondary/25 pl-6">
             {chairman.paragraphs.map((paragraph) => (
               <p key={paragraph} className="leading-8 text-[#6b5d57]">
                 {paragraph}
@@ -53,9 +53,9 @@ export default function ChairmanForeword() {
             ))}
           </div>
 
-          <div className="mt-8 border-t border-[#4a0a0a]/15 pt-6">
-            <div className="border-l border-[#4a0a0a]/35 pl-4">
-              <p className="font-extrabold text-[#4a0a0a]">
+          <div className="mt-8 border-t border-secondary/15 pt-6">
+            <div className="border-l border-secondary/35 pl-4">
+              <p className="font-extrabold text-secondary">
                 Gazi Md. Mozammel Hoque
               </p>
               <p className="mt-1 text-sm text-[#6b5d57]">

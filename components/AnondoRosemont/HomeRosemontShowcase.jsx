@@ -113,18 +113,18 @@ function EstateGateway() {
   return (
     <section className="relative bg-[#f8f3ec] pb-16 text-[#241818] md:pb-24">
       <div className="custom-container relative z-20 mx-auto -mt-20">
-        <div className="border border-[#4a0a0a]/12 bg-white p-4 shadow-2xl shadow-[#4a0a0a]/12 md:p-5">
+        <div className="border border-secondary/12 bg-white p-4 shadow-2xl shadow-secondary/12 md:p-5">
           <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
             <div className="grid gap-3 md:grid-cols-3">
               {estateMarkers.map((item) => (
                 <div
                   key={item.label}
-                  className="border border-[#4a0a0a]/10 bg-[#f8f3ec] px-5 py-4"
+                  className="border border-secondary/10 bg-[#f8f3ec] px-5 py-4"
                 >
-                  <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#4a0a0a]/45">
+                  <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-secondary/45">
                     {item.label}
                   </p>
-                  <p className="mt-2 text-sm font-semibold text-[#4a0a0a]">
+                  <p className="mt-2 text-sm font-semibold text-secondary">
                     {item.value}
                   </p>
                 </div>
@@ -133,7 +133,7 @@ function EstateGateway() {
 
             <Link
               href="/contact"
-              className="group inline-flex h-full min-h-[64px] items-center justify-center gap-4 bg-[#4a0a0a] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition duration-300 hover:bg-[#241818]"
+              className="group inline-flex h-full min-h-[64px] items-center justify-center gap-4 bg-secondary px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition duration-300 hover:bg-[#241818]"
             >
               <FiSearch size={18} />
               Book Visit
@@ -150,12 +150,12 @@ function EstateGateway() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="group border border-[#4a0a0a]/12 bg-white p-5 shadow-lg shadow-[#4a0a0a]/7 transition duration-500 hover:-translate-y-1 hover:bg-[#4a0a0a] hover:text-white"
+                className="group border border-secondary/12 bg-white p-5 shadow-lg shadow-secondary/7 transition duration-500 hover:-translate-y-1 hover:bg-secondary hover:text-white"
               >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center border border-[#4a0a0a]/15 bg-[#4a0a0a]/5 text-[#4a0a0a] transition duration-300 group-hover:border-white/25 group-hover:bg-white/10 group-hover:text-white">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center border border-secondary/15 bg-secondary/5 text-secondary transition duration-300 group-hover:border-white/25 group-hover:bg-white/10 group-hover:text-white">
                   <Icon size={21} />
                 </div>
-                <h3 className="text-lg font-semibold leading-tight text-[#4a0a0a] transition group-hover:text-white">
+                <h3 className="text-lg font-semibold leading-tight text-secondary transition group-hover:text-white">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-[#6b5d57] transition group-hover:text-white/70">
@@ -174,7 +174,7 @@ function ArchitecturalStatement() {
   return (
     <section className="overflow-hidden bg-[#ded8ce] py-16 text-[#241818] md:py-24 lg:py-32">
       <div className="custom-container mx-auto grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-        <div className="relative min-h-[420px] overflow-hidden bg-[#4a0a0a] md:min-h-[560px]">
+        <div className="relative min-h-[420px] overflow-hidden bg-secondary md:min-h-[560px]">
           <Image
             src="/gallary/rosemont-master-plan.jpg"
             alt="Anondo Rosemont Estate master planned environment"
@@ -184,7 +184,7 @@ function ArchitecturalStatement() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(74,10,10,0.02)_0%,rgba(74,10,10,0.54)_100%)]" />
 
-          <div className="absolute bottom-0 left-0 right-0 border-t border-white/15 bg-[#4a0a0a]/70 p-7 text-white backdrop-blur-sm md:p-9">
+          <div className="absolute bottom-0 left-0 right-0 border-t border-white/15 bg-secondary/70 p-7 text-white backdrop-blur-sm md:p-9">
             <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-white/55">
               Estate Identity
             </p>
@@ -195,12 +195,12 @@ function ArchitecturalStatement() {
         </div>
 
         <div className="max-w-2xl lg:pl-8">
-          <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+          <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
             <span className="h-px w-10 bg-current" />
             Welcome to Rosemont
           </p>
 
-          <h2 className="text-4xl font-semibold leading-[1.04] text-[#4a0a0a] md:text-6xl">
+          <h2 className="text-4xl font-semibold leading-[1.04] text-secondary md:text-6xl">
             Estate living shaped by architecture, landscape, and permanence.
           </h2>
 
@@ -210,7 +210,7 @@ function ArchitecturalStatement() {
             open space, and a controlled villa streetscape.
           </p>
 
-          <div className="mt-10 grid border border-[#4a0a0a]/15 bg-[#f8f3ec] sm:grid-cols-3">
+          <div className="mt-10 grid border border-secondary/15 bg-[#f8f3ec] sm:grid-cols-3">
             {[
               ["807", "Bigha"],
               ["60 ft", "Grand Avenue"],
@@ -218,9 +218,9 @@ function ArchitecturalStatement() {
             ].map(([value, label]) => (
               <div
                 key={label}
-                className="border-b border-[#4a0a0a]/12 p-5 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"
+                className="border-b border-secondary/12 p-5 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0"
               >
-                <p className="text-3xl font-semibold text-[#4a0a0a]">{value}</p>
+                <p className="text-3xl font-semibold text-secondary">{value}</p>
                 <p className="mt-2 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#6b5d57]">
                   {label}
                 </p>
@@ -230,7 +230,7 @@ function ArchitecturalStatement() {
 
           <Link
             href="/the-estate"
-            className="group mt-9 inline-flex items-center gap-4 bg-[#4a0a0a] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition duration-300 hover:bg-[#241818]"
+            className="group mt-9 inline-flex items-center gap-4 bg-secondary px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition duration-300 hover:bg-[#241818]"
           >
             Read Estate Story
             <span className="h-px w-12 origin-left scale-x-[0.35] bg-current transition-transform duration-700 group-hover:scale-x-100" />
@@ -247,11 +247,11 @@ function VillaPortfolio() {
       <div className="custom-container mx-auto">
         <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
           <div>
-            <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+            <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
               <span className="h-px w-10 bg-current" />
               Villa Portfolio
             </p>
-            <h2 className="max-w-3xl text-4xl font-semibold leading-tight text-[#4a0a0a] md:text-6xl">
+            <h2 className="max-w-3xl text-4xl font-semibold leading-tight text-secondary md:text-6xl">
               Featured residences in a refined estate collection.
             </h2>
           </div>
@@ -268,9 +268,9 @@ function VillaPortfolio() {
             <Link
               key={item.title}
               href={item.href}
-              className="group min-w-[280px] overflow-hidden border border-[#4a0a0a]/14 bg-white shadow-xl shadow-[#4a0a0a]/8 transition duration-500 hover:-translate-y-1 md:min-w-[420px]"
+              className="group min-w-[280px] overflow-hidden border border-secondary/14 bg-white shadow-xl shadow-secondary/8 transition duration-500 hover:-translate-y-1 md:min-w-[420px]"
             >
-              <div className="relative h-[360px] overflow-hidden bg-[#4a0a0a]">
+              <div className="relative h-[360px] overflow-hidden bg-secondary">
                 <Image
                   src={item.image}
                   alt={`${item.title} ${item.category}`}
@@ -323,11 +323,11 @@ function RosemontServices() {
                 key={item.title}
                 className="group border border-[#f8f3ec]/12 bg-[#f8f3ec]/6 p-6 transition duration-500 hover:-translate-y-1 hover:border-[#f8f3ec]/45 hover:bg-[#f8f3ec]"
               >
-                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-[#f8f3ec]/20 bg-[#f8f3ec] text-2xl text-[#4a0a0a] transition duration-300 group-hover:scale-105 group-hover:border-[#4a0a0a]/15 group-hover:bg-[#4a0a0a] group-hover:text-white">
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-[#f8f3ec]/20 bg-[#f8f3ec] text-2xl text-secondary transition duration-300 group-hover:scale-105 group-hover:border-secondary/15 group-hover:bg-secondary group-hover:text-white">
                   <Icon />
                 </div>
 
-                <h3 className="text-lg font-semibold leading-tight text-white transition duration-300 group-hover:text-[#4a0a0a]">
+                <h3 className="text-lg font-semibold leading-tight text-white transition duration-300 group-hover:text-secondary">
                   {item.title}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-white/62 transition duration-300 group-hover:text-[#6b5d57]">
@@ -363,7 +363,7 @@ function RosemontServices() {
           </div>
 
           <div className="bg-[#f8f3ec] p-8 text-[#241818] md:p-10">
-            <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]/70">
+            <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-secondary/70">
               Sustainable Estate Future
             </p>
             <h3 className="mt-5 max-w-xl text-3xl font-semibold leading-tight md:text-5xl">
@@ -378,7 +378,7 @@ function RosemontServices() {
                 "Estate infrastructure planned for long-term living",
               ].map((item) => (
                 <li key={item} className="flex gap-3 leading-7">
-                  <span className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#4a0a0a]" />
+                  <span className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-secondary" />
                   <span>{item}</span>
                 </li>
               ))}

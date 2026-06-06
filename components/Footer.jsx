@@ -37,7 +37,7 @@ const estateStats = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#4a0a0a] text-white">
+    <footer className="relative overflow-hidden bg-secondary text-white">
       {/* Premium Background Layer */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_34%),linear-gradient(180deg,rgba(74,10,10,1)_0%,rgba(28,4,4,1)_100%)]" />
       <div className="absolute -right-24 top-10 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
@@ -105,7 +105,7 @@ export default function Footer() {
 
             {/* <Link
               href="/contact"
-              className="group mt-7 inline-flex items-center gap-4 border border-white/18 bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#4a0a0a] transition duration-300 hover:bg-white/88"
+              className="group mt-7 inline-flex items-center gap-4 border border-white/18 bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.16em] text-secondary transition duration-300 hover:bg-white/88"
             >
               Book Visit
               <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -165,7 +165,7 @@ export default function Footer() {
                 />
                 <button
                   type="button"
-                  className="group flex items-center gap-2 bg-white px-4 text-sm font-semibold text-[#4a0a0a] transition-all duration-300 hover:bg-white/88"
+                  className="group flex items-center gap-2 bg-white px-4 text-sm font-semibold text-secondary transition-all duration-300 hover:bg-white/88"
                 >
                   Send
                   <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -235,7 +235,7 @@ function SocialIcon({ icon, href }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/18 bg-white/8 text-white backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#4a0a0a]"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/18 bg-white/8 text-white backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-secondary"
     >
       {icon}
     </Link>

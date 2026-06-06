@@ -1,17 +1,17 @@
 export default function EstateStoryHero() {
   return (
-    <div className="relative border-b border-[#4a0a0a]/15 py-16 md:py-24 lg:py-32">
-      <div className="absolute right-0 top-0 hidden h-full w-[30%] bg-[#4a0a0a] lg:block" />
+    <div className="relative border-b border-secondary/15 py-16 md:py-24 lg:py-32">
+      <div className="absolute right-0 top-0 hidden h-full w-[30%] bg-secondary lg:block" />
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-5">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div>
-            <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.26em] text-[#4a0a0a]">
+            <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.26em] text-secondary">
               <span className="h-px w-10 bg-current" />
               The Estate Story
             </p>
 
-            <h1 className="max-w-4xl text-4xl font-semibold leading-[0.98] text-[#4a0a0a] md:text-6xl lg:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-semibold leading-[0.98] text-secondary md:text-6xl lg:text-7xl">
               The Story of Anondo Rosemont Estate
             </h1>
 
@@ -21,7 +21,7 @@ export default function EstateStoryHero() {
             </p>
           </div>
 
-          <div className="border border-white/15 bg-[#4a0a0a] p-7 text-white shadow-2xl shadow-[#4a0a0a]/20">
+          <div className="border border-white/15 bg-secondary p-7 text-white shadow-2xl shadow-secondary/20">
             <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-white/60">
               Motto
             </p>
@@ -35,7 +35,7 @@ export default function EstateStoryHero() {
           </div>
         </div>
 
-        <div className="mt-14 grid border border-[#4a0a0a]/15 bg-white shadow-2xl shadow-[#4a0a0a]/10 md:grid-cols-3">
+        <div className="mt-14 grid border border-secondary/15 bg-white shadow-2xl shadow-secondary/10 md:grid-cols-3">
           {[
             ["807", "Bigha Estate"],
             ["80 ft", "Grand Avenue"],
@@ -43,9 +43,9 @@ export default function EstateStoryHero() {
           ].map(([value, label]) => (
             <div
               key={label}
-              className="border-b border-[#4a0a0a]/15 p-7 md:border-b-0 md:border-r md:last:border-r-0"
+              className="border-b border-secondary/15 p-7 md:border-b-0 md:border-r md:last:border-r-0"
             >
-              <p className="text-4xl font-bold leading-none text-[#4a0a0a]">
+              <p className="text-4xl font-bold leading-none text-secondary">
                 {value}
               </p>
               <p className="mt-3 text-xs font-extrabold uppercase tracking-[0.2em] text-[#6b5d57]">

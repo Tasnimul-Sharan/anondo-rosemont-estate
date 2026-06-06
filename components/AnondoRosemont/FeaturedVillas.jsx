@@ -50,18 +50,18 @@ const villas = [
 export default function FeaturedVillas() {
   return (
     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-      <div className="absolute inset-x-0 top-0 h-px bg-[#4a0a0a]/20" />
-      <div className="absolute right-0 top-0 hidden h-full w-[28%] bg-[#4a0a0a] lg:block" />
+      <div className="absolute inset-x-0 top-0 h-px bg-secondary/20" />
+      <div className="absolute right-0 top-0 hidden h-full w-[28%] bg-secondary lg:block" />
 
       <div className="custom-container relative z-10 mx-auto">
         <div className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#4a0a0a]">
-              <span className="h-px w-10 bg-[#4a0a0a]" />
+            <p className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-secondary">
+              <span className="h-px w-10 bg-secondary" />
               Featured Villas
             </p>
 
-            <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+            <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-secondary md:text-5xl">
               Three Distinct Villa Experiences
             </h2>
 
@@ -72,10 +72,10 @@ export default function FeaturedVillas() {
 
           {/* <Link
             href="/villas-residences"
-            className="group inline-flex w-fit items-center gap-4 border border-[#4a0a0a]/20 bg-white/60 px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a] shadow-sm transition duration-300 hover:bg-[#4a0a0a] hover:text-white"
+            className="group inline-flex w-fit items-center gap-4 border border-secondary/20 bg-white/60 px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-secondary shadow-sm transition duration-300 hover:bg-secondary hover:text-white"
           >
             View All
-            <span className="h-px w-10 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-[transform,background-color] duration-700 ease-out group-hover:scale-x-100 group-hover:bg-white" />
+            <span className="h-px w-10 origin-left scale-x-[0.35] bg-secondary transition-[transform,background-color] duration-700 ease-out group-hover:scale-x-100 group-hover:bg-white" />
           </Link> */}
         </div>
 
@@ -85,10 +85,10 @@ export default function FeaturedVillas() {
               href={`/villas-residences/${villa.slug}`}
               id={`${villa.slug}-card`}
               key={villa.name}
-              className="group block overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#4a0a0a]/18"
+              className="group block overflow-hidden border border-secondary/15 bg-white shadow-xl shadow-secondary/10 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/18"
               aria-label={`Explore ${villa.name} ${villa.size}`}
             >
-              <div className="relative h-[310px] overflow-hidden bg-[#4a0a0a]">
+              <div className="relative h-[310px] overflow-hidden bg-secondary">
                 <Image
                   src={villa.image}
                   alt={`${villa.name} ${villa.size}`}
@@ -119,7 +119,7 @@ export default function FeaturedVillas() {
               </div>
 
               <div className="p-6 md:p-7">
-                <div className="mb-6 h-px w-20 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100" />
+                <div className="mb-6 h-px w-20 origin-left scale-x-[0.35] bg-secondary transition-transform duration-700 ease-out group-hover:scale-x-100" />
 
                 <ul className="space-y-3">
                   {villa.specs.map((spec) => (
@@ -128,7 +128,7 @@ export default function FeaturedVillas() {
                       className="flex gap-3 text-sm leading-6 text-[#5f4f4a] md:text-base"
                     >
                       <FiCheckCircle
-                        className="mt-1 shrink-0 text-[#4a0a0a]"
+                        className="mt-1 shrink-0 text-secondary"
                         size={18}
                       />
                       <span>{spec}</span>
@@ -136,11 +136,9 @@ export default function FeaturedVillas() {
                   ))}
                 </ul>
 
-                <span
-                  className="mt-8 inline-flex items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a]"
-                >
+                <span className="mt-8 inline-flex items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-secondary">
                   Explore Villa
-                  <span className="h-px w-10 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100" />
+                  <span className="h-px w-10 origin-left scale-x-[0.35] bg-secondary transition-transform duration-700 ease-out group-hover:scale-x-100" />
                 </span>
               </div>
             </Link>

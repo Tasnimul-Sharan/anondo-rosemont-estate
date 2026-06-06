@@ -3,7 +3,7 @@ import { estateImage } from "@/data/site";
 
 export function PageHero({ eyebrow, title, copy, image = estateImage }) {
   return (
-    <section className="relative grid min-h-[430px] items-end overflow-hidden bg-[#4a0a0a] text-white">
+    <section className="relative grid min-h-[430px] items-end overflow-hidden bg-secondary text-white">
       <Image
         src={image}
         alt={title}

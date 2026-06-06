@@ -204,13 +204,14 @@ export default function ContactPageSection() {
               name="subject"
               aria-label="Enquiry Type"
               className={`relative z-10 ${inputClass}`}
-              defaultValue="Brochure Request"
+              defaultValue="Villa Consultation"
             >
-              <option>Brochure Request</option>
+              <option>Villa Consultation</option>
               <option>Plot Availability</option>
               <option>Villa Specification</option>
               <option>Booking Procedure</option>
               <option>Site Visit Schedule</option>
+              <option>NRB Investment Enquiry</option>
             </select>
 
             <textarea

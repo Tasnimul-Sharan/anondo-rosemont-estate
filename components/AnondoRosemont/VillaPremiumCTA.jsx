@@ -12,7 +12,7 @@ const ctaFacts = [
 
 export default function VillaPremiumCTA() {
   return (
-    <section className="relative overflow-hidden bg-[#4a0a0a] py-16 text-white md:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-secondary py-16 text-white md:py-20 lg:py-24">
       <Image
         src="/10 katha villa/10-katha.jpg"
         alt="Anondo Rosemont Estate premium villa"
@@ -45,7 +45,7 @@ export default function VillaPremiumCTA() {
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-4 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-[#4a0a0a] transition duration-300 hover:bg-[#f8f3ec]"
+                className="group inline-flex items-center justify-center gap-4 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-secondary transition duration-300 hover:bg-[#f8f3ec]"
               >
                 <FiCalendar size={18} />
                 Book Visit
@@ -56,7 +56,7 @@ export default function VillaPremiumCTA() {
                 href="/ROSEMONT BROCHURE.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-4 border border-white/35 bg-white/10 px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition duration-300 hover:border-white hover:bg-white hover:text-[#4a0a0a]"
+                className="group inline-flex items-center justify-center gap-4 border border-white/35 bg-white/10 px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition duration-300 hover:border-white hover:bg-white hover:text-secondary"
               >
                 <FiDownload size={18} />
                 Brochure
@@ -65,7 +65,7 @@ export default function VillaPremiumCTA() {
             </div>
           </div>
 
-          <div className="grid border border-white/16 bg-white/10 backdrop-blur-md sm:grid-cols-3 lg:grid-cols-1">
+          <div className="grid border border-white/20 bg-white/10 backdrop-blur-md sm:grid-cols-3 lg:grid-cols-1">
             {ctaFacts.map((fact) => (
               <div
                 key={fact.label}

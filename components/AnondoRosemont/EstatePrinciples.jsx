@@ -18,11 +18,11 @@ export default function EstatePrinciples() {
     <div className="bg-white py-16 md:py-24 lg:py-32">
       <div className="mx-auto max-w-[1200px] px-5">
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+          <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
             <span className="h-px w-10 bg-current" />
             Estate Principles
           </p>
-          <h2 className="text-4xl font-semibold leading-tight text-[#4a0a0a] md:text-6xl">
+          <h2 className="text-4xl font-semibold leading-tight text-secondary md:text-6xl">
             The Principles Behind Rosemont
           </h2>
         </div>
@@ -31,7 +31,7 @@ export default function EstatePrinciples() {
           {estatePrinciples.map((item) => (
             <article
               key={item.title}
-              className="group border border-[#4a0a0a]/15 bg-[#f8f3ec] p-8 shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-2 hover:bg-[#4a0a0a] hover:text-white"
+              className="group border border-secondary/15 bg-[#f8f3ec] p-8 shadow-xl shadow-secondary/10 transition duration-500 hover:-translate-y-2 hover:bg-secondary hover:text-white"
             >
               <span className="mb-8 block h-px w-20 origin-left scale-x-[0.35] bg-current transition-transform duration-700 group-hover:scale-x-100" />
               <h3 className="text-2xl font-semibold leading-tight">

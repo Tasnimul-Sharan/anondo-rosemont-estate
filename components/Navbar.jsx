@@ -76,10 +76,10 @@ const menuItems = [
   //     },
   //   ],
   // },
-  {
-    name: "Blogs",
-    path: "/blogs",
-  },
+  // {
+  //   name: "Blogs",
+  //   path: "/blogs",
+  // },
   {
     name: "Gallery",
     path: "/gallery",
@@ -416,7 +416,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className="fixed left-0 top-0 z-40 flex flex-col overflow-y-auto bg-[#4a0a0a] px-8 py-12 shadow-2xl shadow-black/40 xl:hidden"
+        className="fixed left-0 top-0 z-40 flex flex-col overflow-y-auto bg-secondary px-8 py-12 shadow-2xl shadow-black/40 xl:hidden"
         style={{ width: 0, height: 0, opacity: 0 }}
       >
         <div className="mt-12 border-b border-white/12 pb-7">
@@ -463,11 +463,8 @@ export default function Navbar() {
 
         {/* Mobile CTA */}
         <div className="mt-10">
-          <Link
-            href="/contact"
-            onClick={closeMobileMenu}
-          >
-            <button className="group inline-flex w-full items-center justify-center gap-4 bg-[#f8f3ec] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#4a0a0a]">
+          <Link href="/contact" onClick={closeMobileMenu}>
+            <button className="group inline-flex w-full items-center justify-center gap-4 bg-[#f8f3ec] px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-secondary">
               Contact Us
               <span className="h-px w-12 origin-left scale-x-50 bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
             </button>
@@ -529,7 +526,7 @@ export default function Navbar() {
 
           {/* <div className="pt-4">
             <select
-              className="w-full border border-white/15 bg-[#f8f3ec] px-3 py-3 text-sm font-semibold text-[#4a0a0a] outline-none"
+              className="w-full border border-white/15 bg-[#f8f3ec] px-3 py-3 text-sm font-semibold text-secondary outline-none"
               onChange={handleLanguageChange}
               defaultValue=""
               aria-label="Select Language"

@@ -18,15 +18,15 @@ export default function EstateIntroIdentity() {
             key={section.title}
             className={`group border p-7 shadow-2xl md:p-10 ${
               index === 0
-                ? "border-[#4a0a0a]/15 bg-white text-[#241818] shadow-[#4a0a0a]/10"
-                : "border-white/15 bg-[#4a0a0a] text-white shadow-[#4a0a0a]/20"
+                ? "border-secondary/15 bg-white text-[#241818] shadow-secondary/10"
+                : "border-white/15 bg-secondary text-white shadow-secondary/20"
             }`}
           >
             <span className="mb-8 block h-px w-24 origin-left scale-x-[0.35] bg-current transition-transform duration-700 group-hover:scale-x-100" />
 
             <h2
               className={`text-3xl font-semibold leading-tight md:text-5xl ${
-                index === 0 ? "text-[#4a0a0a]" : "text-white"
+                index === 0 ? "text-secondary" : "text-white"
               }`}
             >
               {section.title}
@@ -56,7 +56,7 @@ export default function EstateIntroIdentity() {
                   >
                     <span
                       className={`mt-[10px] h-1.5 w-1.5 shrink-0 ${
-                        index === 0 ? "bg-[#4a0a0a]" : "bg-white"
+                        index === 0 ? "bg-secondary" : "bg-white"
                       }`}
                     />
                     <span>{bullet}</span>

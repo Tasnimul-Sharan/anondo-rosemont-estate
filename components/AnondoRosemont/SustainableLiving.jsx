@@ -20,17 +20,17 @@
 // export default function SustainableLiving() {
 //   return (
 //     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-//       <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-[#4a0a0a] lg:block" />
+//       <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-secondary lg:block" />
 
 //       <div className="relative z-10 mx-auto max-w-[1180px] px-5">
 //         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
 //           <div>
-//             <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a] lg:text-white">
+//             <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary lg:text-white">
 //               <span className="h-px w-10 bg-current" />
 //               Sustainable Living at Rosemont
 //             </p>
 
-//             <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl lg:text-white">
+//             <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-secondary md:text-5xl lg:text-white">
 //               A Community Designed for Modern Living
 //             </h2>
 //           </div>
@@ -48,17 +48,17 @@
 //           {sustainableItems.map((item, index) => (
 //             <article
 //               key={item.title}
-//               className="group relative min-h-[370px] overflow-hidden border border-[#4a0a0a]/15 bg-white p-7 shadow-xl shadow-[#4a0a0a]/10 transition duration-500 hover:-translate-y-2 hover:bg-[#4a0a0a] hover:shadow-2xl hover:shadow-[#4a0a0a]/20"
+//               className="group relative min-h-[370px] overflow-hidden border border-secondary/15 bg-white p-7 shadow-xl shadow-secondary/10 transition duration-500 hover:-translate-y-2 hover:bg-secondary hover:shadow-2xl hover:shadow-secondary/20"
 //             >
-//               <div className="absolute left-0 top-0 h-full w-full origin-left scale-x-0 bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100" />
+//               <div className="absolute left-0 top-0 h-full w-full origin-left scale-x-0 bg-secondary transition-transform duration-700 ease-out group-hover:scale-x-100" />
 
 //               <div className="relative z-10 flex h-full flex-col">
 //                 <div className="mb-10 flex items-center justify-between">
-//                   <span className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#4a0a0a]/45 transition duration-300 group-hover:text-white/45">
+//                   <span className="text-xs font-extrabold uppercase tracking-[0.22em] text-secondary/45 transition duration-300 group-hover:text-white/45">
 //                     {String(index + 1).padStart(2, "0")}
 //                   </span>
 
-//                   <span className="h-px w-14 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100 group-hover:bg-white" />
+//                   <span className="h-px w-14 origin-left scale-x-[0.35] bg-secondary transition-transform duration-700 ease-out group-hover:scale-x-100 group-hover:bg-white" />
 //                 </div>
 
 //                 <h3 className="max-w-[14rem] text-2xl font-semibold leading-tight text-[#241818] transition duration-300 group-hover:text-white">
@@ -69,7 +69,7 @@
 //                   {item.text}
 //                 </p>
 
-//                 <button className="mt-auto inline-flex items-center gap-4 pt-10 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a] transition duration-300 group-hover:text-white">
+//                 <button className="mt-auto inline-flex items-center gap-4 pt-10 text-sm font-bold uppercase tracking-[0.14em] text-secondary transition duration-300 group-hover:text-white">
 //                   Direction
 //                   <span className="h-px w-10 origin-left scale-x-[0.35] bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
 //                 </button>
@@ -105,14 +105,14 @@ export default function SustainableLiving() {
   return (
     <section className="bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
       <div className="mx-auto max-w-[1180px] px-5">
-        <div className="grid gap-10 border-b border-[#4a0a0a]/15 pb-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div className="grid gap-10 border-b border-secondary/15 pb-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+            <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
               <span className="h-px w-10 bg-current" />
               Sustainable Living at Rosemont
             </p>
 
-            <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+            <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-secondary md:text-5xl">
               A Community Designed for Modern Living
             </h2>
           </div>
@@ -126,33 +126,33 @@ export default function SustainableLiving() {
         </div>
 
         <div className="grid lg:grid-cols-[0.62fr_1.38fr]">
-          <div className="hidden border-r border-[#4a0a0a]/15 pt-14 lg:block">
+          <div className="hidden border-r border-secondary/15 pt-14 lg:block">
             <div className="sticky top-28 pr-10">
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.28em] text-[#4a0a0a]/55">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.28em] text-secondary/55">
                 Rosemont Living Principles
               </p>
-              <p className="mt-5 text-2xl font-semibold leading-snug text-[#4a0a0a]">
+              <p className="mt-5 text-2xl font-semibold leading-snug text-secondary">
                 Nature, planning, connection, and community in one estate
                 rhythm.
               </p>
             </div>
           </div>
 
-          <div className="divide-y divide-[#4a0a0a]/15 lg:pl-10">
+          <div className="divide-y divide-secondary/15 lg:pl-10">
             {sustainableItems.map((item, index) => (
               <article
                 key={item.title}
                 className="group grid gap-8 py-10 transition duration-500 md:grid-cols-[120px_1fr_auto] md:items-center"
               >
                 <div className="flex items-center gap-5">
-                  <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]/45 transition duration-300 group-hover:text-[#4a0a0a]">
+                  <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-secondary/45 transition duration-300 group-hover:text-secondary">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="h-px w-14 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100 md:hidden" />
+                  <span className="h-px w-14 origin-left scale-x-[0.35] bg-secondary transition-transform duration-700 ease-out group-hover:scale-x-100 md:hidden" />
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold leading-tight text-[#241818] transition duration-300 group-hover:text-[#4a0a0a] md:text-3xl">
+                  <h3 className="text-2xl font-semibold leading-tight text-[#241818] transition duration-300 group-hover:text-secondary md:text-3xl">
                     {item.title}
                   </h3>
 
@@ -161,7 +161,7 @@ export default function SustainableLiving() {
                   </p>
                 </div>
 
-                <button className="group/btn inline-flex w-fit items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a]">
+                <button className="group/btn inline-flex w-fit items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-secondary">
                   Direction
                   <span className="h-px w-12 origin-left scale-x-[0.35] bg-current transition-transform duration-700 ease-out group-hover:scale-x-100 group-hover/btn:scale-x-100" />
                 </button>
@@ -196,17 +196,17 @@ export default function SustainableLiving() {
 // export default function SustainableLiving() {
 //   return (
 //     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-//       <div className="absolute right-0 top-0 hidden h-full w-[31%] bg-[#4a0a0a] lg:block" />
+//       <div className="absolute right-0 top-0 hidden h-full w-[31%] bg-secondary lg:block" />
 
 //       <div className="relative z-10 mx-auto max-w-[1180px] px-5">
-//         <div className="grid gap-10 border-b border-[#4a0a0a]/15 pb-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+//         <div className="grid gap-10 border-b border-secondary/15 pb-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
 //           <div>
-//             <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+//             <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
 //               <span className="h-px w-10 bg-current" />
 //               Sustainable Living at Rosemont
 //             </p>
 
-//             <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+//             <h2 className="max-w-2xl text-3xl font-semibold leading-tight text-secondary md:text-5xl">
 //               A Community Designed for Modern Living
 //             </h2>
 //           </div>
@@ -220,33 +220,33 @@ export default function SustainableLiving() {
 //         </div>
 
 //         <div className="grid lg:grid-cols-[0.62fr_1.38fr]">
-//           <div className="hidden border-r border-[#4a0a0a]/15 pt-14 lg:block">
+//           <div className="hidden border-r border-secondary/15 pt-14 lg:block">
 //             <div className="sticky top-28 pr-10">
-//               <p className="text-[11px] font-extrabold uppercase tracking-[0.28em] text-[#4a0a0a]/55">
+//               <p className="text-[11px] font-extrabold uppercase tracking-[0.28em] text-secondary/55">
 //                 Rosemont Living Principles
 //               </p>
-//               <p className="mt-5 text-2xl font-semibold leading-snug text-[#4a0a0a]">
+//               <p className="mt-5 text-2xl font-semibold leading-snug text-secondary">
 //                 Nature, planning, connection, and community in one estate
 //                 rhythm.
 //               </p>
 //             </div>
 //           </div>
 
-//           <div className="divide-y divide-[#4a0a0a]/15 lg:pl-10">
+//           <div className="divide-y divide-secondary/15 lg:pl-10">
 //             {sustainableItems.map((item, index) => (
 //               <article
 //                 key={item.title}
 //                 className="group grid gap-8 py-10 transition duration-500 md:grid-cols-[120px_1fr_auto] md:items-center"
 //               >
 //                 <div className="flex items-center gap-5">
-//                   <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]/45 transition duration-300 group-hover:text-[#4a0a0a] lg:group-hover:text-white">
+//                   <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-secondary/45 transition duration-300 group-hover:text-secondary lg:group-hover:text-white">
 //                     {String(index + 1).padStart(2, "0")}
 //                   </span>
-//                   <span className="h-px w-14 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100 md:hidden" />
+//                   <span className="h-px w-14 origin-left scale-x-[0.35] bg-secondary transition-transform duration-700 ease-out group-hover:scale-x-100 md:hidden" />
 //                 </div>
 
 //                 <div>
-//                   <h3 className="text-2xl font-semibold leading-tight text-[#241818] transition duration-300 group-hover:text-[#4a0a0a] md:text-3xl lg:group-hover:text-white">
+//                   <h3 className="text-2xl font-semibold leading-tight text-[#241818] transition duration-300 group-hover:text-secondary md:text-3xl lg:group-hover:text-white">
 //                     {item.title}
 //                   </h3>
 
@@ -255,7 +255,7 @@ export default function SustainableLiving() {
 //                   </p>
 //                 </div>
 
-//                 <button className="group/btn inline-flex w-fit items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-[#4a0a0a] lg:text-white">
+//                 <button className="group/btn inline-flex w-fit items-center gap-4 text-sm font-bold uppercase tracking-[0.14em] text-secondary lg:text-white">
 //                   Direction
 //                   <span className="h-px w-12 origin-left scale-x-[0.35] bg-current transition-transform duration-700 ease-out group-hover:scale-x-100 group-hover/btn:scale-x-100" />
 //                 </button>

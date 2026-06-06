@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/15 bg-[#4a0a0a]/95 text-white backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/15 bg-secondary/95 text-white backdrop-blur-xl">
       <div className="mx-auto flex min-h-[76px] max-w-[1180px] items-center justify-between gap-6 px-5">
         <Link href="/" className="grid gap-1">
           <span className="text-sm font-extrabold uppercase tracking-[0.12em]">
@@ -29,7 +29,7 @@ export function Header() {
 
         <Link
           href="/contact"
-          className="group hidden items-center gap-3 border border-white/25 bg-white/10 px-5 py-3 text-xs font-extrabold uppercase tracking-[0.14em] transition hover:bg-white hover:text-[#4a0a0a] sm:inline-flex"
+          className="group hidden items-center gap-3 border border-white/25 bg-white/10 px-5 py-3 text-xs font-extrabold uppercase tracking-[0.14em] transition hover:bg-white hover:text-secondary sm:inline-flex"
         >
           Enquire
           <span className="h-px w-10 origin-left scale-x-[0.35] bg-current transition-transform duration-700 group-hover:scale-x-100" />

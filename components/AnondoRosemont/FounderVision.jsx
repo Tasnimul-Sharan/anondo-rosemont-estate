@@ -8,7 +8,7 @@ export default function FounderVision() {
   if (!founder) return null;
 
   return (
-    <div className="bg-[#4a0a0a] py-16 text-white md:py-24 lg:py-32">
+    <div className="bg-secondary py-16 text-white md:py-24 lg:py-32">
       <div className="mx-auto max-w-[1200px] px-5">
         <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>

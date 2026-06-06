@@ -8,15 +8,15 @@ export function FeatureGrid({ items, columns = "three", dark }) {
           key={`${item.title}-${index}`}
           className={`group min-h-[210px] border p-7 shadow-xl transition duration-500 hover:-translate-y-1 ${
             dark
-              ? "border-white/15 bg-white/10 text-white hover:bg-white hover:text-[#4a0a0a]"
-              : "border-[#4a0a0a]/15 bg-white/75 text-[#241818] shadow-[#4a0a0a]/10 hover:bg-[#4a0a0a] hover:text-white"
+              ? "border-white/15 bg-white/10 text-white hover:bg-white hover:text-secondary"
+              : "border-secondary/15 bg-white/75 text-[#241818] shadow-secondary/10 hover:bg-secondary hover:text-white"
           }`}
         >
           <p
             className={`mb-6 text-xs font-extrabold uppercase tracking-[0.2em] ${
               dark
-                ? "text-white/55 group-hover:text-[#4a0a0a]/55"
-                : "text-[#4a0a0a]/55 group-hover:text-white/55"
+                ? "text-white/55 group-hover:text-secondary/55"
+                : "text-secondary/55 group-hover:text-white/55"
             }`}
           >
             {String(index + 1).padStart(2, "0")}

@@ -13,7 +13,7 @@ export default function BlogDetailsDataPage() {
 
   if (!slug) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center gap-2 text-[#4a0a0a]">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-2 text-secondary">
         <RiLoader2Fill className="h-6 w-6 animate-spin" />
         <p className="text-xl font-medium">Loading...</p>
       </div>
@@ -26,7 +26,7 @@ export default function BlogDetailsDataPage() {
   if (!blog) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#f8f3ec] px-5 text-center">
-        <p className="text-xl font-medium text-[#4a0a0a]">
+        <p className="text-xl font-medium text-secondary">
           Blog detail not found.
         </p>
       </div>

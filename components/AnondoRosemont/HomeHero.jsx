@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function HomeHero() {
   return (
-    <section className="relative min-h-[calc(100vh-76px)] overflow-hidden bg-[#4a0a0a] text-white">
+    <section className="relative min-h-[calc(100vh-76px)] overflow-hidden bg-secondary text-white">
       <Image
         src={estateImage}
         alt="Anondo Rosemont Estate luxury villa"
@@ -50,8 +50,8 @@ export function HomeHero() {
                 href={item.href}
                 className={`group inline-flex items-center justify-center gap-4 px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] shadow-2xl shadow-black/25 transition ${
                   item.light
-                    ? "bg-white text-[#4a0a0a] hover:bg-[#4a0a0a] hover:text-white"
-                    : "bg-[#4a0a0a] text-white hover:bg-white hover:text-[#4a0a0a]"
+                    ? "bg-white text-secondary hover:bg-secondary hover:text-white"
+                    : "bg-secondary text-white hover:bg-white hover:text-secondary"
                 }`}
               >
                 {item.label}
@@ -64,7 +64,7 @@ export function HomeHero() {
 
       <div className="absolute inset-x-0 bottom-0 z-20">
         <div className="mx-auto max-w-[1180px] px-5">
-          <div className="grid border border-white/15 bg-[#4a0a0a]/82 backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid border border-white/15 bg-secondary/82 backdrop-blur-md sm:grid-cols-2 lg:grid-cols-4">
             {heroStats.map((stat) => (
               <div
                 key={stat.label}

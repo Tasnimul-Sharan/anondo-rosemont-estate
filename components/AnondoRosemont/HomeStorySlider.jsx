@@ -45,7 +45,7 @@ function ArrowButton({ direction, onClick }) {
       type="button"
       aria-label={direction === "prev" ? "Previous slide" : "Next slide"}
       onClick={onClick}
-      className={`absolute top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center border border-white/20 bg-white/10 text-white backdrop-blur-md transition duration-300 hover:border-white hover:bg-white hover:text-[#4a0a0a] lg:flex ${position}`}
+      className={`absolute top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center border border-white/20 bg-white/10 text-white backdrop-blur-md transition duration-300 hover:border-white hover:bg-white hover:text-secondary lg:flex ${position}`}
     >
       <Icon size={20} />
     </button>
@@ -81,7 +81,7 @@ export default function HomeStorySlider() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#4a0a0a] text-white">
+    <section className="relative overflow-hidden bg-secondary text-white">
       <Slider {...settings} className="rosemont-story-slider">
         {slides.map((slide) => (
           <div key={slide.title}>
@@ -96,7 +96,7 @@ export default function HomeStorySlider() {
 
               <div className="absolute inset-0 bg-black/20" />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(74,10,10,0.64)_0%,rgba(74,10,10,0.34)_40%,rgba(74,10,10,0.04)_72%,transparent_100%)]" />
-              <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#4a0a0a] to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-secondary to-transparent" />
 
               <div className="custom-container relative z-10 mx-auto flex min-h-[720px] items-center py-24 md:min-h-[760px] lg:min-h-[820px]">
                 <div className="max-w-3xl">
@@ -121,7 +121,7 @@ export default function HomeStorySlider() {
                     href={slide.href}
                     target={slide.newTab ? "_blank" : undefined}
                     rel={slide.newTab ? "noopener noreferrer" : undefined}
-                    className="group mt-10 inline-flex items-center gap-4 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-[#4a0a0a] transition duration-300 hover:bg-[#f8f3ec]"
+                    className="group mt-10 inline-flex items-center gap-4 bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-secondary transition duration-300 hover:bg-[#f8f3ec]"
                   >
                     {slide.cta}
                     <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

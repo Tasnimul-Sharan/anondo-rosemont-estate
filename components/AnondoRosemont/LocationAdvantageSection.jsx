@@ -45,17 +45,17 @@ const locationHighlights = [
 export default function LocationAdvantageSection() {
   return (
     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-      {/* <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-[#4a0a0a] lg:block" /> */}
+      {/* <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-secondary lg:block" /> */}
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-5">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-[#4a0a0a]">
+            <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary">
               <span className="h-px w-10 bg-current" />
               Strategic Location
             </p>
 
-            <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+            <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-secondary md:text-5xl">
               Peaceful estate living beside a future growth corridor.
             </h2>
           </div>
@@ -67,8 +67,8 @@ export default function LocationAdvantageSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid overflow-hidden border border-[#4a0a0a]/15 bg-white shadow-2xl shadow-[#4a0a0a]/10 lg:grid-cols-[0.82fr_1.18fr]">
-          <div className="relative min-h-[520px] overflow-hidden bg-[#4a0a0a] lg:min-h-[680px]">
+        <div className="mt-12 grid overflow-hidden border border-secondary/15 bg-white shadow-2xl shadow-secondary/10 lg:grid-cols-[0.82fr_1.18fr]">
+          <div className="relative min-h-[520px] overflow-hidden bg-secondary lg:min-h-[680px]">
             <Image
               src={estateImage}
               alt="Anondo Rosemont Estate strategic location"
@@ -96,16 +96,16 @@ export default function LocationAdvantageSection() {
               return (
                 <article
                   key={item.title}
-                  className="group min-h-[230px] border-b border-[#4a0a0a]/15 p-7 transition duration-500 hover:bg-[#f8f3ec] md:border-r md:even:border-r-0 lg:p-9"
+                  className="group min-h-[230px] border-b border-secondary/15 p-7 transition duration-500 hover:bg-[#f8f3ec] md:border-r md:even:border-r-0 lg:p-9"
                 >
                   <div className="mb-8 flex items-center justify-between gap-5">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#4a0a0a]/15 bg-[#4a0a0a]/5 text-[#4a0a0a] transition duration-300 group-hover:border-[#4a0a0a] group-hover:bg-[#4a0a0a] group-hover:text-white">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-secondary/15 bg-secondary/5 text-secondary transition duration-300 group-hover:border-secondary group-hover:bg-secondary group-hover:text-white">
                       <Icon size={22} strokeWidth={1.8} />
                     </span>
-                    <span className="h-px w-16 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100" />
+                    <span className="h-px w-16 origin-left scale-x-[0.35] bg-secondary transition-transform duration-700 ease-out group-hover:scale-x-100" />
                   </div>
 
-                  <h3 className="text-2xl font-semibold leading-tight text-[#4a0a0a]">
+                  <h3 className="text-2xl font-semibold leading-tight text-secondary">
                     {item.title}
                   </h3>
 

@@ -3,7 +3,7 @@ export function SectionIntro({ eyebrow, title, copy, light }) {
     <div>
       <p
         className={`mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] ${
-          light ? "text-white" : "text-[#4a0a0a]"
+          light ? "text-white" : "text-secondary"
         }`}
       >
         <span className="h-px w-10 bg-current" />
@@ -12,7 +12,7 @@ export function SectionIntro({ eyebrow, title, copy, light }) {
 
       <h2
         className={`max-w-3xl text-3xl font-semibold leading-[1.04] md:text-5xl lg:text-6xl ${
-          light ? "text-white" : "text-[#4a0a0a]"
+          light ? "text-white" : "text-secondary"
         }`}
       >
         {title}

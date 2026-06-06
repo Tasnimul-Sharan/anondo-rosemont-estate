@@ -12,6 +12,7 @@ import { ContactBlock } from "@/components/AnondoRosemont/ContactBlock";
 import MasterplanHighlight from "@/components/AnondoRosemont/MasterplanHighlight";
 import LifestyleExperience from "@/components/AnondoRosemont/LifestyleExperience";
 import FeaturedVillas from "@/components/AnondoRosemont/FeaturedVillas";
+import { LifestyleAmenities } from "@/components/AnondoRosemont/lifestyleAmenities";
 
 const siteUrl = "https://anondorosemontestate.com";
 const pageUrl = `${siteUrl}/anondo-rosemont-estate`;
@@ -203,6 +204,7 @@ export default function AnondoRosemontEstatePage() {
         <MasterplanHighlight />
         <LifestyleExperience />
         <FeaturedVillas />
+        {/* <LifestyleAmenities /> */}
         <CommunityFacilitiesSection />
         <InvestmentOpportunity />
         {/* <RosemontBlogsSection /> */}

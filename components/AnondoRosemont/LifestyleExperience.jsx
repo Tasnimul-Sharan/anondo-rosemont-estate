@@ -32,7 +32,7 @@ export default function LifestyleExperience() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(56,10,10,0.18)_0%,rgba(56,10,10,0.58)_100%)]" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(56,10,10,0.52)_0%,rgba(56,10,10,0.12)_100%)]" />
 
-            <div className="absolute bottom-0 left-0 max-w-md border-t border-r border-white/20 bg-[#4a0a0a]/82 p-7 backdrop-blur-md md:p-9">
+            <div className="absolute bottom-0 left-0 max-w-md border-t border-r border-white/20 bg-secondary/82 p-7 backdrop-blur-md md:p-9">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-white/90">
                 Lifestyle Experience
               </p>
@@ -51,12 +51,12 @@ export default function LifestyleExperience() {
 
           <div className="relative">
             <div className="mb-8 max-w-2xl">
-              <p className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#4a0a0a]">
-                <span className="h-px w-10 bg-[#4a0a0a]" />
+              <p className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-secondary">
+                <span className="h-px w-10 bg-secondary" />
                 Lifestyle Highlights
               </p>
 
-              <h3 className="text-3xl font-semibold leading-tight text-[#4a0a0a] md:text-5xl">
+              <h3 className="text-3xl font-semibold leading-tight text-secondary md:text-5xl">
                 Wellness and Spaces Made for Generations
               </h3>
 
@@ -67,18 +67,18 @@ export default function LifestyleExperience() {
               </p>
             </div>
 
-            <div className="grid border border-[#4a0a0a]/16 bg-white/70 backdrop-blur-sm sm:grid-cols-2">
+            <div className="grid border border-secondary/16 bg-white/70 backdrop-blur-sm sm:grid-cols-2">
               {lifestyleHighlights.map((item, index) => (
                 <div
                   key={item}
-                  className="group relative min-h-[138px] border-b border-[#4a0a0a]/12 p-6 transition duration-300 hover:bg-[#4a0a0a] sm:border-r md:p-7"
+                  className="group relative min-h-[138px] border-b border-secondary/12 p-6 transition duration-300 hover:bg-secondary sm:border-r md:p-7"
                 >
                   <div className="mb-6 flex items-center justify-between gap-5">
-                    <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#4a0a0a]/55 transition duration-300 group-hover:text-white/55">
+                    <span className="text-xs font-semibold uppercase tracking-[0.22em] text-secondary/55 transition duration-300 group-hover:text-white/55">
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
-                    <span className="h-px w-16 origin-left scale-x-[0.35] bg-[#4a0a0a] transition-transform duration-700 ease-out group-hover:scale-x-100 group-hover:bg-white" />
+                    <span className="h-px w-16 origin-left scale-x-[0.35] bg-secondary transition-transform duration-700 ease-out group-hover:scale-x-100 group-hover:bg-white" />
                   </div>
 
                   <p className="max-w-[17rem] text-lg font-semibold leading-snug text-[#241818] transition duration-300 group-hover:text-white">
@@ -88,14 +88,14 @@ export default function LifestyleExperience() {
               ))}
             </div>
 
-            <div className="mt-8 flex flex-col gap-4 border-l border-[#4a0a0a]/30 pl-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-8 flex flex-col gap-4 border-l border-secondary/30 pl-6 sm:flex-row sm:items-center sm:justify-between">
               <p className="max-w-xl leading-8 text-[#6b5d55]">
                 At Rosemont, life flows beyond walls into landscapes,
                 waterfronts, and shared spaces designed for wellness and
                 connection.
               </p>
 
-              <button className="group inline-flex items-center justify-center gap-4 bg-[#4a0a0a] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-xl shadow-[#4a0a0a]/20 transition duration-300 hover:bg-[#241818]">
+              <button className="group inline-flex items-center justify-center gap-4 bg-secondary px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-xl shadow-secondary/20 transition duration-300 hover:bg-[#241818]">
                 Get In Touch
                 <span className="h-px w-12 origin-left scale-x-[0.35] bg-white transition-transform duration-700 ease-out group-hover:scale-x-100" />
               </button>

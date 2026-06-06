@@ -8,7 +8,7 @@ export default function RosemontPageHero({
   image = estateImage,
 }) {
   return (
-    <section className="relative flex min-h-[520px] items-end overflow-hidden bg-[#4a0a0a] pt-36 text-white md:min-h-[600px]">
+    <section className="relative flex min-h-[520px] items-end overflow-hidden bg-secondary pt-36 text-white md:min-h-[600px]">
       <Image
         src={image}
         alt={title}
