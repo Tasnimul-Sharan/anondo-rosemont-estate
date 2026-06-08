@@ -3,6 +3,41 @@ import Image from "next/image";
 import Link from "next/link";
 import { residentialComponents } from "@/data/rosemontSite";
 import { FiArrowLeft, FiArrowUpRight, FiCheckCircle } from "react-icons/fi";
+import VillaGallery from "@/components/VillaGallery";
+
+// const villaPages = [
+//   {
+//     slug: "the-classic",
+//     name: "The Classic",
+//     size: "5 Katha Duplex",
+//     detailTitle: "5 Katha Villa Residences",
+//     image: "/5 katha villa/5-katha.jpg",
+//     intro:
+//       "An elegant duplex residence for families who want efficient land use, garden space, and a refined Rosemont address.",
+//   },
+//   {
+//     slug: "the-premium",
+//     name: "The Premium",
+//     size: "10 Katha Duplex",
+//     detailTitle: "10 Katha Villa Residences",
+//     image: "/10 katha villa/10-katha.jpg",
+//     detailImages: [
+//       "/10 katha villa/10-katha-detail-1.png",
+//       "/10 katha villa/10-katha-detail-2.png",
+//     ],
+//     intro:
+//       "A larger villa format with expanded landscape opportunity, avenue frontage, and optional private leisure planning.",
+//   },
+//   {
+//     slug: "the-estate",
+//     name: "The Estate",
+//     size: "20 Katha Villa",
+//     detailTitle: "20 Katha Signature Estates",
+//     image: "/20 katha villa/20-katha.jpg",
+//     intro:
+//       "Rosemont's most prestigious villa category, created for grand family living, gardens, driveway presence, and legacy value.",
+//   },
+// ];
 
 const villaPages = [
   {
@@ -11,9 +46,19 @@ const villaPages = [
     size: "5 Katha Duplex",
     detailTitle: "5 Katha Villa Residences",
     image: "/5 katha villa/5-katha.jpg",
+    gallery: [
+      "/5 katha villa/gallery-1.jpg",
+      "/5 katha villa/gallery-2.jpg",
+      "/5 katha villa/gallery-3.jpg",
+      "/5 katha villa/gallery-4.jpg",
+      "/5 katha villa/gallery-5.jpg",
+      "/5 katha villa/gallery-6.jpg",
+      "/5 katha villa/gallery-7.jpg",
+    ],
     intro:
       "An elegant duplex residence for families who want efficient land use, garden space, and a refined Rosemont address.",
   },
+
   {
     slug: "the-premium",
     name: "The Premium",
@@ -24,15 +69,34 @@ const villaPages = [
       "/10 katha villa/10-katha-detail-1.png",
       "/10 katha villa/10-katha-detail-2.png",
     ],
+    gallery: [
+      "/10 katha villa/gallery-1.jpg",
+      "/10 katha villa/gallery-2.jpg",
+      "/10 katha villa/gallery-3.jpg",
+      "/10 katha villa/gallery-4.jpg",
+      "/10 katha villa/gallery-5.jpg",
+      "/10 katha villa/gallery-6.jpg",
+      "/10 katha villa/gallery-7.jpg",
+    ],
     intro:
       "A larger villa format with expanded landscape opportunity, avenue frontage, and optional private leisure planning.",
   },
+
   {
     slug: "the-estate",
     name: "The Estate",
     size: "20 Katha Villa",
     detailTitle: "20 Katha Signature Estates",
     image: "/20 katha villa/20-katha.jpg",
+    gallery: [
+      "/20 katha villa/gallery-1.jpg",
+      "/20 katha villa/gallery-2.jpg",
+      "/20 katha villa/gallery-3.jpg",
+      "/20 katha villa/gallery-4.jpg",
+      "/20 katha villa/gallery-5.jpg",
+      "/20 katha villa/gallery-6.jpg",
+      "/20 katha villa/gallery-7.jpg",
+    ],
     intro:
       "Rosemont's most prestigious villa category, created for grand family living, gardens, driveway presence, and legacy value.",
   },
@@ -254,6 +318,8 @@ export default function VillaDetailsPage({
         </section>
       )}
 
+      <VillaGallery villa={villa} />
+      
       <section className="bg-secondary py-16 text-white md:py-24">
         <div className="custom-container mx-auto">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
