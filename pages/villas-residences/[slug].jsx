@@ -47,13 +47,14 @@ const villaPages = [
     detailTitle: "5 Katha Villa Residences",
     image: "/5 katha villa/5-katha.jpg",
     gallery: [
-      "/5 katha villa/gallery-1.jpg",
-      "/5 katha villa/gallery-2.jpg",
-      "/5 katha villa/gallery-3.jpg",
-      "/5 katha villa/gallery-4.jpg",
-      "/5 katha villa/gallery-5.jpg",
-      "/5 katha villa/gallery-6.jpg",
-      "/5 katha villa/gallery-7.jpg",
+      "/5 katha villa/5-katha/5 katha-1.jpg",
+      "/5 katha villa/5-katha/5 katha-2.jpg",
+      "/5 katha villa/5-katha/5 katha-3.jpg",
+      "/5 katha villa/5-katha/5 katha-4.jpg",
+      "/5 katha villa/5-katha/5 katha-5.jpg",
+      "/5 katha villa/5-katha/5 katha-6.jpg",
+      "/5 katha villa/5-katha/5 & 10 katha.jpg",
+      "/10 katha villa/10-katha/5 & 10 katha.jpg",
     ],
     intro:
       "An elegant duplex residence for families who want efficient land use, garden space, and a refined Rosemont address.",
@@ -70,13 +71,14 @@ const villaPages = [
       "/10 katha villa/10-katha-detail-2.png",
     ],
     gallery: [
-      "/10 katha villa/gallery-1.jpg",
-      "/10 katha villa/gallery-2.jpg",
-      "/10 katha villa/gallery-3.jpg",
-      "/10 katha villa/gallery-4.jpg",
-      "/10 katha villa/gallery-5.jpg",
-      "/10 katha villa/gallery-6.jpg",
-      "/10 katha villa/gallery-7.jpg",
+      "/10 katha villa/10-katha/10 katha-1.jpg",
+      "/10 katha villa/10-katha/10 katha-2.jpg",
+      "/10 katha villa/10-katha/10 katha-3.jpg",
+      "/10 katha villa/10-katha/10 katha-4.jpg",
+      "/10 katha villa/10-katha/10 katha-5.jpg",
+      "/10 katha villa/10-katha/10 katha-6.jpg",
+      "/10 katha villa/10-katha/10 katha-7.jpg",
+      "/10 katha villa/10-katha/10 katha-8.jpg",
     ],
     intro:
       "A larger villa format with expanded landscape opportunity, avenue frontage, and optional private leisure planning.",
@@ -89,13 +91,13 @@ const villaPages = [
     detailTitle: "20 Katha Signature Estates",
     image: "/20 katha villa/20-katha.jpg",
     gallery: [
-      "/20 katha villa/gallery-1.jpg",
-      "/20 katha villa/gallery-2.jpg",
-      "/20 katha villa/gallery-3.jpg",
-      "/20 katha villa/gallery-4.jpg",
-      "/20 katha villa/gallery-5.jpg",
-      "/20 katha villa/gallery-6.jpg",
-      "/20 katha villa/gallery-7.jpg",
+      "/20 katha villa/20-katha/20 katha-1.jpg",
+      "/20 katha villa/20-katha/20 katha-2.jpg",
+      "/20 katha villa/20-katha/20 katha-3.jpg",
+      "/20 katha villa/20-katha/20 katha-4.jpg",
+      "/20 katha villa/20-katha/20 katha-5.jpg",
+      "/20 katha villa/20-katha/20 katha-6.jpg",
+      "/20 katha villa/20-katha/10 & 20 katha.jpg",
     ],
     intro:
       "Rosemont's most prestigious villa category, created for grand family living, gardens, driveway presence, and legacy value.",
@@ -319,7 +321,7 @@ export default function VillaDetailsPage({
       )}
 
       <VillaGallery villa={villa} />
-      
+
       <section className="bg-secondary py-16 text-white md:py-24">
         <div className="custom-container mx-auto">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
@@ -363,10 +365,19 @@ export default function VillaDetailsPage({
                   <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-white/55 transition group-hover:text-secondary/55">
                     {item.size}
                   </p>
+
                   <h3 className="mt-3 text-2xl font-semibold">{item.name}</h3>
+
                   <p className="mt-4 leading-7 text-white/65 transition group-hover:text-[#6b5d57]">
                     {item.intro}
                   </p>
+
+                  <div className="mt-6">
+                    <span className="inline-flex items-center gap-2 border border-white/20 px-5 py-3 text-xs font-extrabold uppercase tracking-[0.14em] transition duration-300 group-hover:border-secondary group-hover:bg-secondary group-hover:text-white">
+                      View Details
+                      <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}

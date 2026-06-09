@@ -34,16 +34,16 @@ export default function VillaGallery({ villa }) {
                 src={villa.gallery[0]}
                 alt=""
                 fill
-                className="object-cover transition duration-700 group-hover:scale-110"
+                className="object-cover w-full h-full transition duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
 
               <div className="absolute bottom-8 left-8">
                 <span className="rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-secondary">
                   Main Residence
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {villa.gallery.slice(1, 5).map((image, index) => (
@@ -56,7 +56,7 @@ export default function VillaGallery({ villa }) {
                   src={image}
                   alt=""
                   fill
-                  className="object-cover transition duration-700 group-hover:scale-110"
+                  className="object-cover w-full h-full transition duration-700 group-hover:scale-110"
                 />
 
                 <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/25" />
@@ -71,13 +71,13 @@ export default function VillaGallery({ villa }) {
                 <div
                   key={index}
                   onClick={() => setSelectedImage(image)}
-                  className="group relative h-[260px] cursor-pointer overflow-hidden rounded-[24px]"
+                  className="group relative h-[400px] cursor-pointer overflow-hidden rounded-[24px]"
                 >
                   <Image
                     src={image}
                     alt=""
                     fill
-                    className="object-cover transition duration-700 group-hover:scale-110"
+                    className="object-cover w-full h-full transition duration-700 group-hover:scale-110"
                   />
 
                   <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/25" />

@@ -11,6 +11,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FiPhoneCall, FiArrowUpRight } from "react-icons/fi";
 import { PiMapPinBold } from "react-icons/pi";
 import Link from "next/link";
+import Image from "next/image";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -48,13 +49,14 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="mb-5 inline-block text-white">
-              <span className="block text-xs font-semibold uppercase tracking-[0.28em] text-white/58">
-                Anondo
-              </span>
-              <span className="mt-2 block text-2xl font-semibold leading-tight tracking-wide text-white md:text-3xl">
-                Rosemont Estate
-              </span>
-              <span className="mt-4 block h-px w-16 bg-white/70" />
+              <Image
+                src="/rosemont-logo-final.jpeg"
+                alt="Anondo Rosemont Estate"
+                width={5000}
+                height={5000}
+                priority
+                className="h-24 w-[200px] md:h-40 md:w-[280px] object-cover"
+              />
             </Link>
 
             <p className="max-w-sm text-base leading-8 text-white/72">

@@ -262,19 +262,30 @@ export default function Navbar() {
         }`}
       >
         <div className="custom-container mx-auto flex min-h-[92px] items-center justify-between gap-6">
-          <Link
+          {/* <Link
             href="/"
-            className="flex items-center overflow-hidden"
+            className="flex shrink-0 items-center"
             aria-label="Anondo Rosemont Estate Home"
           >
-            <div className="leading-none text-off_white">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-off_white/60">
-                Anondo
-              </p>
-              <p className="mt-2 text-base font-semibold tracking-wide">
-                Rosemont Estate
-              </p>
-            </div>
+            <Image
+              src="/rosemont-logo-final.jpeg"
+              alt="Anondo Rosemont Estate"
+              width={5000}
+              height={5000}
+              priority
+              className="h-20 w-[140px] md:h-24 md:w-[180px] object-contain"
+            />
+          </Link> */}
+
+          <Link href="/" className="inline-block text-white">
+            <Image
+              src="/rosemont-logo-final.jpeg"
+              alt="Anondo Rosemont Estate"
+              width={5000}
+              height={5000}
+              priority
+              className="h-20 w-[140px] md:h-24 md:w-[180px] object-cover"
+            />
           </Link>
 
           {/* <ul className="relative hidden h-[92px] items-center gap-4 text-[13px] font-semibold uppercase tracking-[0.13em] text-off_white/78 xl:flex 2xl:gap-6">
