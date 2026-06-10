@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FiArrowUpRight, FiMail, FiPhoneCall } from "react-icons/fi";
+import { FiAlertCircle, FiArrowUpRight, FiCheckCircle, FiMail, FiPhoneCall } from "react-icons/fi";
 import { PiMapPinBold } from "react-icons/pi";
 
 const contactMethods = [
@@ -38,34 +38,51 @@ const inputClass =
 export default function ContactPageSection() {
   const [result, setResult] = useState("");
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
+    setLoading(true);
     setResult("");
     setSuccess(false);
 
     const formData = new FormData(event.target);
-    formData.append("access_key", "bddcb629-55c2-476e-b590-2d44e089d506");
+
+    formData.append("access_key", "ab503824-020d-4163-a181-7a37a9d5dabf");
+
+    // Optional
+    formData.append("subject", "New Rosemont Estate Enquiry");
+    formData.append("from_name", "Rosemont Website");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
       });
-      const res = await response.json();
 
-      if (res.success) {
+      const data = await response.json();
+
+      if (data.success) {
         setSuccess(true);
-        setResult("Message sent successfully.");
+        setResult(
+          "Thank you for your enquiry. Our team has received your request and will contact you shortly with the relevant information.",
+        );
         event.target.reset();
       } else {
-        setResult("Something went wrong. Please try again.");
+        setSuccess(false);
+        setResult(data.message || "❌ Failed to send enquiry.");
       }
-    } catch {
-      setResult("Something went wrong. Please try again.");
-    }
+    } catch (error) {
+      setSuccess(false);
+      setResult("❌ Network error. Please try again.");
+    } finally {
+      setLoading(false);
 
-    setTimeout(() => setResult(""), 5000);
+      setTimeout(() => {
+        setResult("");
+      }, 5000);
+    }
   };
 
   return (
@@ -225,11 +242,18 @@ export default function ContactPageSection() {
             <div className="relative z-10 mt-2 flex flex-col gap-4 border-t border-[#670f0e]/12 pt-6 sm:flex-row sm:items-center sm:justify-between">
               <button
                 type="submit"
-                className="group relative inline-flex w-fit items-center justify-center gap-4 overflow-hidden bg-[#670f0e] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition duration-500 hover:bg-[#241818]"
+                disabled={loading}
+                className="group relative inline-flex w-fit items-center justify-center gap-4 overflow-hidden bg-[#670f0e] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition duration-500 hover:bg-[#241818] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 <span className="absolute -left-16 top-0 h-full w-12 skew-x-[-18deg] bg-white/12 transition-all duration-700 ease-out group-hover:left-[120%]" />
-                <span className="relative z-10">Send Enquiry</span>
-                <FiArrowUpRight className="relative z-10 text-lg" />
+
+                <span className="relative z-10">
+                  {loading ? "Sending..." : "Send Enquiry"}
+                </span>
+
+                {!loading && (
+                  <FiArrowUpRight className="relative z-10 text-lg" />
+                )}
               </button>
 
               <p className="max-w-sm text-sm leading-7 text-[#6b5d57]">
@@ -239,13 +263,19 @@ export default function ContactPageSection() {
 
             {result && (
               <div
-                className={`relative z-10 border px-5 py-4 text-sm font-medium ${
+                className={`relative z-10 flex items-start gap-3 border px-5 py-4 text-sm font-medium ${
                   success
                     ? "border-green-200 bg-green-50 text-green-700"
                     : "border-red-200 bg-red-50 text-red-700"
                 }`}
               >
-                {result}
+                {success ? (
+                  <FiCheckCircle className="mt-0.5 shrink-0 text-lg" />
+                ) : (
+                  <FiAlertCircle className="mt-0.5 shrink-0 text-lg" />
+                )}
+
+                <span>{result}</span>
               </div>
             )}
           </form>

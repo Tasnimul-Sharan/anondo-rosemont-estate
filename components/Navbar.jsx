@@ -405,7 +405,7 @@ export default function Navbar() {
 
           <div className="hidden xl:block">
             <Link href="/contact">
-              <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-off_white/20 bg-off_white px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-primary shadow-xl shadow-black/15 transition duration-500 hover:text-off_white">
+              <button className="group relative inline-flex items-center justify-center gap-4 overflow-hidden border border-cream/20 hover:border-cream/5 bg-off_white px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-primary shadow-xl shadow-black/15 transition duration-500 hover:text-off_white">
                 <span className="absolute inset-0 bg-secondary opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <span className="relative z-10">Contact Us</span>
                 <span className="relative z-10 h-px w-8 origin-left scale-x-50 bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
@@ -415,7 +415,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="z-50 border border-off_white/20 bg-off_white p-3 text-2xl text-primary xl:hidden"
+            className="z-50 border border-cream/20 bg-off_white p-3 text-2xl text-primary xl:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
