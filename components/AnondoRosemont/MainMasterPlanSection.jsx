@@ -96,73 +96,92 @@ export function MainMasterPlanSection() {
           </div>
         </div>
 
-        <div className="mt-8 grid overflow-hidden border border-secondary/15 bg-white shadow-2xl shadow-secondary/10 lg:grid-cols-[0.78fr_1.22fr]">
-          <div className="bg-secondary p-7 text-white md:p-10 lg:p-12">
-            <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-white/55">
-              Land Area and Project Scale
-            </p>
-            <h3 className="mt-5 text-4xl font-semibold leading-none md:text-6xl">
-              807
-            </h3>
-            <p className="mt-3 text-xl font-semibold text-white">
-              Bigha Estate Development
-            </p>
-            <p className="mt-6 leading-8 text-white/70">
-              A large-scale low-density estate integrating plots, villas,
-              community amenities, green zones, and long-term infrastructure.
-            </p>
+        <div className="mt-8 grid overflow-hidden border border-secondary/15 bg-white shadow-2xl shadow-secondary/10 lg:grid-cols-[0.72fr_1.28fr]">
+          <div className="relative overflow-hidden bg-secondary p-7 text-white md:p-10 lg:p-12">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(248,243,236,0.2),transparent_36%),linear-gradient(180deg,rgba(114,18,19,0.45)_0%,rgba(74,10,10,0)_58%)]" />
+            <div className="relative z-10">
+              <p className="inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-white/58">
+                <span className="h-px w-9 bg-white/70" />
+                Land Area and Project Scale
+              </p>
 
-            <div className="mt-10 grid gap-5 border-t border-white/15 pt-8 sm:grid-cols-2 lg:grid-cols-1">
-              {masterPlanMetrics.slice(1).map((metric) => (
-                <div
-                  key={metric.label}
-                  className="group flex items-end justify-between gap-5 border-b border-white/15 pb-5"
-                >
-                  <div>
-                    <p className="text-3xl font-semibold leading-none">
-                      {metric.value}
-                    </p>
-                    <p className="mt-2 text-xs font-extrabold uppercase tracking-[0.18em] text-white/55">
+              <div className="mt-8 flex items-end gap-4">
+                <h3 className="text-6xl font-semibold leading-[0.82] md:text-7xl">
+                  807
+                </h3>
+                <p className="mb-2 border border-white/18 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-white/68">
+                  Bigha
+                </p>
+              </div>
+
+              <p className="mt-5 text-2xl font-semibold leading-tight text-white">
+                Estate Development
+              </p>
+              <p className="mt-6 max-w-md leading-8 text-white/72">
+                A large-scale low-density estate integrating plots, villas,
+                community amenities, green zones, and long-term infrastructure.
+              </p>
+
+              <div className="mt-10 grid gap-4 border-t border-white/15 pt-7 sm:grid-cols-3 lg:grid-cols-1">
+                {masterPlanMetrics.slice(1).map((metric) => (
+                  <div
+                    key={metric.label}
+                    className="group border border-white/12 bg-white/8 p-5 backdrop-blur-sm transition duration-500 hover:bg-white hover:text-secondary"
+                  >
+                    <div className="flex items-end justify-between gap-4">
+                      <p className="text-3xl font-semibold leading-none">
+                        {metric.value}
+                      </p>
+                      <span className="mb-2 h-px w-12 origin-left scale-x-[0.35] bg-current transition-transform duration-700 ease-out group-hover:scale-x-100" />
+                    </div>
+                    <p className="mt-3 text-xs font-extrabold uppercase tracking-[0.18em] text-white/58 transition group-hover:text-secondary/58">
                       {metric.label}
                     </p>
                   </div>
-                  <span className="h-px w-14 origin-left scale-x-[0.35] bg-white transition-transform duration-700 ease-out group-hover:scale-x-100" />
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="grid lg:grid-rows-[1.05fr_auto]">
-            <div className="relative min-h-[390px] overflow-hidden bg-secondary/95">
-              {/* <Image
+          <div className="grid bg-[#f8f3ec] lg:grid-rows-[1.06fr_auto]">
+            <div className="relative min-h-[430px] overflow-hidden bg-secondary/95">
+              <Image
                 src="/lifestyle/rosemont-master-plan.jpg"
                 alt="Anondo Rosemont Estate master plan overview"
                 fill
-                sizes="(max-width: 1024px) 100vw, 62vw"
+                sizes="(max-width: 1024px) 100vw, 64vw"
                 className="object-cover object-center transition duration-700 hover:scale-105"
-              /> */}
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(56,10,10,0.02)_0%,rgba(56,10,10,0.68)_100%)]" />
-              <div className="absolute bottom-0 left-0 right-0 p-7 text-white md:p-10">
-                <span className="mb-6 block h-px w-24 bg-white" />
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(56,10,10,0.78)_0%,rgba(56,10,10,0.22)_48%,rgba(56,10,10,0.68)_100%)]" />
+              <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-10 lg:p-12">
+                <p className="mb-5 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.22em] text-white/68">
+                  <span className="h-px w-12 bg-white" />
+                  Planned Estate Network
+                </p>
                 <h3 className="max-w-2xl text-3xl font-semibold leading-tight md:text-5xl">
                   Master planning that feels open, organized, and estate-like.
                 </h3>
               </div>
             </div>
 
-            <div className="grid border-t border-secondary/15 md:grid-cols-3">
+            <div className="grid gap-px border-t border-secondary/15 bg-secondary/15 md:grid-cols-3">
               {roadHighlights.map((road, index) => (
                 <article
                   key={road.title}
-                  className="group border-b border-secondary/15 p-6 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
+                  className="group bg-white p-6 transition duration-500 hover:bg-[#f8f3ec] md:p-7"
                 >
-                  <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-secondary/45">
-                    Road 0{index + 1}
-                  </p>
-                  <h4 className="mt-4 text-2xl font-semibold leading-tight text-secondary">
+                  <div className="flex items-center justify-between gap-5">
+                    <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-secondary/45 transition group-hover:text-secondary">
+                      Road 0{index + 1}
+                    </p>
+                    <span className="flex h-10 w-10 items-center justify-center border border-secondary/15 text-xs font-extrabold text-secondary/50 transition group-hover:border-secondary group-hover:bg-secondary group-hover:text-white">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h4 className="mt-5 text-3xl font-semibold leading-none text-secondary">
                     {road.value}
                   </h4>
-                  <p className="mt-3 leading-7 text-[#6b5d57]">
+                  <p className="mt-4 leading-7 text-[#6b5d57]">
                     <span className="font-semibold text-secondary">
                       {road.title}
                     </span>{" "}

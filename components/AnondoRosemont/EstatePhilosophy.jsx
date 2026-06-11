@@ -51,7 +51,7 @@ export default function EstatePhilosophy() {
               <h3 className="text-2xl font-semibold leading-tight">
                 {item.title}
               </h3>
-              <p className="mt-4 leading-8 text-[#6b5d57] transition group-hover:text-white/72">
+              <p className="mt-4 leading-8 text-[#6b5d57] transition group-hover:text-white/70">
                 {item.text}
               </p>
             </article>

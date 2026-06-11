@@ -9,7 +9,6 @@ import FounderVision from "@/components/AnondoRosemont/FounderVision";
 import EstatePhilosophy from "@/components/AnondoRosemont/EstatePhilosophy";
 import EstatePrinciples from "@/components/AnondoRosemont/EstatePrinciples";
 
-
 export default function TheEstatePage() {
   const meta = {
     title: "The Estate Story | Anondo Rosemont Estate",
@@ -49,12 +48,12 @@ export default function TheEstatePage() {
           backgroundImage: "/10 katha villa/MAHI Final.jpeg",
         }}
       />
-        <EstateStoryHero />
-        <EstateIntroIdentity />
-        <ChairmanForeword />
-        <FounderVision />
-        <EstatePhilosophy />
-        <EstatePrinciples />
+      <EstateStoryHero />
+      {/* <EstateIntroIdentity /> */}
+      <ChairmanForeword />
+      <FounderVision />
+      <EstatePhilosophy />
+      <EstatePrinciples />
     </div>
   );
 }

@@ -71,7 +71,7 @@ export default function NRBSupportSection() {
                   {item.title}
                 </h4>
 
-                <p className="mt-3 text-sm leading-7 text-soft_black/60 transition group-hover:text-off_white/72">
+                <p className="mt-3 text-sm leading-7 text-soft_black/60 transition group-hover:text-off_white/70">
                   {item.desc}
                 </p>
 

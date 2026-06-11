@@ -37,7 +37,7 @@ export default function EstateIntroIdentity() {
                 <p
                   key={paragraph}
                   className={`leading-8 ${
-                    index === 0 ? "text-[#6b5d57]" : "text-white/72"
+                    index === 0 ? "text-[#6b5d57]" : "text-white/70"
                   }`}
                 >
                   {paragraph}
@@ -51,7 +51,7 @@ export default function EstateIntroIdentity() {
                   <li
                     key={bullet}
                     className={`flex gap-3 leading-7 ${
-                      index === 0 ? "text-[#6b5d57]" : "text-white/72"
+                      index === 0 ? "text-[#6b5d57]" : "text-white/70"
                     }`}
                   >
                     <span
