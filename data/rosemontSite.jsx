@@ -167,6 +167,10 @@ export const communityFacilities = [
     text: "A designated retail zone for grocery stores, pharmacies, restaurants, cafes, essential shops, and service centers.",
   },
   {
+    title: "Exclusive Pavilion for shopping",
+    text: "A premium retail space offering a curated selection of high-end brands and services.",
+  },
+  {
     title: "Mosque",
     text: "Dedicated religious facility planning to serve Muslim residents within the estate community.",
   },

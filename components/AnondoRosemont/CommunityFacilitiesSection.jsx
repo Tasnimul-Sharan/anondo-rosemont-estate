@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { communityFacilities } from "@/data/rosemontSite";
 
-const primaryFacilities = communityFacilities.slice(0, 3);
-const religiousFacilities = communityFacilities.slice(3);
+const primaryFacilities = communityFacilities.slice(0, 4);
+const religiousFacilities = communityFacilities.slice(4);
 
 export function CommunityFacilitiesSection() {
   return (
