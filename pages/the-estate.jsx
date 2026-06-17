@@ -1,9 +1,5 @@
 "use client";
-
 import Head from "next/head";
-import HeroSection from "@/components/HeroSection";
-import EstateStoryHero from "@/components/AnondoRosemont/EstateStoryHero";
-import EstateIntroIdentity from "@/components/AnondoRosemont/EstateIntroIdentity";
 import ChairmanForeword from "@/components/AnondoRosemont/ChairmanForeword";
 import FounderVision from "@/components/AnondoRosemont/FounderVision";
 import EstatePhilosophy from "@/components/AnondoRosemont/EstatePhilosophy";
