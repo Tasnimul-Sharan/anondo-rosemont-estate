@@ -5,12 +5,43 @@ import Link from "next/link";
 import Slider from "react-slick";
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
+// const slides = [
+//   {
+//     eyebrow: "Anondo Rosemont Estate",
+//     title: "Where Elegance Becomes Heritage",
+//     subtitle: "Land, villas, landscape, and legacy in one planned community",
+//     text: "Rosemont brings spacious duplex homes, open lawns, calm avenues, and natural surroundings together for families who want permanence beyond ordinary city living.",
+//     image: "/rosemont-hero.png",
+//     href: "/ROSEMONT BROCHURE.pdf",
+//     cta: "Download Brochure",
+//     newTab: true,
+//   },
+//   {
+//     eyebrow: "A New Chapter of Estate Living",
+//     title: "True luxury is space to live, breathe, and belong.",
+//     subtitle: "807 bigha of planned openness",
+//     text: "In a world where cities rise higher and homes grow smaller, Rosemont offers land, gardens, water, avenues, and a calmer residential rhythm.",
+//     image: "/5 katha villa/ChatGPT Image May 2, 2026, 12_28_36 PM (1).jpg",
+//     href: "/master-plan",
+//     cta: "View Master Plan",
+//   },
+//   {
+//     eyebrow: "Elegantia in Aeternum",
+//     title: "Elegant duplex villas built for generations.",
+//     subtitle: "5, 10, and 20 katha villa categories",
+//     text: "Developer-built villas maintain architectural harmony across the estate, with landscaped lawns, privacy planning, and refined family living.",
+//     image: "/20 katha villa/ChatGPT Image May 2, 2026, 12_39_41 PM (5).jpg",
+//     href: "/villas-residences",
+//     cta: "Explore Villas",
+//   },
+// ];
+
 const slides = [
   {
     eyebrow: "Anondo Rosemont Estate",
     title: "Where Elegance Becomes Heritage",
     subtitle: "Land, villas, landscape, and legacy in one planned community",
-    text: "Rosemont brings spacious duplex homes, open lawns, calm avenues, and natural surroundings together for families who want permanence beyond ordinary city living.",
+    text: "A master-planned villa estate where elegant duplex homes, open lawns, calm avenues, and natural surroundings create a legacy address for generations.",
     image: "/rosemont-hero.png",
     href: "/ROSEMONT BROCHURE.pdf",
     cta: "Download Brochure",
@@ -20,7 +51,7 @@ const slides = [
     eyebrow: "A New Chapter of Estate Living",
     title: "True luxury is space to live, breathe, and belong.",
     subtitle: "807 bigha of planned openness",
-    text: "In a world where cities rise higher and homes grow smaller, Rosemont offers land, gardens, water, avenues, and a calmer residential rhythm.",
+    text: "Rosemont redefines residential living with spacious land, landscaped gardens, scenic water bodies, wide avenues, and a calmer rhythm beyond ordinary city life.",
     image: "/5 katha villa/ChatGPT Image May 2, 2026, 12_28_36 PM (1).jpg",
     href: "/master-plan",
     cta: "View Master Plan",
@@ -29,7 +60,7 @@ const slides = [
     eyebrow: "Elegantia in Aeternum",
     title: "Elegant duplex villas built for generations.",
     subtitle: "5, 10, and 20 katha villa categories",
-    text: "Developer-built villas maintain architectural harmony across the estate, with landscaped lawns, privacy planning, and refined family living.",
+    text: "Developer-built villas ensure architectural harmony, refined streetscapes, private lawns, and a dignified family lifestyle within a secure estate community.",
     image: "/20 katha villa/ChatGPT Image May 2, 2026, 12_39_41 PM (5).jpg",
     href: "/villas-residences",
     cta: "Explore Villas",

@@ -133,7 +133,7 @@ export function CommunityFacilitiesSection() {
                       {item.title}
                     </h4>
 
-                    <p className="mt-4 text-sm leading-7 text-[#6b5d57] transition duration-300 group-hover:text-white/72">
+                    <p className="mt-4 text-sm leading-7 text-[#6b5d57] transition duration-300 group-hover:text-white/80">
                       {item.text}
                     </p>
                   </article>

@@ -24,13 +24,13 @@ const gatewayCards = [
   },
   {
     title: "Villas",
-    label: "5, 10 and 20 katha",
+    label: "Elegant duplex residences",
     href: "/villas-residences",
     icon: FiHome,
   },
   {
     title: "Lifestyle",
-    label: "Park, lake and sports",
+    label: "Nature, recreation and wellness",
     href: "/lifestyle-amenities",
     icon: FiActivity,
   },
@@ -158,7 +158,7 @@ function EstateGateway() {
                 <h3 className="text-lg font-semibold leading-tight text-secondary transition group-hover:text-white">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-[#6b5d57] transition group-hover:text-white/70">
+                <p className="mt-2 text-sm leading-6 text-[#6b5d57] transition group-hover:text-cream/90">
                   {item.label}
                 </p>
               </Link>
