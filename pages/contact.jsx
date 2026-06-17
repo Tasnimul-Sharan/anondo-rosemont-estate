@@ -3,6 +3,7 @@
 import Head from "next/head";
 import HeroSection from "@/components/HeroSection";
 import ContactPageSection from "@/components/ContactPageSection";
+import RosemontPageHero from "@/components/AnondoRosemont/RosemontPageHero";
 
 export default function ContactPage() {
   const meta = {
@@ -37,11 +38,10 @@ export default function ContactPage() {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-      <HeroSection
-        hero={{
-          title: "Contact",
-          backgroundImage: "/10 katha villa/MAHI Final.jpeg",
-        }}
+      <RosemontPageHero
+        eyebrow="Contact Us"
+        title="Get In Touch"
+        copy="Have questions about Anondo Rosemont Estate? Reach out to us for more information."
       />
       <ContactPageSection />
     </div>

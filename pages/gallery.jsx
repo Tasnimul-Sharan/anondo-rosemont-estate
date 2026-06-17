@@ -3,6 +3,7 @@ import path from "path";
 import Head from "next/head";
 import HeroSection from "@/components/HeroSection";
 import GallarySection from "@/components/AnondoRosemont/GallarySection";
+import RosemontPageHero from "@/components/AnondoRosemont/RosemontPageHero";
 
 const galleryDir = path.join(process.cwd(), "public", "gallery");
 const imageFilePattern = /\.(jpe?g|png|webp|avif)$/i;
@@ -101,13 +102,13 @@ export default function RosemontGalleryPage({ images }) {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-      <HeroSection
-        hero={{
-          title: "Rosemont Gallery",
-          backgroundImage:
-            images?.[0]?.src || "/10 katha villa/MAHI Final.jpeg",
-        }}
+      <RosemontPageHero
+        eyebrow="Gallery"
+        title="Rosemont Gallery"
+        copy="Explore our gallery to see the beauty and lifestyle of Anondo Rosemont Estate."
       />
+      
+
       <GallarySection images={images} />
     </main>
   );

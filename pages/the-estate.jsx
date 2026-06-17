@@ -8,6 +8,7 @@ import ChairmanForeword from "@/components/AnondoRosemont/ChairmanForeword";
 import FounderVision from "@/components/AnondoRosemont/FounderVision";
 import EstatePhilosophy from "@/components/AnondoRosemont/EstatePhilosophy";
 import EstatePrinciples from "@/components/AnondoRosemont/EstatePrinciples";
+import RosemontPageHero from "@/components/AnondoRosemont/RosemontPageHero";
 
 export default function TheEstatePage() {
   const meta = {
@@ -41,14 +42,22 @@ export default function TheEstatePage() {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-      <HeroSection
+      {/* <HeroSection
         hero={{
           title: "The Estate",
           subtitle: "Where Elegance Becomes Heritage",
           backgroundImage: "/10 katha villa/MAHI Final.jpeg",
         }}
+      /> */}
+
+      <RosemontPageHero
+        eyebrow="The Estate Story"
+        title="The Story of Anondo Rosemont Estate"
+        copy="A vision of elegant estate living inspired by nature, architecture, and community heritage.
+"
       />
-      <EstateStoryHero />
+
+      {/* <EstateStoryHero /> */}
       {/* <EstateIntroIdentity /> */}
       <ChairmanForeword />
       <FounderVision />

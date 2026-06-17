@@ -4,57 +4,119 @@ import { useEffect } from "react";
 
 export const useLenis = () => {
   useEffect(() => {
-    let lenis;
-    let rafId;
+    if (typeof window === "undefined") return;
+
+    let lenis = null;
+    let rafId = null;
     let cancelled = false;
     let started = false;
 
+    // Inject Lenis CSS without globals.css
+    const styleId = "lenis-runtime-style";
+
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement("style");
+      style.id = styleId;
+      style.innerHTML = `
+        html {
+          scroll-behavior: auto;
+        }
+
+        html.lenis,
+        html.lenis body {
+          height: auto;
+        }
+
+        .lenis.lenis-smooth {
+          scroll-behavior: auto !important;
+        }
+
+        .lenis.lenis-stopped {
+          overflow: hidden;
+        }
+
+        body {
+          overflow-x: hidden;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
     const startLenis = async () => {
-      if (started) return;
+      if (started || cancelled) return;
+
       started = true;
 
-      const Lenis = (await import("lenis")).default;
+      try {
+        const Lenis = (await import("lenis")).default;
 
-      if (cancelled) return;
+        if (cancelled) return;
 
-      lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => 1 - Math.pow(1 - t, 3),
-        smoothWheel: true,
-        gestureOrientation: "vertical",
-        syncTouch: false,
-        touchMultiplier: 1.5,
-        anchors: true,
-      });
+        lenis = new Lenis({
+          duration: 0.95,
+          easing: (t) => 1 - Math.pow(1 - t, 3),
+          smoothWheel: true,
+          smoothTouch: false,
+          syncTouch: false,
+          touchMultiplier: 1.2,
+          wheelMultiplier: 0.9,
+          gestureOrientation: "vertical",
+          anchors: {
+            offset: -90,
+          },
+        });
 
-      function raf(time) {
-        lenis.raf(time);
+        const raf = (time) => {
+          if (!lenis || cancelled) return;
+
+          lenis.raf(time);
+          rafId = requestAnimationFrame(raf);
+        };
+
         rafId = requestAnimationFrame(raf);
+      } catch (error) {
+        console.error("Lenis failed to load:", error);
       }
-
-      rafId = requestAnimationFrame(raf);
     };
 
     const startOnIntent = () => {
       startLenis();
     };
 
+    const startOnKeyboardScroll = (event) => {
+      const scrollKeys = [
+        "ArrowDown",
+        "ArrowUp",
+        "PageDown",
+        "PageUp",
+        "Home",
+        "End",
+        " ",
+      ];
+
+      if (scrollKeys.includes(event.key)) {
+        startLenis();
+      }
+    };
+
     window.addEventListener("wheel", startOnIntent, {
       once: true,
       passive: true,
     });
+
     window.addEventListener("touchstart", startOnIntent, {
       once: true,
       passive: true,
     });
-    window.addEventListener("keydown", startOnIntent, { once: true });
+
+    window.addEventListener("keydown", startOnKeyboardScroll);
 
     return () => {
       cancelled = true;
 
       window.removeEventListener("wheel", startOnIntent);
       window.removeEventListener("touchstart", startOnIntent);
-      window.removeEventListener("keydown", startOnIntent);
+      window.removeEventListener("keydown", startOnKeyboardScroll);
 
       if (rafId) {
         cancelAnimationFrame(rafId);
@@ -63,6 +125,9 @@ export const useLenis = () => {
       if (lenis) {
         lenis.destroy();
       }
+
+      lenis = null;
+      rafId = null;
     };
   }, []);
 };

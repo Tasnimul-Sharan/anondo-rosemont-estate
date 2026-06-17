@@ -10,6 +10,7 @@ import NRBHeroSection from "@/components/NRB/NRBHeroSection";
 import NRBSupportSection from "@/components/NRB/NRBSupportSection";
 import NRBTrustSection from "@/components/NRB/NRBTrustSection";
 import VideoSection from "@/components/NRB/VideoSection";
+import RosemontPageHero from "@/components/AnondoRosemont/RosemontPageHero";
 
 export default function NRBPage() {
   const meta = {
@@ -55,11 +56,10 @@ export default function NRBPage() {
         <meta name="theme-color" content="#3e0607" />
       </Head>
 
-      <HeroSection
-        hero={{
-          title: "NRB Investment Opportunity",
-          backgroundImage: "/10 katha villa/MAHI Final.jpeg",
-        }}
+      <RosemontPageHero
+        eyebrow="NRB Investment Opportunity"
+        title="Secure Land & Villa Ownership for NRBs"
+        copy="Anondo Rosemont Estate offers NRB investors a secure opportunity to own land and duplex villas near Purbachal, Bangladesh, with legal documentation support, verified ownership process, and a premium gated estate lifestyle."
       />
 
       <NRBHeroSection />

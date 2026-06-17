@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const lifestyleHighlights = [
   "807 Bigha Master Planned Estate",
@@ -95,10 +96,13 @@ export default function LifestyleExperience() {
                 connection.
               </p>
 
-              <button className="group inline-flex items-center justify-center gap-4 bg-secondary px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-xl shadow-secondary/20 transition duration-300 hover:bg-[#241818]">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center justify-center gap-4 bg-secondary px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-xl shadow-secondary/20 transition duration-300 hover:bg-primary hover:shadow-primary/30"
+              >
                 Get In Touch
                 <span className="h-px w-12 origin-left scale-x-[0.35] bg-white transition-transform duration-700 ease-out group-hover:scale-x-100" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -21,16 +21,16 @@ const menuItems = [
   {
     name: "The Estate",
     path: "/the-estate",
-    submenu: [
-      {
-        name: "Estate Story",
-        path: "/the-estate",
-      },
-      // {
-      //   name: "Complete Narrative",
-      //   path: "/estate-details",
-      // },
-    ],
+    // submenu: [
+    //   {
+    //     name: "Estate Story",
+    //     path: "/the-estate",
+    //   },
+    //   // {
+    //   //   name: "Complete Narrative",
+    //   //   path: "/estate-details",
+    //   // },
+    // ],
   },
   {
     name: "Master Plan",
