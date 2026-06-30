@@ -52,7 +52,7 @@ const slides = [
     title: "True luxury is space to live, breathe, and belong.",
     subtitle: "807 bigha of planned openness",
     text: "Rosemont redefines residential living with spacious land, landscaped gardens, scenic water bodies, wide avenues, and a calmer rhythm beyond ordinary city life.",
-    image: "/5 katha villa/ChatGPT Image May 2, 2026, 12_28_36 PM (1).jpg",
+    image: "/5 katha villa/5-katha/5 katha-3.jpg",
     href: "/master-plan",
     cta: "View Master Plan",
   },
