@@ -277,14 +277,28 @@ export default function Navbar() {
             />
           </Link> */}
 
-          <Link href="/" className="inline-block text-white">
+          <Link
+            href="/"
+            className="relative block h-20 w-[140px] shrink-0 overflow-hidden md:h-24 md:w-[180px]"
+            aria-label="Anondo Rosemont Estate Home"
+          >
+            <Image
+              src="/rosemont-logo-final-1.png"
+              alt="Anondo Rosemont Estate"
+              fill
+              sizes="(max-width: 768px) 140px, 180px"
+              priority
+              className="object-cover transition-opacity duration-500"
+              style={{ opacity: isScrolled ? 0 : 1 }}
+            />
             <Image
               src="/rosemont-logo-final.jpeg"
               alt="Anondo Rosemont Estate"
-              width={5000}
-              height={5000}
+              fill
+              sizes="(max-width: 768px) 140px, 180px"
               priority
-              className="h-20 w-[140px] md:h-24 md:w-[180px] object-cover"
+              className="object-cover transition-opacity duration-500"
+              style={{ opacity: isScrolled ? 1 : 0 }}
             />
           </Link>
 
