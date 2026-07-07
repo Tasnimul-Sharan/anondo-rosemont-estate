@@ -51,7 +51,6 @@ export default function FeaturedVillas() {
   return (
     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
       <div className="absolute inset-x-0 top-0 h-px bg-secondary/20" />
-      <div className="absolute right-0 top-0 hidden h-full w-[28%] bg-secondary lg:block" />
 
       <div className="custom-container relative z-10 mx-auto">
         <div className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">

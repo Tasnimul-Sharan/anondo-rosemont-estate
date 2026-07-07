@@ -17,7 +17,6 @@ const lifestyleHighlights = [
 export default function LifestyleExperience() {
   return (
     <section className="relative overflow-hidden bg-[#f8f3ec] text-[#241818]">
-      <div className="absolute inset-y-0 left-0 hidden w-[34%] bg-[#5a0c0c] lg:block" />
 
       <div className="custom-container relative z-10 mx-auto py-16 md:py-24 lg:py-32">
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">

@@ -70,8 +70,6 @@ export function ContactBlock() {
 
   return (
     <section className="relative overflow-hidden bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
-      <div className="absolute right-0 top-0 hidden h-full w-[32%] bg-[#670f0e] lg:block" />
-
       <div className="relative z-10 mx-auto max-w-[1400px] px-5">
         <div className="grid overflow-hidden border border-[#670f0e]/15 bg-white shadow-2xl shadow-[#670f0e]/15 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="bg-[#670f0e] p-7 text-white md:p-10 lg:p-12">

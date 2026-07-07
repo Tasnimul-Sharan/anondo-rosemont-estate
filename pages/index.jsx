@@ -1,6 +1,7 @@
 "use client";
 
 import Head from "next/head";
+import { motion, useReducedMotion } from "framer-motion";
 
 import HeroLuxury from "@/components/AnondoRosemont/HeroLuxury";
 import HomeStorySlider from "@/components/AnondoRosemont/HomeStorySlider";
@@ -142,6 +143,39 @@ const schemaGraph = {
   ],
 };
 
+const homeRevealVariants = {
+  hidden: {
+    opacity: 0,
+    y: 42,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+function HomeReveal({ children }) {
+  const shouldReduceMotion = useReducedMotion();
+
+  if (shouldReduceMotion) {
+    return <div className="w-full">{children}</div>;
+  }
+
+  return (
+    <motion.div
+      className="w-full"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.12, margin: "0px 0px -80px 0px" }}
+      variants={homeRevealVariants}
+      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+      style={{ willChange: "transform, opacity" }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export default function AnondoRosemontEstatePage() {
   return (
     <>
@@ -199,16 +233,32 @@ export default function AnondoRosemontEstatePage() {
 
       <main className="w-full overflow-hidden">
         {/* <HeroLuxury /> */}
-        <HomeStorySlider />
-        <HomeRosemontShowcase />
-        <MasterplanHighlight />
-        <LifestyleExperience />
-        <FeaturedVillas />
+        <HomeReveal>
+          <HomeStorySlider />
+        </HomeReveal>
+        <HomeReveal>
+          <HomeRosemontShowcase />
+        </HomeReveal>
+        <HomeReveal>
+          <MasterplanHighlight />
+        </HomeReveal>
+        <HomeReveal>
+          <LifestyleExperience />
+        </HomeReveal>
+        <HomeReveal>
+          <FeaturedVillas />
+        </HomeReveal>
         {/* <LifestyleAmenities /> */}
-        <CommunityFacilitiesSection />
-        <InvestmentOpportunity />
+        <HomeReveal>
+          <CommunityFacilitiesSection />
+        </HomeReveal>
+        <HomeReveal>
+          <InvestmentOpportunity />
+        </HomeReveal>
         {/* <RosemontBlogsSection /> */}
-        <ContactBlock />
+        <HomeReveal>
+          <ContactBlock />
+        </HomeReveal>
       </main>
     </>
   );
