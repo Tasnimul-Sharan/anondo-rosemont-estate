@@ -111,8 +111,8 @@ const serviceItems = [
 
 function EstateGateway() {
   return (
-    <section className="relative bg-[#f8f3ec] pb-16 text-[#241818] md:pb-24">
-      <div className="custom-container relative z-20 mx-auto -mt-20">
+    <section className="relative bg-[#f8f3ec] py-8 text-[#241818] md:py-12">
+      <div className="custom-container relative z-20 mx-auto">
         <div className="border border-secondary/12 bg-white p-4 shadow-2xl shadow-secondary/12 md:p-5">
           <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
             <div className="grid gap-3 md:grid-cols-3">
@@ -124,6 +124,7 @@ function EstateGateway() {
                   <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-secondary/45">
                     {item.label}
                   </p>
+
                   <p className="mt-2 text-sm font-semibold text-secondary">
                     {item.value}
                   </p>
@@ -136,8 +137,10 @@ function EstateGateway() {
               className="group inline-flex h-full min-h-[64px] items-center justify-center gap-4 bg-secondary px-7 py-4 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition duration-300 hover:bg-[#241818]"
             >
               <FiSearch size={18} />
-              Book Visit
-              <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+
+              <span>Book Visit</span>
+
+              <FiArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>
@@ -155,9 +158,11 @@ function EstateGateway() {
                 <div className="mb-6 flex h-12 w-12 items-center justify-center border border-secondary/15 bg-secondary/5 text-secondary transition duration-300 group-hover:border-white/25 group-hover:bg-white/10 group-hover:text-white">
                   <Icon size={21} />
                 </div>
+
                 <h3 className="text-lg font-semibold leading-tight text-secondary transition group-hover:text-white">
                   {item.title}
                 </h3>
+
                 <p className="mt-2 text-sm leading-6 text-[#6b5d57] transition group-hover:text-cream/90">
                   {item.label}
                 </p>

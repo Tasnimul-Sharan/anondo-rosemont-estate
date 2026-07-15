@@ -17,7 +17,6 @@ const titledGalleryImages = [
   { file: "sports-complex-details.jpg", title: "Sports Complex Details" },
   { file: "sports-playground.jpg", title: "Sports Playground" },
   { file: "community-farming-space.jpg", title: "Community Farming Space" },
-  { file: "community-spaces.jpg", title: "Community Spaces" },
   { file: "club-house.png", title: "Clubhouse and Social Center" },
   { file: "anondo-rosemont-get-together.jpg", title: "Get Together Plaza" },
   { file: "fresco-plaza.jpg", title: "Fresco Plaza" },

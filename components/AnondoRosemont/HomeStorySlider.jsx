@@ -167,7 +167,6 @@
 //   );
 // }
 
-
 // "use client";
 
 // import { useRef, useState } from "react";
@@ -547,32 +546,429 @@
 //   );
 // }
 
+// "use client";
+
+// import { useRef, useState } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import Slider from "react-slick";
+// // import { Cormorant_Garamond } from "next/font/google";
+// import { Playfair_Display, Manrope } from "next/font/google";
+// import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+
+// // const headingFont = Cormorant_Garamond({
+// //   subsets: ["latin"],
+// //   weight: ["500", "600", "700"],
+// //   display: "swap",
+// // });
+
+// const titleFont = Playfair_Display({
+//   subsets: ["latin"],
+//   weight: ["500", "600", "700"],
+//   display: "swap",
+// });
+
+// const subtitleFont = Manrope({
+//   subsets: ["latin"],
+//   weight: ["500", "600", "700"],
+//   display: "swap",
+// });
+
+// const slides = [
+//   {
+//     eyebrow: "Anondo Rosemont Estate",
+//     title: "Where Elegance Becomes Heritage",
+//     subtitle: "Land, villas, landscape, and legacy in one planned community.",
+//     text: "A master-planned villa estate where elegant duplex homes, open lawns, calm avenues, and natural surroundings create a distinguished legacy address for generations.",
+//     image: "/rosemont-hero.png",
+//     imagePosition: "67% center",
+//     href: "/ROSEMONT BROCHURE.pdf",
+//     cta: "Download Brochure",
+//     newTab: true,
+//     secondaryHref: "/gallery",
+//     secondaryCta: "View Estate Gallery",
+//     facts: ["807 Bigha Estate", "Near Purbachal", "Luxury Villa Community"],
+//   },
+//   {
+//     eyebrow: "A New Chapter of Estate Living",
+//     title: "True Luxury Is Space to Live, Breathe and Belong",
+//     subtitle:
+//       "A thoughtfully planned estate defined by openness, greenery and tranquillity.",
+//     text: "Rosemont redefines residential living through spacious land, landscaped gardens, scenic water bodies, wide avenues and a calmer rhythm beyond ordinary city life.",
+//     image: "/5 katha villa/5-katha.jpg",
+//     imagePosition: "63% center",
+//     href: "/master-plan",
+//     cta: "View Master Plan",
+//     secondaryHref: "/the-estate",
+//     secondaryCta: "Discover The Estate",
+//     facts: ["807 Bigha Master Plan", "Wide Grand Avenues", "Natural Landscape"],
+//   },
+//   {
+//     eyebrow: "Elegantia in Aeternum",
+//     title: "Elegant Duplex Villas Built for Generations",
+//     subtitle:
+//       "Exclusive 5, 10 and 20 katha villa categories within one harmonious estate.",
+//     text: "Developer-built villas ensure architectural harmony, refined streetscapes, private lawns and a dignified family lifestyle within a secure estate community.",
+//     image: "/20 katha villa/20-katha.jpg",
+//     imagePosition: "66% center",
+//     href: "/villas-residences",
+//     cta: "Explore Villas",
+//     secondaryHref: "/contact",
+//     secondaryCta: "Book Consultation",
+//     facts: ["5 Katha Villas", "10 Katha Villas", "20 Katha Villas"],
+//   },
+// ];
+
+// const formatNumber = (number) => String(number).padStart(2, "0");
+
+// function DesktopArrow({ direction, onClick }) {
+//   const isPrevious = direction === "previous";
+//   const Icon = isPrevious ? FiArrowLeft : FiArrowRight;
+
+//   return (
+//     <button
+//       type="button"
+//       onClick={onClick}
+//       aria-label={isPrevious ? "Previous slide" : "Next slide"}
+//       className={`
+//         group absolute top-1/2 z-[70] hidden h-14 w-14
+//         -translate-y-1/2 items-center justify-center
+//         border border-white/35 bg-[#3e0607]/55
+//         text-white opacity-0
+//         shadow-[0_18px_45px_rgba(0,0,0,0.35)]
+//         backdrop-blur-md
+//         pointer-events-none
+//         transition-all duration-500 ease-out
+
+//         group-hover/hero:pointer-events-auto
+//         group-hover/hero:translate-x-0
+//         group-hover/hero:opacity-100
+
+//         focus-visible:pointer-events-auto
+//         focus-visible:translate-x-0
+//         focus-visible:opacity-100
+//         focus-visible:outline-none
+//         focus-visible:ring-2
+//         focus-visible:ring-white
+
+//         hover:border-[#f8f3ec]
+//         hover:bg-[#f8f3ec]
+//         hover:text-[#3e0607]
+
+//         lg:flex
+//         xl:h-16 xl:w-16
+
+//         ${
+//           isPrevious
+//             ? "left-6 -translate-x-4 xl:left-8"
+//             : "right-6 translate-x-4 xl:right-8"
+//         }
+//       `}
+//     >
+//       <Icon
+//         className={`text-xl transition-transform duration-500 xl:text-2xl ${
+//           isPrevious
+//             ? "group-hover:-translate-x-1"
+//             : "group-hover:translate-x-1"
+//         }`}
+//       />
+
+//       <span className="pointer-events-none absolute inset-[5px] border border-white/10 transition-colors duration-500 group-hover:border-[#3e0607]/10" />
+//     </button>
+//   );
+// }
+
+// function MobileArrow({ direction, onClick }) {
+//   const isPrevious = direction === "previous";
+//   const Icon = isPrevious ? FiArrowLeft : FiArrowRight;
+
+//   return (
+//     <button
+//       type="button"
+//       onClick={onClick}
+//       aria-label={isPrevious ? "Previous slide" : "Next slide"}
+//       className={`
+//         group flex h-12 w-12 items-center justify-center
+//         bg-[#f8f3ec] text-[#3e0607]
+//         shadow-[0_12px_32px_rgba(0,0,0,0.28)]
+//         transition-all duration-300 hover:bg-white
+//         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white
+//         sm:h-14 sm:w-14
+//         ${isPrevious ? "border-r border-[#3e0607]/15" : ""}
+//       `}
+//     >
+//       <Icon
+//         className={`text-lg transition-transform duration-300 ${
+//           isPrevious
+//             ? "group-hover:-translate-x-1"
+//             : "group-hover:translate-x-1"
+//         }`}
+//       />
+//     </button>
+//   );
+// }
+
+// export default function HomeStorySlider() {
+//   const sliderRef = useRef(null);
+//   const [activeSlide, setActiveSlide] = useState(0);
+
+//   const settings = {
+//     arrows: false,
+//     dots: false,
+//     fade: true,
+//     infinite: true,
+//     autoplay: true,
+//     autoplaySpeed: 6500,
+//     speed: 1200,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     pauseOnHover: true,
+//     pauseOnFocus: true,
+//     swipe: true,
+//     swipeToSlide: true,
+//     draggable: true,
+//     accessibility: true,
+//     cssEase: "cubic-bezier(0.77, 0, 0.175, 1)",
+
+//     beforeChange: (_, nextSlide) => {
+//       setActiveSlide(nextSlide);
+//     },
+//   };
+
+//   const goToPreviousSlide = () => {
+//     sliderRef.current?.slickPrev();
+//   };
+
+//   const goToNextSlide = () => {
+//     sliderRef.current?.slickNext();
+//   };
+
+//   const progress = ((activeSlide + 1) / slides.length) * 100;
+
+//   return (
+//     <section
+//       className="group/hero relative isolate overflow-hidden bg-[#3e0607] text-white"
+//       aria-label="Anondo Rosemont Estate highlights"
+//     >
+//       <Slider ref={sliderRef} {...settings} className="rosemont-story-slider">
+//         {slides.map((slide, index) => (
+//           <div key={slide.title}>
+//             <article className="relative h-[760px] overflow-hidden sm:h-[800px] md:h-[840px] lg:h-[900px]">
+//               {/* Background Image */}
+//               <Image
+//                 src={slide.image}
+//                 alt={slide.title}
+//                 fill
+//                 priority={index === 0}
+//                 sizes="100vw"
+//                 className="object-cover"
+//                 style={{
+//                   objectPosition: slide.imagePosition,
+//                 }}
+//               />
+
+//               {/* Basic Image Tone */}
+//               <div className="pointer-events-none absolute inset-0 bg-black/10" />
+
+//               {/* Desktop Left Gradient */}
+//               {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(39,3,5,0.95)_0%,rgba(57,5,7,0.84)_27%,rgba(62,6,7,0.54)_46%,rgba(62,6,7,0.16)_68%,rgba(0,0,0,0.02)_84%,transparent_100%)]" /> */}
+//               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(39,3,5,0.82)_0%,rgba(57,5,7,0.62)_27%,rgba(62,6,7,0.32)_46%,rgba(62,6,7,0.08)_68%,transparent_100%)]" />
+//               {/* Mobile Overlay */}
+//               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(30,2,4,0.42)_0%,rgba(30,2,4,0.12)_28%,rgba(30,2,4,0.66)_69%,rgba(30,2,4,0.97)_100%)] lg:bg-none" />
+
+//               {/* Cinematic Vignette */}
+//               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_74%_40%,transparent_0%,transparent_25%,rgba(27,2,3,0.12)_58%,rgba(27,2,3,0.52)_100%)]" />
+
+//               {/* Bottom Gradient */}
+//               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#290405]/95 via-[#290405]/35 to-transparent" />
+
+//               {/* Premium Frame */}
+//               <div className="pointer-events-none absolute inset-7 z-[2] hidden border border-white/[0.1] lg:block" />
+
+//               {/* Content */}
+//               <div className="custom-container relative z-20 mx-auto flex h-[760px] items-end pb-32 pt-40 sm:h-[800px] sm:pb-36 md:h-[840px] md:pt-44 lg:h-[900px] lg:items-center lg:pb-24 lg:pt-48">
+//                 <div className="max-w-[760px]">
+//                   {/* Eyebrow */}
+//                   <div className="mb-6 flex items-center gap-4 sm:mb-7">
+//                     <span className="h-px w-10 bg-[#f8f3ec]/75 sm:w-14" />
+
+//                     <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/75 sm:text-xs sm:tracking-[0.32em]">
+//                       {slide.eyebrow}
+//                     </p>
+//                   </div>
+
+//                   {/* Heading */}
+//                   {/* <h1
+//                     className={`${headingFont.className} max-w-[720px] text-[clamp(2.7rem,4.3vw,4.8rem)] font-semibold leading-[0.94] tracking-[-0.03em] text-white`}
+//                   >
+//                     {slide.title}
+//                   </h1> */}
+
+//                   {/* Subtitle */}
+//                   {/* <p className="mt-6 max-w-[650px] text-lg font-medium leading-[1.45] text-white/90 sm:text-xl md:text-[22px] md:leading-[1.4]">
+//                     {slide.subtitle}
+//                   </p> */}
+
+//                   {/* Description */}
+//                   {/* <p className="mt-5 hidden max-w-[620px] text-[15px] leading-7 text-white/68 sm:block md:text-base md:leading-8">
+//                     {slide.text}
+//                   </p> */}
+
+//                   {/* Heading */}
+//                   <h1
+//                     className={`${titleFont.className} max-w-[720px] text-[clamp(2.7rem,4.3vw,4.8rem)] font-semibold leading-[0.94] tracking-[-0.03em] text-white`}
+//                   >
+//                     {slide.title}
+//                   </h1>
+
+//                   {/* Subtitle */}
+//                   {/* <p
+//   className={`${subtitleFont.className} mt-6 max-w-[650px] text-base font-semibold leading-[1.55] tracking-[-0.015em] text-white/90 sm:text-lg md:text-[21px] md:leading-[1.5]`}
+// >
+//   {slide.subtitle}
+// </p> */}
+
+//                   {/* Description */}
+//                   <p
+//                     className={`${subtitleFont.className} mt-5 hidden max-w-[620px] text-[15px] font-medium leading-7 text-white/68 sm:block md:text-[15px] md:leading-8`}
+//                   >
+//                     {slide.text}
+//                   </p>
+
+//                   {/* Facts */}
+//                   <div className="mt-6 hidden flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/15 pt-5 md:flex">
+//                     {slide.facts.map((fact, factIndex) => (
+//                       <div key={fact} className="flex items-center gap-5">
+//                         <span className="text-[10px] font-bold uppercase tracking-[0.19em] text-white/65 lg:text-[11px]">
+//                           {fact}
+//                         </span>
+
+//                         {factIndex !== slide.facts.length - 1 && (
+//                           <span className="h-1 w-1 rounded-full bg-white/40" />
+//                         )}
+//                       </div>
+//                     ))}
+//                   </div>
+
+//                   {/* Buttons */}
+//                   <div className="mt-8 flex flex-wrap items-center gap-5 sm:mt-16">
+//                     <Link
+//                       href={slide.href}
+//                       target={slide.newTab ? "_blank" : undefined}
+//                       rel={slide.newTab ? "noopener noreferrer" : undefined}
+//                       className="group/primary inline-flex min-h-14 w-full items-center justify-center gap-5 bg-[#f8f3ec] px-6 text-[11px] font-extrabold uppercase tracking-[0.17em] text-[#3e0607] transition-all duration-500 hover:bg-white sm:w-auto sm:px-7 sm:text-xs"
+//                     >
+//                       <span>{slide.cta}</span>
+
+//                       <span className="relative hidden h-px w-8 overflow-hidden bg-[#3e0607]/25 sm:block">
+//                         <span className="absolute inset-0 origin-left scale-x-50 bg-[#3e0607] transition-transform duration-500 group-hover/primary:scale-x-100" />
+//                       </span>
+
+//                       <FiArrowUpRight className="text-base transition-transform duration-500 group-hover/primary:-translate-y-1 group-hover/primary:translate-x-1" />
+//                     </Link>
+
+//                     <Link
+//                       href={slide.secondaryHref}
+//                       className="group/secondary inline-flex min-h-12 items-center gap-4 border-b border-white/30 px-1 text-[10px] font-bold uppercase tracking-[0.17em] text-white transition-colors duration-300 hover:border-white sm:text-xs"
+//                     >
+//                       <span>{slide.secondaryCta}</span>
+
+//                       <FiArrowRight className="text-base transition-transform duration-500 group-hover/secondary:translate-x-1.5" />
+//                     </Link>
+//                   </div>
+//                 </div>
+//               </div>
+//             </article>
+//           </div>
+//         ))}
+//       </Slider>
+
+//       {/* Desktop Arrows — only visible on hero hover */}
+//       <DesktopArrow direction="previous" onClick={goToPreviousSlide} />
+
+//       <DesktopArrow direction="next" onClick={goToNextSlide} />
+
+//       {/* Mobile Navigation */}
+//       <div className="pointer-events-none absolute inset-x-0 bottom-6 z-[70] lg:hidden">
+//         <div className="custom-container mx-auto flex items-center justify-between">
+//           <div className="pointer-events-auto flex items-center gap-3">
+//             <span className="text-sm font-bold tracking-[0.18em] text-white">
+//               {formatNumber(activeSlide + 1)}
+//             </span>
+
+//             <span className="h-px w-7 bg-white/35" />
+
+//             <span className="text-xs font-semibold tracking-[0.18em] text-white/55">
+//               {formatNumber(slides.length)}
+//             </span>
+//           </div>
+
+//           <div className="pointer-events-auto flex overflow-hidden">
+//             <MobileArrow direction="previous" onClick={goToPreviousSlide} />
+
+//             <MobileArrow direction="next" onClick={goToNextSlide} />
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Desktop Counter */}
+//       <div className="pointer-events-none absolute bottom-11 right-28 z-[60] hidden items-center gap-3 lg:flex xl:right-32">
+//         <span className="text-sm font-bold tracking-[0.18em] text-white">
+//           {formatNumber(activeSlide + 1)}
+//         </span>
+
+//         <span className="h-px w-8 bg-white/35" />
+
+//         <span className="text-xs font-semibold tracking-[0.18em] text-white/55">
+//           {formatNumber(slides.length)}
+//         </span>
+//       </div>
+
+//       {/* Progress Bar */}
+//       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[80] h-[3px] bg-white/10">
+//         <div
+//           className="h-full bg-[#f8f3ec] transition-[width] duration-700 ease-out"
+//           style={{
+//             width: `${progress}%`,
+//           }}
+//         />
+//       </div>
+
+//       {/* Screen Reader Status */}
+//       <p className="sr-only" aria-live="polite">
+//         Slide {activeSlide + 1} of {slides.length}: {slides[activeSlide].title}
+//       </p>
+//     </section>
+//   );
+// }
+
 "use client";
 
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
-import { Cormorant_Garamond } from "next/font/google";
-import {
-  FiArrowLeft,
-  FiArrowRight,
-  FiArrowUpRight,
-} from "react-icons/fi";
+import { Manrope, Playfair_Display } from "next/font/google";
+import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
-const headingFont = Cormorant_Garamond({
+const titleFont = Playfair_Display({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   display: "swap",
 });
 
+const bodyFont = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
 const slides = [
   {
-    eyebrow: "Anondo Rosemont Estate",
+    label: "Luxury Villa Estate",
     title: "Where Elegance Becomes Heritage",
-    subtitle:
-      "Land, villas, landscape, and legacy in one planned community.",
-    text: "A master-planned villa estate where elegant duplex homes, open lawns, calm avenues, and natural surroundings create a distinguished legacy address for generations.",
+    subtitle: "Land, villas, landscape and legacy in one planned community.",
+    text: "A master-planned villa estate where elegant duplex homes, open lawns, calm avenues and natural surroundings create a distinguished legacy address for generations.",
     image: "/rosemont-hero.png",
     imagePosition: "67% center",
     href: "/ROSEMONT BROCHURE.pdf",
@@ -580,14 +976,10 @@ const slides = [
     newTab: true,
     secondaryHref: "/gallery",
     secondaryCta: "View Estate Gallery",
-    facts: [
-      "807 Bigha Estate",
-      "Near Purbachal",
-      "Luxury Villa Community",
-    ],
+    facts: ["807 Bigha Estate", "Near Purbachal", "Luxury Villa Community"],
   },
   {
-    eyebrow: "A New Chapter of Estate Living",
+    label: "A New Chapter of Estate Living",
     title: "True Luxury Is Space to Live, Breathe and Belong",
     subtitle:
       "A thoughtfully planned estate defined by openness, greenery and tranquillity.",
@@ -598,14 +990,10 @@ const slides = [
     cta: "View Master Plan",
     secondaryHref: "/the-estate",
     secondaryCta: "Discover The Estate",
-    facts: [
-      "807 Bigha Master Plan",
-      "Wide Grand Avenues",
-      "Natural Landscape",
-    ],
+    facts: ["807 Bigha Master Plan", "Wide Grand Avenues", "Natural Landscape"],
   },
   {
-    eyebrow: "Elegantia in Aeternum",
+    label: "Elegantia in Aeternum",
     title: "Elegant Duplex Villas Built for Generations",
     subtitle:
       "Exclusive 5, 10 and 20 katha villa categories within one harmonious estate.",
@@ -632,14 +1020,12 @@ function DesktopArrow({ direction, onClick }) {
       onClick={onClick}
       aria-label={isPrevious ? "Previous slide" : "Next slide"}
       className={`
-        group absolute top-1/2 z-[70] hidden h-14 w-14
-        -translate-y-1/2 items-center justify-center
-        border border-white/35 bg-[#3e0607]/55
-        text-white opacity-0
+        group pointer-events-none absolute top-1/2 z-[70]
+        hidden h-14 w-14 -translate-y-1/2
+        items-center justify-center border border-white/35
+        bg-[#3e0607]/55 text-white opacity-0
         shadow-[0_18px_45px_rgba(0,0,0,0.35)]
-        backdrop-blur-md
-        pointer-events-none
-        transition-all duration-500 ease-out
+        backdrop-blur-md transition-all duration-500 ease-out
 
         group-hover/hero:pointer-events-auto
         group-hover/hero:translate-x-0
@@ -657,7 +1043,8 @@ function DesktopArrow({ direction, onClick }) {
         hover:text-[#3e0607]
 
         lg:flex
-        xl:h-16 xl:w-16
+        xl:h-16
+        xl:w-16
 
         ${
           isPrevious
@@ -693,8 +1080,11 @@ function MobileArrow({ direction, onClick }) {
         bg-[#f8f3ec] text-[#3e0607]
         shadow-[0_12px_32px_rgba(0,0,0,0.28)]
         transition-all duration-300 hover:bg-white
-        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white
-        sm:h-14 sm:w-14
+        focus-visible:outline-none
+        focus-visible:ring-2
+        focus-visible:ring-white
+        sm:h-14
+        sm:w-14
         ${isPrevious ? "border-r border-[#3e0607]/15" : ""}
       `}
     >
@@ -748,14 +1138,10 @@ export default function HomeStorySlider() {
 
   return (
     <section
-      className="group/hero relative isolate overflow-hidden bg-[#3e0607] text-white"
+      className={`${bodyFont.className} group/hero relative isolate overflow-hidden bg-[#3e0607] text-white`}
       aria-label="Anondo Rosemont Estate highlights"
     >
-      <Slider
-        ref={sliderRef}
-        {...settings}
-        className="rosemont-story-slider"
-      >
+      <Slider ref={sliderRef} {...settings} className="rosemont-story-slider">
         {slides.map((slide, index) => (
           <div key={slide.title}>
             <article className="relative h-[760px] overflow-hidden sm:h-[800px] md:h-[840px] lg:h-[900px]">
@@ -775,57 +1161,63 @@ export default function HomeStorySlider() {
               {/* Basic Image Tone */}
               <div className="pointer-events-none absolute inset-0 bg-black/10" />
 
-              {/* Desktop Left Gradient */}
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(39,3,5,0.95)_0%,rgba(57,5,7,0.84)_27%,rgba(62,6,7,0.54)_46%,rgba(62,6,7,0.16)_68%,rgba(0,0,0,0.02)_84%,transparent_100%)]" />
+              {/* Left Gradient */}
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(39,3,5,0.82)_0%,rgba(57,5,7,0.62)_27%,rgba(62,6,7,0.32)_46%,rgba(62,6,7,0.08)_68%,transparent_100%)]" />
+
+              {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(39,3,5,0.88)_0%,rgba(57,5,7,0.70)_27%,rgba(62,6,7,0.40)_46%,rgba(62,6,7,0.12)_68%,transparent_100%)]" /> */}
 
               {/* Mobile Overlay */}
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(30,2,4,0.42)_0%,rgba(30,2,4,0.12)_28%,rgba(30,2,4,0.66)_69%,rgba(30,2,4,0.97)_100%)] lg:bg-none" />
 
               {/* Cinematic Vignette */}
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_74%_40%,transparent_0%,transparent_25%,rgba(27,2,3,0.12)_58%,rgba(27,2,3,0.52)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_74%_40%,transparent_0%,transparent_25%,rgba(27,2,3,0.10)_58%,rgba(27,2,3,0.42)_100%)]" />
 
               {/* Bottom Gradient */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#290405]/95 via-[#290405]/35 to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-[#290405]/90 via-[#290405]/30 to-transparent" />
 
               {/* Premium Frame */}
               <div className="pointer-events-none absolute inset-7 z-[2] hidden border border-white/[0.1] lg:block" />
 
-              {/* Content */}
+              {/* Main Content */}
               <div className="custom-container relative z-20 mx-auto flex h-[760px] items-end pb-32 pt-40 sm:h-[800px] sm:pb-36 md:h-[840px] md:pt-44 lg:h-[900px] lg:items-center lg:pb-24 lg:pt-48">
-                <div className="max-w-[760px]">
-                  {/* Eyebrow */}
-                  <div className="mb-6 flex items-center gap-4 sm:mb-7">
-                    <span className="h-px w-10 bg-[#f8f3ec]/75 sm:w-14" />
+                <div className="max-w-[920px]">
+                  {/* Small Label */}
+                  <div className="mb-5 flex items-center gap-4 sm:mb-6">
+                    <span className="h-px w-10 bg-[#f8f3ec]/70 sm:w-14" />
 
-                    <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/75 sm:text-xs sm:tracking-[0.32em]">
-                      {slide.eyebrow}
+                    <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-white/70 sm:text-xs">
+                      {slide.label}
                     </p>
                   </div>
 
-                  {/* Heading */}
+                  {/* Main Brand Title */}
                   <h1
-                    className={`${headingFont.className} max-w-[720px] text-[clamp(2.7rem,4.3vw,4.8rem)] font-semibold leading-[0.94] tracking-[-0.03em] text-white`}
+                    className={`${titleFont.className} max-w-full text-[clamp(2.7rem,4.3vw,4.8rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-white`}
                   >
-                    {slide.title}
+                    Anondo Rosemont Estate
                   </h1>
 
+                  {/* Individual Slide Title */}
+                  <h2
+                    className={`${bodyFont.className} mt-5 max-w-[760px] text-[clamp(1.1rem,1.7vw,2rem)] font-semibold leading-[1.35] tracking-[-0.02em] text-white/92`}
+                  >
+                    {slide.title}
+                  </h2>
+
                   {/* Subtitle */}
-                  <p className="mt-6 max-w-[650px] text-lg font-medium leading-[1.45] text-white/90 sm:text-xl md:text-[22px] md:leading-[1.4]">
+                  {/* <p className="mt-4 max-w-[650px] text-sm font-semibold leading-7 text-white/78 sm:text-base md:text-lg">
                     {slide.subtitle}
-                  </p>
+                  </p> */}
 
                   {/* Description */}
-                  <p className="mt-5 hidden max-w-[620px] text-[15px] leading-7 text-white/68 sm:block md:text-base md:leading-8">
+                  {/* <p className="mt-4 hidden max-w-[620px] text-[14px] font-medium leading-7 text-white/62 sm:block md:text-[15px] md:leading-8">
                     {slide.text}
-                  </p>
+                  </p> */}
 
                   {/* Facts */}
                   <div className="mt-6 hidden flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/15 pt-5 md:flex">
                     {slide.facts.map((fact, factIndex) => (
-                      <div
-                        key={fact}
-                        className="flex items-center gap-5"
-                      >
+                      <div key={fact} className="flex items-center gap-5">
                         <span className="text-[10px] font-bold uppercase tracking-[0.19em] text-white/65 lg:text-[11px]">
                           {fact}
                         </span>
@@ -838,15 +1230,11 @@ export default function HomeStorySlider() {
                   </div>
 
                   {/* Buttons */}
-                  <div className="mt-7 flex flex-wrap items-center gap-5 sm:mt-8">
+                  <div className="mt-8 flex flex-wrap items-center gap-5 sm:mt-16">
                     <Link
                       href={slide.href}
                       target={slide.newTab ? "_blank" : undefined}
-                      rel={
-                        slide.newTab
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
+                      rel={slide.newTab ? "noopener noreferrer" : undefined}
                       className="group/primary inline-flex min-h-14 w-full items-center justify-center gap-5 bg-[#f8f3ec] px-6 text-[11px] font-extrabold uppercase tracking-[0.17em] text-[#3e0607] transition-all duration-500 hover:bg-white sm:w-auto sm:px-7 sm:text-xs"
                     >
                       <span>{slide.cta}</span>
@@ -874,16 +1262,10 @@ export default function HomeStorySlider() {
         ))}
       </Slider>
 
-      {/* Desktop Arrows — only visible on hero hover */}
-      <DesktopArrow
-        direction="previous"
-        onClick={goToPreviousSlide}
-      />
+      {/* Desktop Arrows */}
+      <DesktopArrow direction="previous" onClick={goToPreviousSlide} />
 
-      <DesktopArrow
-        direction="next"
-        onClick={goToNextSlide}
-      />
+      <DesktopArrow direction="next" onClick={goToNextSlide} />
 
       {/* Mobile Navigation */}
       <div className="pointer-events-none absolute inset-x-0 bottom-6 z-[70] lg:hidden">
@@ -901,15 +1283,9 @@ export default function HomeStorySlider() {
           </div>
 
           <div className="pointer-events-auto flex overflow-hidden">
-            <MobileArrow
-              direction="previous"
-              onClick={goToPreviousSlide}
-            />
+            <MobileArrow direction="previous" onClick={goToPreviousSlide} />
 
-            <MobileArrow
-              direction="next"
-              onClick={goToNextSlide}
-            />
+            <MobileArrow direction="next" onClick={goToNextSlide} />
           </div>
         </div>
       </div>
@@ -937,10 +1313,9 @@ export default function HomeStorySlider() {
         />
       </div>
 
-      {/* Screen Reader Status */}
+      {/* Accessibility Status */}
       <p className="sr-only" aria-live="polite">
-        Slide {activeSlide + 1} of {slides.length}:{" "}
-        {slides[activeSlide].title}
+        Slide {activeSlide + 1} of {slides.length}: {slides[activeSlide].title}
       </p>
     </section>
   );
