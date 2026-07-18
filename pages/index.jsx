@@ -144,17 +144,17 @@ const schemaGraph = {
 };
 
 const homeRevealVariants = {
-  hidden: {
+  hidden: (lift = true) => ({
     opacity: 0,
-    y: 42,
-  },
+    y: lift ? 42 : 0,
+  }),
   visible: {
     opacity: 1,
     y: 0,
   },
 };
 
-function HomeReveal({ children }) {
+function HomeReveal({ children, lift = true }) {
   const shouldReduceMotion = useReducedMotion();
 
   if (shouldReduceMotion) {
@@ -168,8 +168,8 @@ function HomeReveal({ children }) {
       whileInView="visible"
       viewport={{ once: true, amount: 0.12, margin: "0px 0px -80px 0px" }}
       variants={homeRevealVariants}
+      custom={lift}
       transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>
@@ -252,7 +252,7 @@ export default function AnondoRosemontEstatePage() {
         <HomeReveal>
           <CommunityFacilitiesSection />
         </HomeReveal>
-        <HomeReveal>
+        <HomeReveal lift={false}>
           <InvestmentOpportunity />
         </HomeReveal>
         {/* <RosemontBlogsSection /> */}

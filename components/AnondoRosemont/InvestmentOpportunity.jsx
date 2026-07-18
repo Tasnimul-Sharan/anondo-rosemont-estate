@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 
 const investmentStats = [
@@ -222,93 +223,96 @@ export default function InvestmentOpportunity() {
         </div>
       </section>
 
-      {open && (
-        <div
-          className="fixed inset-0 z-[999] bg-[#241818]/70 px-4 py-6 backdrop-blur-sm md:px-5 md:py-8"
-          onClick={() => setOpen(false)}
-          role="presentation"
-          data-lenis-prevent="true"
-        >
+      {open &&
+        typeof document !== "undefined" &&
+        createPortal(
           <div
-            className="mx-auto max-h-[calc(100vh-3rem)] max-w-[1200px] overflow-y-auto overscroll-contain border border-white/15 bg-[#f8f3ec] shadow-2xl shadow-black/30 md:max-h-[calc(100vh-4rem)]"
-            onClick={(event) => event.stopPropagation()}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="why-invest-title"
+            className="fixed inset-0 z-[999] bg-[#241818]/70 px-4 py-6 backdrop-blur-sm md:px-5 md:py-8"
+            onClick={() => setOpen(false)}
+            role="presentation"
             data-lenis-prevent="true"
           >
-            <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
-              <div className="bg-[#5a0c0c] p-7 text-white md:p-10">
-                <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-white/70">
-                  <span className="h-px w-10 bg-current" />
-                  Why Invest
-                </p>
+            <div
+              className="mx-auto max-h-[calc(100vh-3rem)] max-w-[1200px] overflow-y-auto overscroll-contain border border-white/15 bg-[#f8f3ec] shadow-2xl shadow-black/30 md:max-h-[calc(100vh-4rem)]"
+              onClick={(event) => event.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="why-invest-title"
+              data-lenis-prevent="true"
+            >
+              <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
+                <div className="bg-[#5a0c0c] p-7 text-white md:p-10">
+                  <p className="mb-4 inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-white/70">
+                    <span className="h-px w-10 bg-current" />
+                    Why Invest
+                  </p>
 
-                <h3
-                  id="why-invest-title"
-                  className="text-3xl font-semibold leading-tight md:text-5xl"
-                >
-                  Rosemont is built for lifestyle, legacy, and long-term asset
-                  confidence.
-                </h3>
-
-                <p className="mt-6 leading-8 text-white/72">
-                  The investment strength of Rosemont comes from combining land
-                  ownership, completed villas, controlled planning, future
-                  regional growth, and a secure gated estate model.
-                </p>
-
-                <button
-                  type="button"
-                  onClick={() => setOpen(false)}
-                  className="group mt-10 inline-flex items-center gap-4 border border-white/25 px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:bg-white hover:text-[#5a0c0c]"
-                >
-                  Close
-                  <span className="h-px w-10 origin-left scale-x-[0.35] bg-current transition-transform duration-700 group-hover:scale-x-100" />
-                </button>
-              </div>
-
-              <div className="divide-y divide-[#5a0c0c]/15">
-                {whyInvestDetails.map((item, index) => (
-                  <article
-                    key={item.title}
-                    className="group grid gap-6 p-7 md:p-8 lg:grid-cols-[70px_1fr]"
+                  <h3
+                    id="why-invest-title"
+                    className="text-3xl font-semibold leading-tight md:text-5xl"
                   >
-                    <div>
-                      <p className="text-sm font-extrabold uppercase tracking-[0.22em] text-[#5a0c0c]/45 group-hover:text-[#5a0c0c]">
-                        {String(index + 1).padStart(2, "0")}
-                      </p>
-                      <span className="mt-5 block h-px w-12 origin-left scale-x-[0.35] bg-[#5a0c0c] transition-transform duration-700 group-hover:scale-x-100" />
-                    </div>
+                    Rosemont is built for lifestyle, legacy, and long-term asset
+                    confidence.
+                  </h3>
 
-                    <div>
-                      <h4 className="text-2xl font-semibold leading-tight text-[#5a0c0c]">
-                        {item.title}
-                      </h4>
+                  <p className="mt-6 leading-8 text-white/72">
+                    The investment strength of Rosemont comes from combining
+                    land ownership, completed villas, controlled planning,
+                    future regional growth, and a secure gated estate model.
+                  </p>
 
-                      <p className="mt-4 leading-8 text-[#6b5d57]">
-                        {item.text}
-                      </p>
+                  <button
+                    type="button"
+                    onClick={() => setOpen(false)}
+                    className="group mt-10 inline-flex items-center gap-4 border border-white/25 px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:bg-white hover:text-[#5a0c0c]"
+                  >
+                    Close
+                    <span className="h-px w-10 origin-left scale-x-[0.35] bg-current transition-transform duration-700 group-hover:scale-x-100" />
+                  </button>
+                </div>
 
-                      <ul className="mt-5 grid gap-2 sm:grid-cols-2">
-                        {item.points.map((point) => (
-                          <li
-                            key={point}
-                            className="flex gap-3 leading-7 text-[#6b5d57]"
-                          >
-                            <span className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#5a0c0c]" />
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </article>
-                ))}
+                <div className="divide-y divide-[#5a0c0c]/15">
+                  {whyInvestDetails.map((item, index) => (
+                    <article
+                      key={item.title}
+                      className="group grid gap-6 p-7 md:p-8 lg:grid-cols-[70px_1fr]"
+                    >
+                      <div>
+                        <p className="text-sm font-extrabold uppercase tracking-[0.22em] text-[#5a0c0c]/45 group-hover:text-[#5a0c0c]">
+                          {String(index + 1).padStart(2, "0")}
+                        </p>
+                        <span className="mt-5 block h-px w-12 origin-left scale-x-[0.35] bg-[#5a0c0c] transition-transform duration-700 group-hover:scale-x-100" />
+                      </div>
+
+                      <div>
+                        <h4 className="text-2xl font-semibold leading-tight text-[#5a0c0c]">
+                          {item.title}
+                        </h4>
+
+                        <p className="mt-4 leading-8 text-[#6b5d57]">
+                          {item.text}
+                        </p>
+
+                        <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                          {item.points.map((point) => (
+                            <li
+                              key={point}
+                              className="flex gap-3 leading-7 text-[#6b5d57]"
+                            >
+                              <span className="mt-[10px] h-1.5 w-1.5 shrink-0 bg-[#5a0c0c]" />
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body,
+        )}
     </>
   );
 }
