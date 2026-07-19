@@ -22,23 +22,23 @@ const trustedCountries = [
   "South Korea",
 ];
 
-const trustPoints = [
-  {
-    icon: <FaShieldAlt />,
-    title: "Secure Investment",
-    desc: "Structured guidance for overseas buyers.",
-  },
-  {
-    icon: <FaFileSignature />,
-    title: "Documentation Support",
-    desc: "Assistance for booking and legal process.",
-  },
-  {
-    icon: <FaGlobeAsia />,
-    title: "Remote Coordination",
-    desc: "Consultation from anywhere in the world.",
-  },
-];
+// const trustPoints = [
+//   {
+//     icon: <FaShieldAlt />,
+//     title: "Secure Investment",
+//     desc: "Structured guidance for overseas buyers.",
+//   },
+//   {
+//     icon: <FaFileSignature />,
+//     title: "Documentation Support",
+//     desc: "Assistance for booking and legal process.",
+//   },
+//   {
+//     icon: <FaGlobeAsia />,
+//     title: "Remote Coordination",
+//     desc: "Consultation from anywhere in the world.",
+//   },
+// ];
 
 export default function NRBHeroSection() {
   return (
@@ -72,7 +72,7 @@ export default function NRBHeroSection() {
               a meaningful connection to home.
             </p>
 
-            <div className="relative z-20 mt-8 grid gap-4 sm:grid-cols-3">
+            {/* <div className="relative z-20 mt-8 grid gap-4 sm:grid-cols-3">
               {trustPoints.map((item) => (
                 <div
                   key={item.title}
@@ -91,7 +91,7 @@ export default function NRBHeroSection() {
                   </p>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
