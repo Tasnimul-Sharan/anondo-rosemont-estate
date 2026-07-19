@@ -118,7 +118,7 @@ export const roadNetwork = [
 ];
 
 export const designFeatures = [
-  "Elevated plots and houses 24 to 36 inches above road level",
+  "Elevated plots and houses 2 to 3 feet above road level",
   "Open front lawn concept with no front boundary walls",
   "Pillar-based plot demarcation system",
   "Rear and partial side privacy boundary walls",

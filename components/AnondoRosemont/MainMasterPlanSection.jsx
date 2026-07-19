@@ -7,7 +7,7 @@ const plotCategories = [
     plots: "900 plots",
     size: "2,750 sft duplex",
     floors: "Ground 1,350 sft / First 1,400 sft",
-    frontage: "25 ft residential road",
+    frontage: "Private driveway",
     image: "/5 katha villa/5-katha-1.jpg",
     note: "Efficient family villas with open lawn living, garage planning, and comfortable indoor-outdoor balance.",
   },
@@ -16,7 +16,7 @@ const plotCategories = [
     plots: "450 plots",
     size: "4,500 sft duplex",
     floors: "Ground 2,000 sft / First 2,500 sft",
-    frontage: "40 ft avenue frontage",
+    frontage: "Private driveway",
     image: "/10 katha villa/10-katha-1.png",
     note: "Expanded estate living with larger gardens, executive facade presence, and optional private pool planning.",
   },
@@ -38,7 +38,7 @@ const roadHighlights = [
     text: "The primary estate boulevard designed for arrival, movement, and a generous estate impression.",
   },
   {
-    value: "40 ft",
+    value: "60 ft",
     title: "Secondary Avenues",
     text: "Wide internal avenues connect residential zones, amenities, landscapes, and community facilities.",
   },
@@ -126,7 +126,7 @@ export function MainMasterPlanSection() {
                 {masterPlanMetrics.slice(1).map((metric) => (
                   <div
                     key={metric.label}
-                    className="group border border-white/12 bg-white/8 p-5 backdrop-blur-sm transition duration-500 hover:bg-white hover:text-secondary"
+                    className="group border border-white/15 bg-white/8 p-5 backdrop-blur-sm transition duration-500 hover:bg-white hover:text-secondary"
                   >
                     <div className="flex items-end justify-between gap-4">
                       <p className="text-3xl font-semibold leading-none">
@@ -172,7 +172,7 @@ export function MainMasterPlanSection() {
                 >
                   <div className="flex items-center justify-between gap-5">
                     <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-secondary/45 transition group-hover:text-secondary">
-                      Road 0{index + 1}
+                      Avenue 0{index + 1}
                     </p>
                     <span className="flex h-10 w-10 items-center justify-center border border-secondary/15 text-xs font-extrabold text-secondary/50 transition group-hover:border-secondary group-hover:bg-secondary group-hover:text-white">
                       {String(index + 1).padStart(2, "0")}
@@ -316,6 +316,28 @@ export function MainMasterPlanSection() {
                 </p>
               </article>
             ))}
+          </div>
+        </div>
+        {/* Luxury Design Credit */}
+        <div className="mt-16 flex justify-center">
+          <div className="relative max-w-xl overflow-hidden border border-secondary/15 bg-white px-8 py-6 text-center shadow-xl shadow-secondary/10">
+            <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent_0%,rgba(74,10,10,0.06)_45%,transparent_100%)]" />
+
+            <div className="relative flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-secondary/25" />
+              <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-secondary/35">
+                Designed by
+              </p>
+              <span className="h-px w-12 bg-secondary/25" />
+            </div>
+
+            <p className="relative mt-3 font-serif text-lg font-semibold italic tracking-wide text-secondary">
+              REART DESIGN PTE LTD
+            </p>
+
+            <p className="relative mt-2 text-[11px] font-medium uppercase tracking-[0.16em] text-secondary/45">
+              20 Kallang Avenue #03-12 Singapore 339411
+            </p>
           </div>
         </div>
       </div>

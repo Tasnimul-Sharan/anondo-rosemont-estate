@@ -66,7 +66,7 @@ export default function NRBPage() {
       <NRBTrustSection />
       <BuyingProcessSection />
       <DocumentsSection />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <NRBSupportSection />
       <FAQSection />
       <LeadCaptureCard />
