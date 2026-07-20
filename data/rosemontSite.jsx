@@ -428,7 +428,7 @@ export const residentialComponents = [
     text: "Ideal for families seeking elegant villa living with efficient land use, garden space, and comfortable indoor planning.",
     items: [
       "Number of plots: 900",
-      "Total villa size: 2,750 sft",
+      "Planned Built-up Area: 3,600 sft",
       "Ground Floor: 1,350 sft",
       "First Floor: 1,400 sft",
       "25 ft residential road frontage",
@@ -440,7 +440,7 @@ export const residentialComponents = [
     text: "A larger estate residence designed for expanded family living, enhanced landscaping, and optional private leisure facilities.",
     items: [
       "Number of plots: 450",
-      "Total villa size: 4,500 sft",
+      "Planned Built-up Area: 4,500 sft",
       "Ground Floor: 2,000 sft",
       "First Floor: 2,500 sft",
       "40 ft avenue frontage",
@@ -453,7 +453,7 @@ export const residentialComponents = [
     text: "The most prestigious residential category, created for families seeking grand villa living, expansive gardens, premium facilities, and long-term legacy value.",
     items: [
       "Number of plots: 90",
-      "Total villa size: 7,200 sft",
+      "Planned Built-up Area: 7,200 sft",
       "Ground Floor: 4,000 sft",
       "First Floor: 3,200 sft",
       "Optional duplex or triplex configuration",

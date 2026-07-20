@@ -11,7 +11,7 @@ const villas = [
     size: "5 Katha Duplex",
     image: "/5 katha villa/5-katha.jpg",
     specs: [
-      "Total: 2,750 sft",
+      "Total: 3,600 sft",
       "Ground: 1,350 sft",
       "First: 1,400 sft",
       // "25 ft road frontage",
