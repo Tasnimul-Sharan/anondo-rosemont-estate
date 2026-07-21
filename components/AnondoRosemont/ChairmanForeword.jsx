@@ -16,7 +16,7 @@ export default function ChairmanForeword() {
 
           <div className="relative min-h-[560px] overflow-hidden bg-secondary shadow-2xl shadow-secondary/20">
             <Image
-              src="/gazi-md-mozammel-haque.jpeg"
+              src="/gazi-md-mozammel-haque-1.jpeg"
               alt="Chairman of Anondo Rosemont Estate"
               fill
               sizes="(max-width: 1024px) 100vw, 44vw"
