@@ -23,7 +23,7 @@ export default function ChairmanForeword() {
               className="object-cover"
             />
 
-            <div className="absolute inset-x-0 -bottom-3 bg-secondary/82 px-6 pb-5 pt-4 text-white backdrop-blur-md">
+            <div className="absolute inset-x-0 -bottom-3 bg-secondary/82 px-6 pb-4 pt-2 text-white backdrop-blur-md">
               <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-white/55">
                 Chairman
               </p>
