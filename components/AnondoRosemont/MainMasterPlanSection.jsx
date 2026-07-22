@@ -14,8 +14,8 @@ const plotCategories = [
   {
     title: "10 Katha Villa Residences",
     plots: "450 plots",
-    size: "4,500 sft duplex",
-    floors: "Ground 2,000 sft / First 2,500 sft",
+    size: "5,000 sft duplex",
+    floors: "Ground 2,000 sft / First 3,000 sft",
     frontage: "Private driveway",
     image: "/10 katha villa/10-katha-1.png",
     note: "Expanded estate living with larger gardens, executive facade presence, and optional private pool planning.",

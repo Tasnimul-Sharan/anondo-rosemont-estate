@@ -25,7 +25,7 @@ const villas = [
     size: "10 Katha Duplex",
     image: "/10 katha villa/10-katha.jpg",
     specs: [
-      "Total: 4,500 sft",
+      "Total: 5,000 sft",
       "40 ft avenue frontage",
       "Optional private swimming pool",
       "Expansive lawn & garden",
@@ -96,7 +96,8 @@ export default function FeaturedVillas() {
                   className="object-cover transition duration-700 group-hover:scale-105"
                 />
 
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(56,10,10,0.02)_0%,rgba(56,10,10,0.76)_100%)]" />
+                {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(56,10,10,0.02)_0%,rgba(56,10,10,0.76)_100%)]" /> */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                 <div className="absolute left-6 top-6 flex h-12 w-12 items-center justify-center border border-white/25 bg-white/15 text-sm font-semibold text-white backdrop-blur-md">
                   {String(index + 1).padStart(2, "0")}

@@ -76,7 +76,7 @@ export const villas = [
     intro:
       "A larger villa format with expanded garden potential, executive facade design, and optional resort-style pool planning.",
     specs: [
-      "Total: 4,500 sft",
+      "Total: 5,000 sft",
       "Ground Floor: 2,000 sft",
       "First Floor: 2,500 sft",
       "40 ft avenue frontage",
@@ -440,7 +440,7 @@ export const residentialComponents = [
     text: "A larger estate residence designed for expanded family living, enhanced landscaping, and optional private leisure facilities.",
     items: [
       "Number of plots: 450",
-      "Planned Built-up Area: 4,500 sft",
+      "Planned Built-up Area: 5,000 sft",
       "Ground Floor: 2,000 sft",
       "First Floor: 2,500 sft",
       "40 ft avenue frontage",
