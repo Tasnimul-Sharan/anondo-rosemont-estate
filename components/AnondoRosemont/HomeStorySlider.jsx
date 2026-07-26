@@ -1159,12 +1159,11 @@ export default function HomeStorySlider() {
               />
 
               {/* Basic Image Tone */}
-              <div className="pointer-events-none absolute inset-0 bg-black/10" />
+              <div className="pointer-events-none absolute inset-0 bg-black/20" />
 
               {/* Left Gradient */}
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(39,3,5,0.82)_0%,rgba(57,5,7,0.62)_27%,rgba(62,6,7,0.32)_46%,rgba(62,6,7,0.08)_68%,transparent_100%)]" />
+           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(39,3,5,0.58)_0%,rgba(57,5,7,0.42)_27%,rgba(62,6,7,0.18)_46%,rgba(62,6,7,0.03)_68%,transparent_100%)]" />
 
-              {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(39,3,5,0.88)_0%,rgba(57,5,7,0.70)_27%,rgba(62,6,7,0.40)_46%,rgba(62,6,7,0.12)_68%,transparent_100%)]" /> */}
 
               {/* Mobile Overlay */}
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(30,2,4,0.42)_0%,rgba(30,2,4,0.12)_28%,rgba(30,2,4,0.66)_69%,rgba(30,2,4,0.97)_100%)] lg:bg-none" />

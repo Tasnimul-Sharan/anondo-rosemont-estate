@@ -32,13 +32,13 @@ export default function LifestyleExperience() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(56,10,10,0.18)_0%,rgba(56,10,10,0.58)_100%)]" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(56,10,10,0.52)_0%,rgba(56,10,10,0.12)_100%)]" />
 
-            <div className="absolute bottom-0 left-0 max-w-md border-t border-r border-white/20 bg-secondary/82 p-7 backdrop-blur-md md:p-9">
+            <div className="absolute bottom-0 left-0 max-w-md border-t border-r border-white/20 bg-secondary/82 p-7 backdrop-blur-md md:p-10">
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-white/90">
                 Lifestyle Experience
               </p>
 
               <h2 className="text-3xl font-semibold leading-tight text-white md:text-5xl">
-                A Life Beyond Your Villa
+                A Life Beyond Your Imagination
               </h2>
 
               <p className="mt-5 leading-8 text-off_white/80">

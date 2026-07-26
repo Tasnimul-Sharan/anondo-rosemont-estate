@@ -62,24 +62,6 @@ const menuItems = [
     name: "NRB Investment",
     path: "/investment-nrb",
   },
-  // {
-  //   name: "Investment",
-  //   path: "#",
-  //   submenu: [
-  //     {
-  //       name: "Investment & NRB",
-  //       path: "/investment-nrb",
-  //     },
-  //     {
-  //       name: "Developer",
-  //       path: "/developer",
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: "Blogs",
-  //   path: "/blogs",
-  // },
   {
     name: "Gallery",
     path: "/gallery",
@@ -202,7 +184,6 @@ export default function Navbar() {
           : "bg-transparent shadow-none"
       }`}
     >
-      {/* Top Info Bar */}
       <div
         className={`hidden overflow-hidden border-b border-off_white/10 text-off_white transition-all duration-500 lg:block ${
           isScrolled
@@ -262,20 +243,6 @@ export default function Navbar() {
         }`}
       >
         <div className="custom-container mx-auto flex min-h-[92px] items-center justify-between gap-6">
-          {/* <Link
-            href="/"
-            className="flex shrink-0 items-center"
-            aria-label="Anondo Rosemont Estate Home"
-          >
-            <Image
-              src="/rosemont-logo-final.jpeg"
-              alt="Anondo Rosemont Estate"
-              width={5000}
-              height={5000}
-              priority
-              className="h-20 w-[140px] md:h-24 md:w-[180px] object-contain"
-            />
-          </Link> */}
 
           <Link
             href="/"
@@ -301,44 +268,6 @@ export default function Navbar() {
               style={{ opacity: isScrolled ? 1 : 0 }}
             />
           </Link>
-
-          {/* <ul className="relative hidden h-[92px] items-center gap-4 text-[13px] font-semibold uppercase tracking-[0.13em] text-off_white/78 xl:flex 2xl:gap-6">
-            {menuItems.map((item, i) => (
-              <li key={i} className="group relative flex h-full items-center">
-                <Link
-                  href={item.path}
-                  className="flex h-full items-center gap-1.5 transition duration-300 hover:text-off_white"
-                >
-                  {item.name}
-
-                  {item.submenu && (
-                    <FiChevronRight className="rotate-90 text-sm text-off_white/55 transition duration-300 group-hover:text-off_white" />
-                  )}
-                </Link>
-
-                <span className="absolute bottom-0 left-0 h-px w-0 bg-off_white transition-all duration-500 group-hover:w-full" />
-
-                {item.submenu && (
-                  <ul className="invisible absolute left-0 top-full z-50 w-80 translate-y-0 overflow-hidden border border-off_white/12 bg-primary/95 opacity-0 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 group-hover:visible group-hover:opacity-100">
-                    {item.submenu.map((sub, j) => (
-                      <li
-                        key={j}
-                        className="group/item border-b border-off_white/10 last:border-b-0"
-                      >
-                        <Link
-                          href={sub.path}
-                          className="flex items-center justify-between px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-off_white/75 transition-all duration-300 hover:bg-off_white hover:text-primary"
-                        >
-                          <span>{sub.name}</span>
-                          <FiChevronRight className="translate-x-[-8px] text-lg opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:opacity-100" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul> */}
 
           <ul className="relative hidden h-[92px] items-center gap-4 text-[13px] font-semibold uppercase tracking-[0.13em] text-off_white/78 xl:flex 2xl:gap-6">
             {menuItems.map((item, i) => (
@@ -378,44 +307,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-
-          {/* <ul className="relative hidden items-center gap-4 text-[13px] font-semibold uppercase tracking-[0.13em] text-off_white/78 xl:flex 2xl:gap-6">
-            {menuItems.map((item, i) => (
-              <li key={i} className="group relative py-7">
-                <Link
-                  href={item.path}
-                  className="flex items-center gap-1.5 transition duration-300 hover:text-off_white"
-                >
-                  {item.name}
-
-                  {item.submenu && (
-                    <FiChevronRight className="rotate-90 text-sm text-off_white/55 transition duration-300 group-hover:text-off_white" />
-                  )}
-                </Link>
-
-                <span className="absolute bottom-5 left-0 h-px w-0 bg-off_white transition-all duration-500 group-hover:w-full" />
-
-                {item.submenu && (
-                  <ul className="invisible absolute left-0 top-full z-50 w-80 translate-y-5 overflow-hidden border border-off_white/12 bg-primary/95 opacity-0 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                    {item.submenu.map((sub, j) => (
-                      <li
-                        key={j}
-                        className="group/item border-b border-off_white/10 last:border-b-0"
-                      >
-                        <Link
-                          href={sub.path}
-                          className="flex items-center justify-between px-6 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-off_white/75 transition-all duration-300 hover:bg-off_white hover:text-primary"
-                        >
-                          <span>{sub.name}</span>
-                          <FiChevronRight className="translate-x-[-8px] text-lg opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:opacity-100" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul> */}
 
           <div className="hidden xl:block">
             <Link href="/contact">
@@ -506,7 +397,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-3">
               <FiMail className="text-[#f8f3ec]" />
-              <span>info@anondocityscapers.com</span>
+              <span>info@anondorosemontestate.com</span>
             </div>
 
             <div className="flex items-center gap-3">

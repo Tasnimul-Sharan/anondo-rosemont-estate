@@ -50,12 +50,12 @@ export default function Footer() {
           <div>
             <Link href="/" className="mb-5 inline-block text-white">
               <Image
-                src="/rosemont-logo-final.jpeg"
+                src="/rosemont-logo-final-1.png"
                 alt="Anondo Rosemont Estate"
                 width={5000}
                 height={5000}
                 priority
-                className="h-24 w-[200px] md:h-40 md:w-[280px] object-cover"
+                className="h-24 w-[200px] md:h-44 md:w-[300px] object-cover"
               />
             </Link>
 

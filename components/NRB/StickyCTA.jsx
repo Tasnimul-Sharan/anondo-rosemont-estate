@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function StickyCTA() {
   return (
     <a
-      href="https://wa.me/+8801313775333?text=Hello%20Anondo%20Cityscapers%2C%20I%20would%20like%20to%20inquire%20about%20your%20projects."
+      href="https://wa.me/+8801313775333?text=Hello%20Anondo%20Rosemont%20Estate%2C%20I%20would%20like%20to%20inquire%20about%20your%20projects."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-12 right-6 z-50 w-14 h-14 flex items-center justify-center 

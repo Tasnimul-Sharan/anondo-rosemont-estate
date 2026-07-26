@@ -92,7 +92,7 @@ export function ContactBlock() {
               {contactDetails.map(([label, value]) => (
                 <div
                   key={label}
-                  className="group flex items-start justify-between gap-6 border-b border-white/12 pb-5 last:border-b-0 last:pb-0"
+                  className="group flex items-start justify-between gap-6 border-b border-white/15 pb-5 last:border-b-0 last:pb-0"
                 >
                   <div>
                     <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-white/45">
