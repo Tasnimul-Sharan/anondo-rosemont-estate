@@ -9,10 +9,10 @@ function MyApp({ Component, pageProps }) {
   useLenis();
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-      <Analytics />
-    </Layout>
+    // <Layout>
+    <Component {...pageProps} />
+    //   <Analytics />
+    // </Layout>
   );
 }
 
