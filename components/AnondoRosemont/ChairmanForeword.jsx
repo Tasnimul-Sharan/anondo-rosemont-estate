@@ -8,10 +8,28 @@ export default function ChairmanForeword() {
 
   if (!chairman) return null;
 
+  const renderWithEmphasis = (text) =>
+    text
+      .split(/(Anondo Rosemont Estate|“Elegantia in Aeternum” — Elegance Forever)/g)
+      .map((part) =>
+        part === "Anondo Rosemont Estate" ||
+        part === "“Elegantia in Aeternum” — Elegance Forever" ? (
+          <strong key={part} className="font-semibold text-secondary">
+            {part}
+          </strong>
+        ) : (
+          part
+        ),
+      );
+
   return (
-    <div className="bg-white py-16 md:py-24 lg:py-32">
-      <div className="mx-auto grid max-w-[1200px] gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <div className="relative">
+    <section
+      id="chairmans-foreword"
+      aria-labelledby="chairmans-foreword-title"
+      className="bg-white py-16 md:py-24 lg:py-32"
+    >
+      <div className="mx-auto grid max-w-[1200px] gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="relative lg:sticky lg:top-28">
           <div className="absolute -left-5 -top-5 hidden h-full w-full border border-secondary/15 lg:block" />
 
           <div className="relative min-h-[560px] overflow-hidden bg-secondary shadow-2xl shadow-secondary/20">
@@ -41,16 +59,36 @@ export default function ChairmanForeword() {
             Chairman
           </p>
 
-          <h2 className="text-4xl font-semibold leading-tight text-secondary md:text-6xl">
+          <h2
+            id="chairmans-foreword-title"
+            className="text-4xl font-semibold leading-tight text-secondary md:text-6xl"
+          >
             Chairman&apos;s Foreword
           </h2>
 
-          <div className="mt-8 grid gap-5 border-l border-secondary/25 pl-6">
-            {chairman.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="leading-8 text-[#6b5d57]">
-                {paragraph}
+          <div className="mt-8 grid gap-6 border-l border-secondary/25 pl-6">
+            {chairman.paragraphs.map((paragraph, index) => (
+              <p
+                key={paragraph}
+                className={`leading-8 ${
+                  index === 0
+                    ? "text-xl font-medium text-secondary"
+                    : "text-[#6b5d57]"
+                }`}
+              >
+                {renderWithEmphasis(paragraph)}
               </p>
             ))}
+
+            {chairman.closingLines && (
+              <p className="pt-2 text-lg font-medium leading-8 text-secondary">
+                {chairman.closingLines.map((line) => (
+                  <span key={line} className="block">
+                    {renderWithEmphasis(line)}
+                  </span>
+                ))}
+              </p>
+            )}
           </div>
 
           <div className="mt-8 border-t border-secondary/15 pt-6">
@@ -65,6 +103,6 @@ export default function ChairmanForeword() {
           </div>
         </article>
       </div>
-    </div>
+    </section>
   );
 }

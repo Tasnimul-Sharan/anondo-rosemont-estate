@@ -50,11 +50,11 @@ export default function MasterplanHighlight() {
 
             <p className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-secondary">
               <span className="h-px w-10 bg-secondary" />
-              Build Your Dream
+              A New Chapter of Estate Living Begins
             </p>
 
             <h2 className="mb-6 max-w-xl text-3xl font-bold leading-tight text-secondary md:text-5xl">
-              A Landmark Villa Township in the Making
+              Introducing a Legacy Address for Generations to Come
             </h2>
 
             <p className="mb-5 max-w-2xl leading-relaxed text-[#5f625c]">
