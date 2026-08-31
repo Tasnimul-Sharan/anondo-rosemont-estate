@@ -5,7 +5,7 @@ const plotCategories = [
   {
     title: "5 Katha Villa Residences",
     plots: "900 plots",
-    size: "2,750 sft duplex",
+    size: "3,600 sft duplex",
     floors: "Ground 1,350 sft / First 1,400 sft",
     frontage: "Private driveway",
     image: "/5 katha villa/5-katha-1.jpg",
@@ -60,16 +60,12 @@ export function MainMasterPlanSection() {
               Master Plan Overview
             </p>
             <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#3e0607] md:text-5xl">
-              A complete estate layout shaped around villas, avenues, water, and
-              community life.
+              A complete estate layout shaped around villas, avenues, water, and community life.
             </h2>
           </div>
 
           <p className="max-w-3xl text-base leading-8 text-[#6b5d57] md:text-lg">
-            The master plan organizes Rosemont into residential villa zones,
-            wide avenue networks, elevated plots, lake and park landscapes,
-            community farming, infrastructure corridors, and a harmonized
-            architectural environment.
+            Anondo Rosemont Estate spans 807 bigha of land and follows a structured master plan integrating residential zones, recreation areas, and community facilities.
           </p>
         </div>
 
@@ -82,7 +78,7 @@ export function MainMasterPlanSection() {
               sizes="(max-width: 1400px) 100vw, 1400px"
               className="object-contain object-center"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(74,10,10,0)_0%,rgba(74,10,10,0.32)_100%)]" />
+            {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(74,10,10,0)_0%,rgba(74,10,10,0.32)_100%)]" /> */}
 
             {/* <div className="absolute bottom-0 left-0 right-0 p-6 text-white md:p-9">
               <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.24em] text-white/65">
