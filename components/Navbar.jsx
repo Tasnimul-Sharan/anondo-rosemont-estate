@@ -66,6 +66,11 @@ const menuItems = [
     name: "Gallery",
     path: "/gallery",
   },
+  {
+    name: "Prospectus",
+    path: "/PROSPECTUS%20OF%20ROSEMONT%20ESTATE.pdf",
+    newTab: true,
+  },
   // {
   //   name: "Contact",
   //   path: "/contact",
@@ -274,6 +279,8 @@ export default function Navbar() {
               <li key={i} className="group relative flex h-full items-center">
                 <Link
                   href={item.path}
+                  target={item.newTab ? "_blank" : undefined}
+                  rel={item.newTab ? "noopener noreferrer" : undefined}
                   className="flex h-full items-center gap-1.5 transition duration-300 hover:text-off_white"
                 >
                   {item.name}
@@ -352,6 +359,8 @@ export default function Navbar() {
             <li key={i}>
               <Link
                 href={item.path}
+                target={item.newTab ? "_blank" : undefined}
+                rel={item.newTab ? "noopener noreferrer" : undefined}
                 className="block transition hover:text-white"
                 onClick={closeMobileMenu}
               >
