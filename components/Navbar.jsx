@@ -66,11 +66,11 @@ const menuItems = [
     name: "Gallery",
     path: "/gallery",
   },
-  {
-    name: "Prospectus",
-    path: "/PROSPECTUS%20OF%20ROSEMONT%20ESTATE.pdf",
-    newTab: true,
-  },
+  // {
+  //   name: "Prospectus",
+  //   path: "/PROSPECTUS%20OF%20ROSEMONT%20ESTATE.pdf",
+  //   newTab: true,
+  // },
   // {
   //   name: "Contact",
   //   path: "/contact",

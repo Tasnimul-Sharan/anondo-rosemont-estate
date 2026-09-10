@@ -1,4 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { createPortal } from "react-dom";
+import { FiX } from "react-icons/fi";
 import { designFeatures, masterPlanMetrics } from "@/data/rosemontSite";
 
 const plotCategories = [
@@ -49,7 +54,113 @@ const roadHighlights = [
   },
 ];
 
+const masterPlanVisuals = [
+  {
+    src: "/gallery/masterplan.jpg",
+    label: "Estate Layout",
+    title: "1440 Plot Estate Master Plan",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/master-plan-two-entry-gates-1440-plots.png",
+    label: "Estate Layout",
+    title: "Master Plan with Two Entry Gates",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/master-plan-estate-overview-alt.png",
+    label: "Estate Layout",
+    title: "Estate Master Plan Overview",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/master-plan-lakes-community-spaces.png",
+    label: "Estate Layout",
+    title: "Lakes, Green Promenades and Community Spaces",
+    width: 1618,
+    height: 972,
+  },
+  {
+    src: "/gallery/80-feet-wide-road.jpg",
+    label: "Road Network",
+    title: "80 Feet Wide Road",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/80-ft-avenue-option-1.png",
+    label: "Road Network",
+    title: "80 Feet Avenue",
+    width: 1774,
+    height: 887,
+  },
+  {
+    src: "/gallery/80-ft-avenue-option-2.png",
+    label: "Road Network",
+    title: "80 Feet Avenue Planning",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/80-ft-road-with-divider.png",
+    label: "Road Network",
+    title: "80 Feet Wide Road with Divider",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/60-ft-second-avenue.png",
+    label: "Road Network",
+    title: "60 Feet Wide Second Avenue",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/40-ft-artery-road.png",
+    label: "Road Network",
+    title: "40 Feet Artery Road",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/30-ft-artery-road.png",
+    label: "Road Network",
+    title: "30 Feet Artery Road",
+    width: 1536,
+    height: 1024,
+  },
+  {
+    src: "/gallery/40-ft-landscaped-canal.png",
+    label: "Water Infrastructure",
+    title: "40 Feet Landscaped Canal",
+    width: 1402,
+    height: 1122,
+  },
+];
+
 export function MainMasterPlanSection() {
+  const [activeVisual, setActiveVisual] = useState(null);
+
+  useEffect(() => {
+    if (!activeVisual) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setActiveVisual(null);
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeVisual]);
+
   return (
     <section className="bg-[#f8f3ec] py-16 text-[#241818] md:py-24 lg:py-32">
       <div className="mx-auto custom-container">
@@ -314,6 +425,61 @@ export function MainMasterPlanSection() {
             ))}
           </div>
         </div>
+
+        <div className="mt-16 border-y border-secondary/15 py-12 md:mt-20 md:py-16">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <div>
+              <p className="inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-secondary/60">
+                <span className="h-px w-10 bg-secondary" />
+                Planning Visuals
+              </p>
+              <h3 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight text-secondary md:text-5xl">
+                Master Plan and Road Network
+              </h3>
+            </div>
+            <p className="max-w-xl leading-8 text-[#6b5d57]">
+              Estate master plans, road sections, and the landscaped canal
+              concept.
+            </p>
+          </div>
+
+          <div className="mt-9 grid gap-6 lg:grid-cols-2">
+            {masterPlanVisuals.map((visual, index) => (
+              <button
+                key={visual.src}
+                type="button"
+                onClick={() => setActiveVisual(visual)}
+                className="group overflow-hidden border border-secondary/15 bg-white text-left shadow-xl shadow-secondary/10 transition duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-secondary/15"
+                aria-label={`View ${visual.title} in full size`}
+              >
+                <div className="relative aspect-[3/2] overflow-hidden bg-[#eee8df]">
+                  <Image
+                    src={visual.src}
+                    alt={visual.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-contain object-center transition duration-700 group-hover:scale-[1.015]"
+                  />
+                </div>
+
+                <div className="flex items-end justify-between gap-5 border-t border-secondary/15 p-5 md:p-6">
+                  <div>
+                    <p className="text-[10px] font-extrabold uppercase tracking-[0.22em] text-secondary/50">
+                      {visual.label} / {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h4 className="mt-2 text-xl font-semibold leading-tight text-secondary md:text-2xl">
+                      {visual.title}
+                    </h4>
+                  </div>
+                  <span className="hidden shrink-0 text-xs font-extrabold uppercase tracking-[0.16em] text-secondary/55 sm:block">
+                    View Full Image
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Luxury Design Credit */}
         <div className="mt-16 flex justify-center">
           <div className="relative max-w-xl overflow-hidden border border-secondary/15 bg-white px-8 py-6 text-center shadow-xl shadow-secondary/10">
@@ -337,6 +503,47 @@ export function MainMasterPlanSection() {
           </div>
         </div>
       </div>
+
+      {activeVisual &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/90 p-3 backdrop-blur-sm md:p-8"
+            onMouseDown={(event) => {
+              if (event.target === event.currentTarget) setActiveVisual(null);
+            }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={activeVisual.title}
+          >
+            <button
+              type="button"
+              onClick={() => setActiveVisual(null)}
+              onMouseDown={(event) => event.stopPropagation()}
+              className="absolute right-4 top-4 z-20 flex h-12 w-12 items-center justify-center border border-white/25 bg-secondary text-2xl text-white transition hover:bg-white hover:text-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-white md:right-8 md:top-8"
+              aria-label="Close full image"
+              title="Close image"
+              autoFocus
+            >
+              <FiX aria-hidden="true" />
+            </button>
+
+            <Image
+              src={activeVisual.src}
+              alt={activeVisual.title}
+              width={activeVisual.width}
+              height={activeVisual.height}
+              sizes="100vw"
+              className="h-auto max-h-[calc(100dvh-7rem)] w-auto max-w-full object-contain"
+              onMouseDown={(event) => event.stopPropagation()}
+              priority
+            />
+
+            <p className="pointer-events-none absolute inset-x-16 bottom-3 text-center text-sm font-semibold text-white/85 md:bottom-5 md:text-base">
+              {activeVisual.title}
+            </p>
+          </div>,
+          document.body,
+        )}
     </section>
   );
 }
