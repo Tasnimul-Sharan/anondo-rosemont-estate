@@ -66,20 +66,20 @@ const titledGalleryImages = [
   },
   { file: "rosemont-fresco-plaza.jpg", title: "Fresco Plaza Light & Fountain Night View" },
   {
-    file: "rosemont-fresco-plaza-1.jpg",
+    file: "rosemont-plaza-1.jpg",
     // title: "Rosemont Plaza Modern Exterior",
     title: "Rosemont Plaza Premium Shopping and lifestyle destination",
   },
   {
-    file: "rosemont-fresco-plaza-2.jpg",
+    file: "rosemont-plaza-2.jpg",
     title: "Rosemont Plaza Premium Shopping and lifestyle destination",
   },
   {
-    file: "rosemont-fresco-plaza-interior.jpg",
+    file: "rosemont-plaza-interior.jpg",
     title: "Rosemont Plaza Interior and Floor Concept",
   },
   {
-    file: "rosemont-fresco-plaza-interior-1.jpg",
+    file: "rosemont-plaza-interior-1.jpg",
     title: "Rosemont Plaza Grand Atrium",
   },
   { file: "rosemont-plaza.jpg", title: "Rosemont Plaza" },

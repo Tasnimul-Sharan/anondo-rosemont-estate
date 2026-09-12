@@ -55,20 +55,20 @@ const roadHighlights = [
 ];
 
 const masterPlanVisuals = [
-  {
-    src: "/gallery/masterplan.jpg",
-    label: "Estate Layout",
-    title: "1440 Plot Estate Master Plan",
-    width: 1536,
-    height: 1024,
-  },
-  {
-    src: "/gallery/master-plan-two-entry-gates-1440-plots.png",
-    label: "Estate Layout",
-    title: "Master Plan with Two Entry Gates",
-    width: 1536,
-    height: 1024,
-  },
+  // {
+  //   src: "/gallery/masterplan.jpg",
+  //   label: "Estate Layout",
+  //   title: "1440 Plot Estate Master Plan",
+  //   width: 1536,
+  //   height: 1024,
+  // },
+  // {
+  //   src: "/gallery/master-plan-two-entry-gates-1440-plots.png",
+  //   label: "Estate Layout",
+  //   title: "Master Plan with Two Entry Gates",
+  //   width: 1536,
+  //   height: 1024,
+  // },
   {
     src: "/gallery/master-plan-estate-overview-alt.png",
     label: "Estate Layout",
@@ -83,27 +83,27 @@ const masterPlanVisuals = [
     width: 1618,
     height: 972,
   },
-  {
-    src: "/gallery/80-feet-wide-road.jpg",
-    label: "Road Network",
-    title: "80 Feet Wide Road",
-    width: 1536,
-    height: 1024,
-  },
-  {
-    src: "/gallery/80-ft-avenue-option-1.png",
-    label: "Road Network",
-    title: "80 Feet Avenue",
-    width: 1774,
-    height: 887,
-  },
-  {
-    src: "/gallery/80-ft-avenue-option-2.png",
-    label: "Road Network",
-    title: "80 Feet Avenue Planning",
-    width: 1536,
-    height: 1024,
-  },
+  // {
+  //   src: "/gallery/80-feet-wide-road.jpg",
+  //   label: "Road Network",
+  //   title: "80 Feet Wide Road",
+  //   width: 1536,
+  //   height: 1024,
+  // },
+  // {
+  //   src: "/gallery/80-ft-avenue-option-1.png",
+  //   label: "Road Network",
+  //   title: "80 Feet Avenue",
+  //   width: 1774,
+  //   height: 887,
+  // },
+  // {
+  //   src: "/gallery/80-ft-avenue-option-2.png",
+  //   label: "Road Network",
+  //   title: "80 Feet Avenue Planning",
+  //   width: 1536,
+  //   height: 1024,
+  // },
   {
     src: "/gallery/80-ft-road-with-divider.png",
     label: "Road Network",
@@ -171,19 +171,22 @@ export function MainMasterPlanSection() {
               Master Plan Overview
             </p>
             <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-[#3e0607] md:text-5xl">
-              A complete estate layout shaped around villas, avenues, water, and community life.
+              A complete estate layout shaped around villas, avenues, water, and
+              community life.
             </h2>
           </div>
 
           <p className="max-w-3xl text-base leading-8 text-[#6b5d57] md:text-lg">
-            Anondo Rosemont Estate spans 807 bigha of land and follows a structured master plan integrating residential zones, recreation areas, and community facilities.
+            Anondo Rosemont Estate spans 807 bigha of land and follows a
+            structured master plan integrating residential zones, recreation
+            areas, and community facilities.
           </p>
         </div>
 
         <div className="mt-12 overflow-hidden border border-secondary/15 bg-white p-3 shadow-2xl shadow-secondary/10 md:p-5">
           <div className="relative aspect-[16/9] overflow-hidden bg-[#f8f3ec]">
             <Image
-              src="/lifestyle/rosemont-master-plan.jpg"
+              src="/gallery/master-plan-estate-overview-alt.png"
               alt="Anondo Rosemont Estate full master plan"
               fill
               sizes="(max-width: 1400px) 100vw, 1400px"
@@ -480,7 +483,6 @@ export function MainMasterPlanSection() {
           </div>
         </div>
 
-        {/* Luxury Design Credit */}
         <div className="mt-16 flex justify-center">
           <div className="relative max-w-xl overflow-hidden border border-secondary/15 bg-white px-8 py-6 text-center shadow-xl shadow-secondary/10">
             <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent_0%,rgba(74,10,10,0.06)_45%,transparent_100%)]" />

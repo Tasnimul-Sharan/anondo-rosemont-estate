@@ -18,6 +18,7 @@ export default function GallarySection({ images = [] }) {
 
   const slides = images.map((image) => ({
     src: image.src,
+    alt: image.title,
     title: image.title,
   }));
 
@@ -97,8 +98,22 @@ export default function GallarySection({ images = [] }) {
             index={currentIndex}
             slides={slides}
             plugins={[Thumbnails, Captions, Zoom, Fullscreen, Slideshow]}
-            captions={{ titleTextAlign: "center" }}
-            thumbnails={{ position: "bottom", width: 104, height: 72 }}
+            className="rosemont-lightbox"
+            animation={{ fade: 360, swipe: 520 }}
+            carousel={{ imageFit: "contain", preload: 2 }}
+            controller={{ closeOnBackdropClick: true }}
+            styles={{ captionsTitle: { textAlign: "center" } }}
+            thumbnails={{
+              position: "bottom",
+              width: 110,
+              height: 72,
+              border: 1,
+              borderRadius: 0,
+              padding: 3,
+              gap: 12,
+              imageFit: "cover",
+              vignette: true,
+            }}
           />
         )}
       </div>
