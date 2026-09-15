@@ -50,7 +50,7 @@ import { Analytics } from "@vercel/analytics/react";
 //   );
 // }
 
-function MyApp({ Component, pageProps }) {
+function PublicApp({ Component, pageProps }) {
   useLenis();
 
   // if (MAINTENANCE_MODE) {
@@ -63,6 +63,11 @@ function MyApp({ Component, pageProps }) {
       <Analytics />
     </Layout>
   );
+}
+
+function MyApp({ Component, pageProps }) {
+  if (Component.portalPage) return <Component {...pageProps} />;
+  return <PublicApp Component={Component} pageProps={pageProps} />;
 }
 
 export default MyApp;

@@ -19,6 +19,7 @@ const quickLinks = [
   { name: "Blogs", href: "/blogs" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
+  { name: "Owner Login", href: "/login" },
   // { name: "Terms & Conditions", href: "/terms-and-conditions" },
 ];
 
