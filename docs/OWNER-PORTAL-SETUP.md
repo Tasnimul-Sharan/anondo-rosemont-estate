@@ -10,7 +10,7 @@ Development previews: `/admin?preview=1` and `/portal?preview=1`. Preview data i
 
 ## 1. Supabase
 
-1. Create a dedicated Supabase project. Run `supabase/migrations/202609150001_owner_portal.sql` once in the SQL editor.
+1. Create a dedicated Supabase project. Run `supabase/migrations/202609150001_owner_portal.sql`, then `supabase/migrations/202609160001_client_codes.sql`, once each in the SQL editor. Existing installations need only the new client-code migration; it assigns IDs to existing profiles without changing their UUIDs or villa assignments.
 2. Disable public user signup in Authentication settings. Keep email/password login enabled. Clients enter through administrator invitations.
 3. Configure custom SMTP and verify your sender domain. Supabase's built-in sender is for testing, is restricted to team addresses and currently limited to 2 messages/hour. Set a suitable SMTP rate limit before inviting clients.
 4. Set the Auth Site URL to your production domain, and allow the exact production `/portal/reset-password` URL. Add `http://localhost:3010/portal/reset-password` for local testing. Do not use broad production redirect wildcards.
@@ -50,7 +50,7 @@ The repository already contains older lightbox dependencies with React peer conf
 ## 4. Daily workflow
 
 1. Sign in at `/login` with the administrator account.
-2. Add a client, verify their email, and send the invitation with the mail action. Linked clients can receive a new account-access email using the same action. An existing unrelated Auth account must be reconciled manually by a trusted operator; the app does not silently claim it.
+2. Add a client. Leave Client ID blank for an automatic code such as `RE-000001`, or enter a unique ID (3-32 letters, digits or hyphens; first character must be a letter or digit). Manual IDs are trimmed and uppercased. IDs are fixed after creation, shown in the directory and owner profile, and searchable along with name/email. Automatic numbering skips IDs already entered manually; sequence gaps are normal. Client ID is a reference, not a password or an authorization credential. Verify their email and send the invitation with the mail action. Linked clients can receive a new account-access email using the same action. An existing unrelated Auth account must be reconciled manually by a trusted operator; the app does not silently claim it.
 3. Open that client's villas and add their villa number, collection, block, plot size and construction details.
 4. Open the villa's progress page, save a report as a draft, add photos/videos, then publish it.
 5. The invited owner sets their password and signs in to see only their assigned villas and published updates.

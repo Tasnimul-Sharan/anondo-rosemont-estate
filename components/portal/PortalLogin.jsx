@@ -121,11 +121,15 @@ export default function PortalLogin({ allowPreview, reset = false }) {
         </div>
       </div>
       <div className={styles.loginMain}>
-        <Link href="/" className={styles.brand}>
-          <span className={styles.brandMark}>R</span>
-          <span>
-            ROSEMONT<small>ANONDO ESTATE</small>
-          </span>
+        <Link href="/" className={styles.brand} aria-label="Anondo Rosemont Estate home">
+          <Image
+            src="/rosemont-logo-final-1--.png"
+            alt="Anondo Rosemont Estate"
+            fill
+            sizes="360px"
+            priority
+            className={styles.brandLogo}
+          />
         </Link>
         <h1>
           {reset

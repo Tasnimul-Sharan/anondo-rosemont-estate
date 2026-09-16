@@ -66,7 +66,8 @@ try {
     .getByRole("button", { name: /Preview Test Owner/ })
     .first()
     .waitFor();
-  await page.getByRole("searchbox").fill("test-owner@example.com");
+  await page.getByText("Client ID: RE-000004", { exact: true }).waitFor();
+  await page.getByRole("searchbox").fill("RE-000004");
   await page.waitForFunction(
     () => document.querySelectorAll("tbody tr").length === 1,
   );

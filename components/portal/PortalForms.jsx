@@ -86,6 +86,18 @@ export default function PortalForm({
         {kind === "client" && (
           <div className={styles.formGrid}>
             <Field
+              label={item ? "Client ID" : "Client ID (optional)"}
+              name={item ? undefined : "client_code"}
+              readOnly={Boolean(item)}
+              defaultValue={item?.client_code}
+              placeholder="Auto-generated if left blank"
+              minLength={3}
+              maxLength={32}
+              pattern="[A-Za-z0-9][A-Za-z0-9\-]{2,31}"
+              title="3-32 letters, numbers or hyphens, starting with a letter or number"
+              autoComplete="off"
+            />
+            <Field
               label="Full name"
               name="full_name"
               required
@@ -158,7 +170,7 @@ export default function PortalForm({
                 type="search"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search by name or email"
+                placeholder="Search by client ID, name or email"
               />
             )}
             {clientId || item?.client_id ? (
@@ -175,7 +187,7 @@ export default function PortalForm({
                   </option>
                   {matches.map((c) => (
                     <option key={c.id} value={c.id}>
-                      {c.full_name} ({c.email})
+                      {c.client_code} - {c.full_name} ({c.email})
                     </option>
                   ))}
                 </select>

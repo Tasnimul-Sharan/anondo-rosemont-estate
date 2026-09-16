@@ -53,33 +53,21 @@
   z-index: 20;
 }
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--wine);
-  padding: 0 12px;
-  font-family: Georgia, serif;
-  font-size: 19px;
-  font-weight: 600;
-}
-.brand small {
+  position: relative;
   display: block;
-  font-family: Arial, sans-serif;
-  font-size: 9px;
-  color: #7a6565;
-  margin-top: 5px;
+  width: 180px;
+  max-width: 100%;
+  aspect-ratio: 1.9;
+  flex-shrink: 0;
+  overflow: hidden;
 }
-.brandMark {
-  border: 1px solid #b38f8f;
-  width: 43px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  font-size: 32px;
-  font-style: italic;
+.brandLogo {
+  object-fit: cover;
+  /* The original square logo has generous transparent padding. */
+  transform: scale(1.54);
 }
 .workspaceLabel {
-  margin: 44px 14px 14px;
+  margin: 24px 14px 14px;
   color: #747980;
   font-size: 11px;
   text-transform: uppercase;
@@ -753,32 +741,40 @@
   margin-bottom: 15px;
 }
 .stagePanel h2 {
-  font-size: 17px;
+  font-size: 22px;
 }
 .stagePanel .row > strong {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--wine);
 }
 .stages {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  margin-top: 24px;
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  margin-top: 28px;
+  gap: 24px 16px;
 }
 .stages li {
-  font-size: 10px;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.6;
-  color: #83888e;
+  overflow-wrap: anywhere;
+  color: #656b72;
 }
 .stages li > span {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 27px;
-  width: 27px;
+  height: 42px;
+  width: 42px;
+  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 50%;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+}
+.stages li > span > svg {
+  width: 22px;
+  height: 22px;
 }
 .stages .stageComplete {
   color: var(--wine);
@@ -1032,8 +1028,8 @@
   padding: 65px;
 }
 .loginMain > .brand {
-  padding: 0;
-  margin-bottom: 55px;
+  width: 220px;
+  margin-bottom: 32px;
 }
 .loginMain h1 {
   font:
@@ -1123,13 +1119,7 @@
     margin-left: 190px;
   }
   .brand {
-    font-size: 15px;
-    padding: 0 8px;
-    gap: 8px;
-  }
-  .brandMark {
-    width: 35px;
-    height: 42px;
+    width: 155px;
   }
   .nav button {
     padding: 12px 10px;
@@ -1185,16 +1175,7 @@
     border-bottom: 1px solid var(--line);
   }
   .brand {
-    font-size: 16px;
-  }
-  .brand small {
-    font-size: 8px;
-    margin-top: 3px;
-  }
-  .brandMark {
-    width: 33px;
-    height: 38px;
-    font-size: 26px;
+    width: 140px;
   }
   .workspaceLabel {
     display: none;
@@ -1336,10 +1317,13 @@
   }
   .stages {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    gap: 24px 16px;
+  }
+  .stagePanel h2 {
+    font-size: 20px;
   }
   .stagePanel .row > strong {
-    font-size: 11px;
+    font-size: 14px;
   }
   .profile {
     padding: 22px;

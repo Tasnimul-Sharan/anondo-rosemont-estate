@@ -46,6 +46,15 @@ test("portal migration enforces owner isolation, publication and administrator p
       insert into public.portal_updates(id,villa_id,title,body,published) values ('${published}','${villa}','Public report','Published report',true),('${draft}','${villa}','Draft report','Unpublished report',false);
       insert into public.portal_media(update_id,public_id,resource_type,ready) values ('${published}','ready','image',true),('${published}','pending','image',false),('${draft}','draft-media','image',true);
     `);
+    await db.exec(await readFile(new URL(
+      "../supabase/migrations/202609160001_client_codes.sql", import.meta.url,
+    ), "utf8"));
+    await t.test("existing clients receive unique IDs without changing villa ownership", async () => {
+      const codes = (await db.query("select client_code from portal_clients")).rows.map((r) => r.client_code);
+      assert.equal(new Set(codes).size, 2);
+      assert.ok(codes.every((code) => /^RE-\d{6}$/.test(code)));
+      assert.equal((await db.query(`select client_id from portal_villas where id='${villa}'`)).rows[0].client_id, client);
+    });
     await t.test("owner reads only their profile and villa", async () => {
       await as(owner);
       assert.deepEqual(
@@ -240,6 +249,34 @@ test("portal migration enforces owner isolation, publication and administrator p
         );
       },
     );
+    await t.test("automatic IDs remain unique across 1503 profiles", async () => {
+      const { rows } = await db.query("select count(distinct client_code) as total from portal_clients");
+      assert.equal(Number(rows[0].total), 1503);
+    });
+    await t.test("manual IDs normalize and duplicates are rejected", async () => {
+      const { rows } = await db.query("insert into portal_clients(full_name,email,client_code) values ('Manual Owner','manual@example.com',' re-custom-01 ') returning client_code");
+      assert.equal(rows[0].client_code, "RE-CUSTOM-01");
+      await assert.rejects(() => db.exec("insert into portal_clients(full_name,email,client_code) values ('Duplicate Owner','duplicate@example.com','re-custom-01')"), (error) => error.code === "23505");
+      await assert.rejects(() => db.exec("insert into portal_clients(full_name,email,client_code) values ('Invalid Owner','invalid@example.com','bad id!')"), (error) => error.code === "23514");
+    });
+    await t.test("blank IDs are generated and skip manually reserved sequence codes", async () => {
+      await db.exec("reset role");
+      const next = Number((await db.query("select last_value from portal_client_code_seq")).rows[0].last_value) + 1;
+      const reserved = `RE-${String(next).padStart(6, "0")}`;
+      await as(admin);
+      await db.query("insert into portal_clients(full_name,email,client_code) values ('Reserved Code','reserved@example.com',$1)", [reserved]);
+      const { rows } = await db.query("insert into portal_clients(full_name,email,client_code) values ('Auto Owner','auto@example.com','   ') returning client_code");
+      assert.equal(rows[0].client_code, `RE-${String(next + 1).padStart(6, "0")}`);
+    });
+    await t.test("client IDs are immutable and cannot bypass owner access controls", async () => {
+      await assert.rejects(() => db.exec("update portal_clients set client_code='RE-CHANGED' where email='manual@example.com'"));
+      await assert.rejects(() => db.query("select nextval('public.portal_client_code_seq')"));
+      await db.exec("reset role");
+      await assert.rejects(() => db.exec("update portal_clients set client_code='RE-CHANGED' where email='manual@example.com'"), /cannot be changed/);
+      await as(other);
+      await assert.rejects(() => db.exec("insert into portal_clients(full_name,email,client_code) values ('Unauthorized Owner','unauthorized@example.com','RE-UNAUTHORIZED')"));
+      assert.equal((await db.query("select * from portal_clients where client_code='RE-CUSTOM-01'")).rows.length, 0);
+    });
   } finally {
     await db.close();
   }

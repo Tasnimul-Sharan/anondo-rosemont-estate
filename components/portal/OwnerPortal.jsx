@@ -29,6 +29,7 @@ import {
 } from "@/lib/portal/browser";
 import { demoData, villaRender } from "@/lib/portal/demo";
 import { PAGE_SIZE, VILLA_STAGES } from "@/lib/portal/constants";
+import { createClientSchema } from "@/lib/portal/validation";
 import PortalDialog from "./PortalDialog";
 import PortalForm, { UploadForm } from "./PortalForms";
 import { MediaTile, MediaViewer } from "./PortalMedia";
@@ -77,6 +78,7 @@ export default function OwnerPortal({ role, preview }) {
   const [villa, setVilla] = useState(null);
   const [pending, setPending] = useState("");
   const generation = useRef(0);
+  const nextPreviewClientCode = useRef(4);
 
   useEffect(() => {
     if (preview) return;
@@ -141,7 +143,7 @@ export default function OwnerPortal({ role, preview }) {
           (u) => ownerVillaIds.includes(u.villa_id) && (admin || u.published),
         );
         const clients = ownerClients.filter((c) =>
-          `${c.full_name} ${c.email}`
+          `${c.client_code} ${c.full_name} ${c.email}`
             .toLowerCase()
             .includes(search.toLowerCase()),
         );
@@ -223,7 +225,7 @@ export default function OwnerPortal({ role, preview }) {
     async (term) =>
       preview
         ? sample.clients.filter((c) =>
-            `${c.full_name} ${c.email}`
+            `${c.client_code} ${c.full_name} ${c.email}`
               .toLowerCase()
               .includes(term.toLowerCase()),
           )
@@ -257,6 +259,18 @@ export default function OwnerPortal({ role, preview }) {
       update: "updates",
     }[kind];
     if (preview) {
+      if (kind === "client" && !item) {
+        const parsed = createClientSchema.safeParse(values);
+        if (!parsed.success) throw new Error(parsed.error.issues[0].message);
+        values = parsed.data;
+        if (!values.client_code) {
+          do {
+            values.client_code = `RE-${String(nextPreviewClientCode.current++).padStart(6, "0")}`;
+          } while (sample.clients.some((c) => c.client_code === values.client_code));
+        }
+        if (sample.clients.some((c) => c.client_code === values.client_code))
+          throw new Error("This client ID already exists. Please use a different ID.");
+      }
       if (
         !item &&
         kind === "client" &&
@@ -530,11 +544,15 @@ export default function OwnerPortal({ role, preview }) {
         <meta name="referrer" content="no-referrer" />
       </Head>
       <aside className={styles.sidebar}>
-        <Link href="/" className={styles.brand}>
-          <span className={styles.brandMark}>R</span>
-          <span>
-            ROSEMONT<small>ANONDO ESTATE</small>
-          </span>
+        <Link href="/" className={styles.brand} aria-label="Anondo Rosemont Estate home">
+          <Image
+            src="/rosemont-logo-final-1--.png"
+            alt="Anondo Rosemont Estate"
+            fill
+            sizes="(max-width: 640px) 240px, 300px"
+            priority
+            className={styles.brandLogo}
+          />
         </Link>
         <div className={styles.workspaceLabel}>
           {admin ? "Estate management" : "Private owner access"}
@@ -757,8 +775,8 @@ export default function OwnerPortal({ role, preview }) {
                       <FiSearch />
                       <input
                         type="search"
-                        aria-label="Search clients by name or email"
-                        placeholder="Search name or email"
+                        aria-label="Search clients by ID, name or email"
+                        placeholder="Search client ID, name or email"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                       />
@@ -791,6 +809,7 @@ export default function OwnerPortal({ role, preview }) {
                                 </span>
                                 <span>
                                   <strong>{c.full_name}</strong>
+                                  <small>Client ID: {c.client_code}</small>
                                   <small>Added {date(c.created_at)}</small>
                                 </span>
                               </button>
@@ -1047,6 +1066,7 @@ function Profile({ client }) {
       </div>
       <dl className={styles.profileGrid}>
         {[
+          ["Client ID", client.client_code],
           ["Email address", client.email],
           ["Phone number", client.phone],
           ["Country", client.country],

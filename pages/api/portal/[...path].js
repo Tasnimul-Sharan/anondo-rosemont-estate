@@ -120,7 +120,7 @@ export default async function handler(req, res) {
           .trim();
         if (search)
           query = query.or(
-            `full_name.ilike.%${search}%,email.ilike.%${search}%`,
+            `client_code.ilike.%${search}%,full_name.ilike.%${search}%,email.ilike.%${search}%`,
           );
         const result = check(await query.range(from, from + PAGE_SIZE - 1));
         return res.json({ rows: result.data, total: result.count, page });
