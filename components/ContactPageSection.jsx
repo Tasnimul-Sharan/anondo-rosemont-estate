@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   FiAlertCircle,
@@ -10,6 +10,7 @@ import {
   FiPhoneCall,
 } from "react-icons/fi";
 import { PiMapPinBold } from "react-icons/pi";
+import { submitWeb3Form } from "@/lib/web3forms";
 
 const contactMethods = [
   {
@@ -45,50 +46,48 @@ export default function ContactPageSection() {
   const [result, setResult] = useState("");
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    if (loading) return;
+    if (timerRef.current) clearTimeout(timerRef.current);
 
     setLoading(true);
     setResult("");
     setSuccess(false);
 
-    const formData = new FormData(event.target);
+    const form = event.currentTarget;
+    const enquiryType = form.elements.enquiry_type?.value;
+    const outcome = await submitWeb3Form({
+      form,
+      subject: enquiryType
+        ? `New Rosemont Estate Enquiry: ${enquiryType}`
+        : "New Rosemont Estate Enquiry",
+      fromName: "Rosemont Website",
+    });
 
-    formData.append("access_key", "26650a51-3fb4-44db-93ee-06e1e36565ac");
-
-    // Optional
-    formData.append("subject", "New Rosemont Estate Enquiry");
-    formData.append("from_name", "Rosemont Website");
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setSuccess(true);
-        setResult(
-          "Thank you for your enquiry. Our team has received your request and will contact you shortly with the relevant information.",
-        );
-        event.target.reset();
-      } else {
-        setSuccess(false);
-        setResult(data.message || "❌ Failed to send enquiry.");
-      }
-    } catch (error) {
+    if (outcome.ok) {
+      setSuccess(true);
+      setResult(
+        "Thank you for your enquiry. Our team has received your request and will contact you shortly with the relevant information.",
+      );
+      form.reset();
+    } else {
       setSuccess(false);
-      setResult("❌ Network error. Please try again.");
-    } finally {
-      setLoading(false);
-
-      setTimeout(() => {
-        setResult("");
-      }, 5000);
+      setResult(outcome.message || "Failed to send enquiry. Please try again.");
     }
+
+    setLoading(false);
+    timerRef.current = setTimeout(() => {
+      setResult("");
+    }, 5000);
   };
 
   return (
@@ -198,6 +197,7 @@ export default function ContactPageSection() {
             </div>
 
             <div className="relative z-10 mt-3 grid gap-4 md:grid-cols-2">
+              <input type="checkbox" name="botcheck" className="hidden" />
               <input
                 name="name"
                 aria-label="Name"
@@ -224,7 +224,7 @@ export default function ContactPageSection() {
             />
 
             <select
-              name="subject"
+              name="enquiry_type"
               aria-label="Enquiry Type"
               className={`relative z-10 ${inputClass}`}
               defaultValue="Villa Consultation"

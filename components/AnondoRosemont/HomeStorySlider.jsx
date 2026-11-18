@@ -19,7 +19,7 @@
 // //   {
 // //     eyebrow: "A New Chapter of Estate Living",
 // //     title: "True luxury is space to live, breathe, and belong.",
-// //     subtitle: "807 bigha of planned openness",
+// //     subtitle: "Master-planned openness",
 // //     text: "In a world where cities rise higher and homes grow smaller, Rosemont offers land, gardens, water, avenues, and a calmer residential rhythm.",
 // //     image: "/5 katha villa/ChatGPT Image May 2, 2026, 12_28_36 PM (1).jpg",
 // //     href: "/master-plan",
@@ -50,7 +50,7 @@
 //   {
 //     eyebrow: "A New Chapter of Estate Living",
 //     title: "True luxury is space to live, breathe, and belong.",
-//     subtitle: "807 bigha of planned openness",
+//     subtitle: "Master-planned openness",
 //     text: "Rosemont redefines residential living with spacious land, landscaped gardens, scenic water bodies, wide avenues, and a calmer rhythm beyond ordinary city life.",
 //     image: "/5 katha villa/5-katha.jpg",
 //     href: "/master-plan",
@@ -201,7 +201,7 @@
 //     secondaryHref: "/gallery",
 //     secondaryCta: "View Estate Gallery",
 //     facts: [
-//       "807 Bigha Estate",
+//       "Master Planned Estate",
 //       "Near Purbachal",
 //       "Luxury Villa Community",
 //     ],
@@ -219,7 +219,7 @@
 //     secondaryHref: "/the-estate",
 //     secondaryCta: "Discover The Estate",
 //     facts: [
-//       "807 Bigha Master Plan",
+//       "Low-Density Master Plan",
 //       "Wide Grand Avenues",
 //       "Natural Landscape",
 //     ],
@@ -587,7 +587,7 @@
 //     newTab: true,
 //     secondaryHref: "/gallery",
 //     secondaryCta: "View Estate Gallery",
-//     facts: ["807 Bigha Estate", "Near Purbachal", "Luxury Villa Community"],
+//     facts: ["Master Planned Estate", "Near Purbachal", "Luxury Villa Community"],
 //   },
 //   {
 //     eyebrow: "A New Chapter of Estate Living",
@@ -601,7 +601,7 @@
 //     cta: "View Master Plan",
 //     secondaryHref: "/the-estate",
 //     secondaryCta: "Discover The Estate",
-//     facts: ["807 Bigha Master Plan", "Wide Grand Avenues", "Natural Landscape"],
+//     facts: ["Low-Density Master Plan", "Wide Grand Avenues", "Natural Landscape"],
 //   },
 //   {
 //     eyebrow: "Elegantia in Aeternum",
@@ -976,7 +976,11 @@ const slides = [
     newTab: true,
     secondaryHref: "/gallery",
     secondaryCta: "View Estate Gallery",
-    facts: ["807 Bigha Estate", "Near Purbachal", "Luxury Villa Community"],
+    facts: [
+      "Master Planned Estate",
+      "Near Purbachal",
+      "Luxury Villa Community",
+    ],
   },
   {
     label: "A New Chapter of Estate Living",
@@ -990,7 +994,11 @@ const slides = [
     cta: "View Master Plan",
     secondaryHref: "/the-estate",
     secondaryCta: "Discover The Estate",
-    facts: ["807 Bigha Master Plan", "Wide Grand Avenues", "Natural Landscape"],
+    facts: [
+      "Low-Density Master Plan",
+      "Wide Grand Avenues",
+      "Natural Landscape",
+    ],
   },
   {
     label: "Elegantia in Aeternum",

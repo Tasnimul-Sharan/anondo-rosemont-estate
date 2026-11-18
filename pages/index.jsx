@@ -16,15 +16,15 @@ import FeaturedVillas from "@/components/AnondoRosemont/FeaturedVillas";
 import { LifestyleAmenities } from "@/components/AnondoRosemont/lifestyleAmenities";
 
 const siteUrl = "https://anondorosemontestate.com";
-const pageUrl = `${siteUrl}/anondo-rosemont-estate`;
+const pageUrl = siteUrl;
 
 const meta = {
   title:
-    "Anondo Rosemont Estate | 807 Bigha Premium Duplex Villa Community Near Purbachal",
+    "Anondo Rosemont Estate | Premium Duplex Villa Community Near Purbachal",
   description:
-    "Anondo Rosemont Estate is an 807-bigha premium low-density duplex villa community in Ulukhola near Purbachal New Town, offering elegant villas, secure gated living, lake, central park, clubhouse, sports complex, community facilities, and NRB-friendly investment value.",
+    "Anondo Rosemont Estate is a premium low-density duplex villa community in Ulukhola near Purbachal New Town, offering elegant villas, secure gated living, lake, central park, clubhouse, sports complex, community facilities, and NRB-friendly investment value.",
   keywords:
-    "Anondo Rosemont Estate, Rosemont Estate, duplex villa Bangladesh, villa community near Purbachal, luxury villa Bangladesh, Ulukhola housing project, gated community Bangladesh, premium real estate Bangladesh, NRB property investment Bangladesh, low density villa community, Purbachal real estate investment, 807 bigha estate Bangladesh",
+    "Anondo Rosemont Estate, Rosemont Estate, duplex villa Bangladesh, villa community near Purbachal, luxury villa Bangladesh, Ulukhola housing project, gated community Bangladesh, premium real estate Bangladesh, NRB property investment Bangladesh, low density villa community, Purbachal real estate investment",
   author: "Anondo Rosemont Estate",
   url: pageUrl,
   image: `${siteUrl}/og/anondo-rosemont-estate-og.jpg`,
@@ -90,7 +90,7 @@ const schemaGraph = {
       url: pageUrl,
       image: meta.image,
       description:
-        "A premium 807-bigha low-density duplex villa estate in Ulukhola near Purbachal New Town.",
+        "A premium low-density duplex villa estate in Ulukhola near Purbachal New Town.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Ulukhola",

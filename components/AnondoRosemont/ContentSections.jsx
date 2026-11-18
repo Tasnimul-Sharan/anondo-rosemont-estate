@@ -95,8 +95,8 @@ export function ContentSections({
 
           <div className="mt-14 grid border border-secondary/15 bg-white shadow-2xl shadow-secondary/10 md:grid-cols-3">
             {[
-              ["807", "Bigha Estate"],
-              ["60 ft", "Grand Avenue"],
+              ["Duplex", "Villa Estate"],
+              ["80 ft", "Grand Avenue"],
               ["Villa", "Only Township"],
             ].map(([value, label]) => (
               <div

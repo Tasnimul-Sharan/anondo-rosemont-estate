@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { FiCheckCircle } from "react-icons/fi";
+import { useEffect, useRef, useState } from "react";
+import { FiAlertCircle, FiCheckCircle } from "react-icons/fi";
+import { submitWeb3Form } from "@/lib/web3forms";
 
 const contactDetails = [
   [
@@ -17,55 +18,48 @@ export function ContactBlock() {
   const [result, setResult] = useState("");
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    if (loading) return;
+    if (timerRef.current) clearTimeout(timerRef.current);
 
     setLoading(true);
     setResult("");
     setSuccess(false);
 
-    const formData = new FormData(event.target);
+    const form = event.currentTarget;
+    const outcome = await submitWeb3Form({
+      form,
+      accessKey: "ab503824-020d-4163-a181-7a37a9d5dabf",
+      subject: "New Rosemont Estate Enquiry",
+      fromName: "Rosemont Website",
+    });
 
-    formData.append("access_key", "ab503824-020d-4163-a181-7a37a9d5dabf");
-
-    formData.append("subject", "New Rosemont Estate Enquiry");
-
-    formData.append("from_name", "Rosemont Website");
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setSuccess(true);
-
-        setResult(
-          "Thank you for your interest in Anondo Rosemont Estate. Your enquiry has been received successfully, and our team will contact you soon regarding your request.",
-        );
-
-        event.target.reset();
-      } else {
-        setSuccess(false);
-        setResult(
-          data.message || "Unable to send your enquiry. Please try again.",
-        );
-      }
-    } catch (error) {
+    if (outcome.ok) {
+      setSuccess(true);
+      setResult(
+        "Thank you for your interest in Anondo Rosemont Estate. Your enquiry has been received successfully, and our team will contact you soon regarding your request.",
+      );
+      form.reset();
+    } else {
       setSuccess(false);
-
-      setResult("A network error occurred. Please try again shortly.");
-    } finally {
-      setLoading(false);
-
-      setTimeout(() => {
-        setResult("");
-      }, 5000);
+      setResult(
+        outcome.message || "Unable to send your enquiry. Please try again.",
+      );
     }
+
+    setLoading(false);
+    timerRef.current = setTimeout(() => {
+      setResult("");
+    }, 5000);
   };
 
   return (

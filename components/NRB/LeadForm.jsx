@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { submitWeb3Form } from "@/lib/web3forms";
 
 export default function LeadForm() {
   const [loading, setLoading] = useState(false);
@@ -8,66 +9,51 @@ export default function LeadForm() {
     type: "",
     message: "",
   });
+  const timerRef = useRef(null);
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
-  setStatus({ type: "", message: "" });
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
-  const form = e.target;
-  const formData = new FormData(form);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (loading) return;
+    if (timerRef.current) clearTimeout(timerRef.current);
 
-  formData.append("access_key", "26650a51-3fb4-44db-93ee-06e1e36565ac");
-  formData.append("subject", "New Site Visit Lead - Anondo Rosemont Estate");
-  formData.append("from_name", "Anondo Rosemont Estate Website");
+    setLoading(true);
+    setStatus({ type: "", message: "" });
 
-  try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
+    const form = e.currentTarget;
+    const outcome = await submitWeb3Form({
+      form,
+      subject: "New Site Visit Lead - Anondo Rosemont Estate",
     });
 
-    const result = await response.json();
-
-    if (result.success) {
+    if (outcome.ok) {
       setStatus({
         type: "success",
         message:
           "Thank you. Your site visit request has been submitted successfully. Our team will contact you shortly.",
       });
-
       form.reset();
-
-      setTimeout(() => {
-        setStatus({ type: "", message: "" });
-      }, 3000);
     } else {
       setStatus({
         type: "error",
-        message: "Submission failed. Please try again later.",
+        message: outcome.message || "Submission failed. Please try again later.",
       });
-
-      setTimeout(() => {
-        setStatus({ type: "", message: "" });
-      }, 3000);
     }
-  } catch (err) {
-    setStatus({
-      type: "error",
-      message:
-        "Something went wrong. Please check your connection and try again.",
-    });
 
-    setTimeout(() => {
-      setStatus({ type: "", message: "" });
-    }, 3000);
-  } finally {
     setLoading(false);
-  }
-};
+    timerRef.current = setTimeout(() => {
+      setStatus({ type: "", message: "" });
+    }, 5000);
+  };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      <input type="checkbox" name="botcheck" className="hidden" />
       {status.message && (
         <div
           className={`border px-5 py-4 text-sm leading-6 ${

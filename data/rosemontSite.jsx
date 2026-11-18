@@ -9,21 +9,20 @@ export const navItems = [
   { label: "Facilities", href: "/community-facilities" },
   { label: "Location", href: "/location" },
   { label: "Investment", href: "/investment-nrb" },
-  { label: "Developer", href: "/developer" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const heroStats = [
-  { value: "807", label: "Bigha Master Planned Estate" },
-  { value: "60 ft", label: "Grand Avenue" },
+  { value: "1,440", label: "Planned Villa Plots" },
+  { value: "80 ft", label: "Grand Avenue" },
   { value: "3", label: "Villa Categories" },
   { value: "2035", label: "Development Vision" },
 ];
 
 export const homeHighlights = [
   {
-    title: "807 Bigha Master Planned Estate",
+    title: "Master Planned Villa Estate",
     text: "A large-scale low-density duplex villa township planned with residential zones, parks, lakefronts, roads, community facilities, and long-term infrastructure.",
   },
   {
@@ -60,10 +59,10 @@ export const villas = [
     intro:
       "An elegant family residence designed for efficient land use, comfortable indoor planning, and open lawn living.",
     specs: [
-      "Total: 2,750 sft",
+      "Total: 3,600 sft",
       "Ground Floor: 1,350 sft",
       "First Floor: 1,400 sft",
-      "25 ft road frontage",
+      "30 ft road frontage",
       "Landscaped lawn",
       "Attached garage facility",
       "Elegant family design",
@@ -104,16 +103,16 @@ export const villas = [
 ];
 
 export const masterPlanMetrics = [
-  { value: "807", label: "Bigha Land Area" },
+  { value: "1,440", label: "Total Villa Plots" },
   { value: "900", label: "5 Katha Plots" },
   { value: "450", label: "10 Katha Plots" },
   { value: "90", label: "20 Katha Estates" },
 ];
 
 export const roadNetwork = [
-  "60 ft wide Grand Avenue",
-  "40 ft secondary avenues",
-  "25 ft roads serving smaller residential plots",
+  "80 ft wide Grand Avenue with divider",
+  "60 ft wide Second Avenue",
+  "40 ft and 30 ft artery roads serving residential plots",
   "Organized lighting, drainage, utilities, and access planning",
 ];
 
@@ -196,7 +195,7 @@ export const communityFacilities = [
 
 // export const investmentBenefits = [
 //   "Land ownership combined with developer-built villa construction",
-//   "Large-scale master planning over 807 bigha",
+//   "Large-scale master-planned villa estate",
 //   "Low-density villa community design",
 //   "Comprehensive lifestyle and community facilities",
 //   "Secure gated environment with CCTV surveillance",
@@ -227,7 +226,7 @@ export const storySections = [
     paragraphs: [
       "In the evolving landscape of modern Bangladesh, where cities continue to expand vertically and space becomes increasingly limited, families are rediscovering the timeless value of land ownership, open spaces, and homes that offer dignity and permanence.",
       "Anondo Rosemont Estate is conceived as a response to this transformation. Located in the serene landscape of Ulukhola, near Purbachal New Town, on the southern side of the Turag River, the estate is envisioned as a landmark residential development where European elegance meets the natural beauty of the Bhawal region.",
-      "Spread across 807 bigha of carefully planned land, Anondo Rosemont Estate is designed as a low-density duplex villa community that offers space, privacy, natural landscapes, recreation, secure gated living, and a stable investment opportunity.",
+      "Carefully planned on expansive grounds, Anondo Rosemont Estate is designed as a low-density duplex villa community that offers space, privacy, natural landscapes, recreation, secure gated living, and a stable investment opportunity.",
     ],
     bullets: [
       "Permanent land ownership",
@@ -324,8 +323,8 @@ export const storySections = [
   {
     title: "Master Plan Overview",
     paragraphs: [
-      "Anondo Rosemont Estate spans 807 bigha of land and follows a structured master plan integrating residential zones, recreation areas, nature, infrastructure, and community facilities.",
-      "The estate road network includes a 60 ft Grand Avenue, 40 ft secondary avenues, and 25 ft residential roads. These wide streets enhance accessibility while creating a spacious estate character.",
+      "Anondo Rosemont Estate follows a structured master plan integrating residential zones, recreation areas, nature, infrastructure, and community facilities.",
+      "The estate road network includes an 80 ft Grand Avenue, 60 ft Second Avenue, 40 ft primary artery roads, and 30 ft residential artery roads. These wide streets enhance accessibility while creating a spacious estate character.",
     ],
     bullets: [
       "900 plots in the 5 Katha category",
@@ -469,7 +468,7 @@ export const residentialComponents = [
       "Planned Built-up Area: 3,600 sft",
       "Ground Floor: 1,350 sft",
       "First Floor: 1,400 sft",
-      "25 ft residential road frontage",
+      "30 ft residential road frontage",
       "Balanced indoor and outdoor family living",
     ],
   },
@@ -573,9 +572,10 @@ export const securityInfrastructure = [
     title: "Road, Lighting, and Drainage System",
     text: "The estate combines wide roads, street lighting, and drainage planning to create an organized, safe, and durable living environment.",
     items: [
-      "60 ft Grand Avenue",
-      "40 ft secondary avenues",
-      "25 ft residential roads",
+      "80 ft Grand Avenue",
+      "60 ft Second Avenue",
+      "40 ft artery roads",
+      "30 ft residential roads",
       "Street lighting network",
       "Drainage systems for rainwater management",
       "Elevated plot design for improved surface water protection",
@@ -600,7 +600,7 @@ export const nrbOpportunity = [
     text: "Rosemont addresses common NRB concerns by combining land ownership, developer-built villas, secure estate planning, and organized infrastructure within a professionally planned community.",
     items: [
       "Land ownership with constructed villa",
-      "Large-scale 807 bigha master-planned estate",
+      "Large-scale master-planned villa estate",
       "Low-density villa community design",
       "CCTV-backed secure environment",
       "Strong future appreciation potential",

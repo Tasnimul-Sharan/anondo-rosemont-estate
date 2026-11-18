@@ -61,7 +61,7 @@ export default function LeadCaptureCard() {
             </div>
 
             <Link
-              href="https://wa.me/8801313775333?text=Hello%20Anondo%20Cityscapers%2C%20I%20would%20like%20to%20inquire%20about%20Anondo%20Rosemont%20Estate%20NRB%20investment."
+              href="https://wa.me/8801313775333?text=Hello%20Anondo%20Rosemont%20Estate%2C%20I%20would%20like%20to%20inquire%20about%20Anondo%20Rosemont%20Estate%20NRB%20investment."
               target="_blank"
               className="group flex w-full items-center justify-center gap-3 border border-primary px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary transition duration-500 hover:bg-primary hover:text-off_white"
             >

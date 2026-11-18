@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -12,6 +13,7 @@ import { FiPhoneCall, FiArrowUpRight } from "react-icons/fi";
 import { PiMapPinBold } from "react-icons/pi";
 import Link from "next/link";
 import Image from "next/image";
+import { submitWeb3Form } from "@/lib/web3forms";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -33,11 +35,54 @@ const estateLinks = [
 ];
 
 const estateStats = [
-  { value: "807", label: "Bigha Estate" },
+  { value: "Duplex", label: "Villa Estate" },
   { value: "3", label: "Villa Types" },
 ];
 
 export default function Footer() {
+  const [loading, setLoading] = useState(false);
+  const [notice, setNotice] = useState({ type: "", message: "" });
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (loading) return;
+    if (timerRef.current) clearTimeout(timerRef.current);
+
+    setLoading(true);
+    setNotice({ type: "", message: "" });
+
+    const form = e.currentTarget;
+    const outcome = await submitWeb3Form({
+      form,
+      subject: "Newsletter Subscription - Anondo Rosemont Estate",
+    });
+
+    if (outcome.ok) {
+      setNotice({
+        type: "success",
+        message: "Thank you for subscribing to Rosemont updates.",
+      });
+      form.reset();
+    } else {
+      setNotice({
+        type: "error",
+        message: outcome.message || "Unable to subscribe. Please try again.",
+      });
+    }
+
+    setLoading(false);
+    timerRef.current = setTimeout(() => {
+      setNotice({ type: "", message: "" });
+    }, 5000);
+  };
+
   return (
     <footer className="relative overflow-hidden bg-secondary text-white">
       {/* Premium Background Layer */}
@@ -160,20 +205,41 @@ export default function Footer() {
                 Enter your email and receive the latest news from us.
               </p>
 
-              <div className="flex overflow-hidden border border-white/15 bg-black/15">
+              <form
+                onSubmit={handleSubscribe}
+                className="flex overflow-hidden border border-white/15 bg-black/15"
+              >
+                <input type="checkbox" name="botcheck" className="hidden" />
                 <input
                   type="email"
+                  name="email"
+                  required
+                  aria-label="Email address"
                   placeholder="email@example.com"
                   className="min-w-0 flex-1 bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-white/45"
                 />
                 <button
-                  type="button"
-                  className="group flex items-center gap-2 bg-white px-4 text-sm font-semibold text-secondary transition-all duration-300 hover:bg-white/88"
+                  type="submit"
+                  disabled={loading}
+                  className="group flex items-center gap-2 bg-white px-4 text-sm font-semibold text-secondary transition-all duration-300 hover:bg-white/88 disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  Send
+                  {loading ? "Sending..." : "Send"}
                   <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
-              </div>
+              </form>
+
+              {notice.message && (
+                <p
+                  role="status"
+                  className={`mt-2 text-xs leading-5 ${
+                    notice.type === "success"
+                      ? "text-green-200"
+                      : "text-red-200"
+                  }`}
+                >
+                  {notice.message}
+                </p>
+              )}
             </div>
           </div>
         </div>

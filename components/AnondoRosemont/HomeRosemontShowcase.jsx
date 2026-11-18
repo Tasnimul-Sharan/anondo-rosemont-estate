@@ -18,7 +18,7 @@ import {
 const gatewayCards = [
   {
     title: "Master Plan",
-    label: "807 bigha estate",
+    label: "Master planned villa estate",
     href: "/master-plan",
     icon: FiMap,
   },
@@ -51,7 +51,7 @@ const gatewayCards = [
 const estateMarkers = [
   { label: "Location", value: "Ulukhola, Purbachal Corridor" },
   { label: "Residence", value: "Developer-Built Duplex Villas" },
-  { label: "Estate Scale", value: "807 Bigha Master Plan" },
+  { label: "Estate Scale", value: "Master Planned Villa Community" },
 ];
 
 const villaPortfolio = [
@@ -76,7 +76,7 @@ const villaPortfolio = [
   {
     title: "Estate Landscape",
     category: "Lake, park and avenues",
-    image: "/gallary/rosemont-plaza.jpg",
+    image: "/gallery/rosemont-plaza.jpg",
     href: "/gallery",
   },
 ];
@@ -181,7 +181,7 @@ function ArchitecturalStatement() {
       <div className="custom-container mx-auto grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div className="relative min-h-[420px] overflow-hidden bg-secondary md:min-h-[560px]">
           <Image
-            src="/gallary/rosemont-master-plan.jpg"
+            src="/lifestyle/rosemont-master-plan.jpg"
             alt="Anondo Rosemont Estate master planned environment"
             fill
             sizes="(max-width: 1024px) 100vw, 48vw"
@@ -217,8 +217,8 @@ function ArchitecturalStatement() {
 
           <div className="mt-10 grid border border-secondary/15 bg-[#f8f3ec] sm:grid-cols-3">
             {[
-              ["807", "Bigha"],
-              ["60 ft", "Grand Avenue"],
+              ["2035", "Estate Vision"],
+              ["80 ft", "Grand Avenue"],
               ["3", "Villa Types"],
             ].map(([value, label]) => (
               <div

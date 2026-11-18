@@ -20,7 +20,7 @@ export default function NrbOpportunity() {
 
             <div className="mt-10 grid gap-5 border-t border-white/15 pt-8 sm:grid-cols-3 lg:grid-cols-1">
               {[
-                ["807", "Bigha Estate"],
+                ["Land", "Permanent Ownership"],
                 ["Villa", "Ready-Built Model"],
                 ["NRB", "Ownership Confidence"],
               ].map(([value, label]) => (

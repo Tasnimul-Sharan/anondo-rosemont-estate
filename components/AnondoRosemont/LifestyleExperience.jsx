@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const lifestyleHighlights = [
-  "807 Bigha Master Planned Estate",
+  "Master Planned Duplex Estate",
   "Duplex Villas on Every Plot",
   "Central Park",
   "Scenic Lake",

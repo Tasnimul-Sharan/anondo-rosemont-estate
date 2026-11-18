@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { FaWhatsapp, FaVideo, FaFileAlt, FaUsers } from "react-icons/fa";
 import Link from "next/link";
+import { submitWeb3Form } from "@/lib/web3forms";
 
 const supports = [
   {
@@ -27,6 +29,50 @@ const supports = [
 ];
 
 export default function NRBSupportSection() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: "", message: "" });
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
+
+  const handleBookingSubmit = async (e) => {
+    e.preventDefault();
+    if (loading) return;
+    if (timerRef.current) clearTimeout(timerRef.current);
+
+    setLoading(true);
+    setStatus({ type: "", message: "" });
+
+    const form = e.currentTarget;
+    const outcome = await submitWeb3Form({
+      form,
+      subject: "NRB Consultation Booking - Anondo Rosemont Estate",
+    });
+
+    if (outcome.ok) {
+      setStatus({
+        type: "success",
+        message:
+          "Thank you. Your consultation request for Anondo Rosemont Estate has been received. Our NRB desk will contact you shortly.",
+      });
+      form.reset();
+    } else {
+      setStatus({
+        type: "error",
+        message: outcome.message,
+      });
+    }
+
+    setLoading(false);
+    timerRef.current = setTimeout(() => {
+      setStatus({ type: "", message: "" });
+    }, 5000);
+  };
+
   return (
     <section className="relative overflow-hidden bg-off_white py-24 text-soft_black">
       {/* <div className="absolute left-0 top-0 hidden h-full w-[30%] bg-primary lg:block" /> */}
@@ -101,8 +147,9 @@ export default function NRBSupportSection() {
 
             <div className="mt-7 space-y-4">
               <Link
-                href="https://wa.me/8801313775333?text=Hello%20Anondo%20Cityscapers%2C%20I%20would%20like%20to%20inquire%20about%20Anondo%20Rosemont%20Estate%20NRB%20investment."
+                href="https://wa.me/8801313775333?text=Hello%20Anondo%20Rosemont%20Estate%2C%20I%20would%20like%20to%20inquire%20about%20Anondo%20Rosemont%20Estate%20NRB%20investment."
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group flex w-full items-center justify-center gap-3 bg-primary px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-off_white transition duration-500 hover:bg-secondary"
               >
                 <FaWhatsapp />
@@ -110,36 +157,64 @@ export default function NRBSupportSection() {
                 <span className="h-px w-8 origin-left scale-x-50 bg-current transition-transform duration-700 group-hover:scale-x-100" />
               </Link>
 
-              <form className="space-y-4">
+              <form onSubmit={handleBookingSubmit} className="space-y-4">
+                <input type="checkbox" name="botcheck" className="hidden" />
+
                 <input
+                  name="name"
+                  type="text"
+                  required
+                  aria-label="Your Name"
                   placeholder="Your Name"
                   className="w-full border border-primary/15 bg-off_white px-4 py-3 text-sm text-soft_black outline-none transition focus:border-primary"
                 />
 
                 <input
+                  name="phone"
+                  type="tel"
+                  required
+                  aria-label="WhatsApp Number"
                   placeholder="WhatsApp Number"
                   className="w-full border border-primary/15 bg-off_white px-4 py-3 text-sm text-soft_black outline-none transition focus:border-primary"
                 />
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <input
+                    name="preferred_date"
                     type="date"
+                    aria-label="Preferred consultation date"
                     className="w-full border border-primary/15 bg-off_white px-4 py-3 text-sm text-soft_black outline-none transition focus:border-primary"
                   />
 
                   <input
+                    name="preferred_time"
                     type="time"
+                    aria-label="Preferred consultation time"
                     className="w-full border border-primary/15 bg-off_white px-4 py-3 text-sm text-soft_black outline-none transition focus:border-primary"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="group flex w-full items-center justify-center gap-3 border border-primary bg-off_white px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary transition duration-500 hover:bg-primary hover:text-off_white"
+                  disabled={loading}
+                  className="group flex w-full items-center justify-center gap-3 border border-primary bg-off_white px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-primary transition duration-500 hover:bg-primary hover:text-off_white disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  Confirm Booking
+                  {loading ? "Submitting..." : "Confirm Booking"}
                   <span className="h-px w-8 origin-left scale-x-50 bg-current transition-transform duration-700 group-hover:scale-x-100" />
                 </button>
+
+                {status.message && (
+                  <div
+                    role="status"
+                    className={`border px-4 py-3 text-sm leading-6 ${
+                      status.type === "success"
+                        ? "border-primary/20 bg-primary/8 text-primary"
+                        : "border-red-200 bg-red-50 text-red-700"
+                    }`}
+                  >
+                    {status.message}
+                  </div>
+                )}
               </form>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 
 const investmentStats = [
-  { value: "807", label: "Bigha Master Plan" },
+  { value: "Land", label: "Permanent Ownership" },
   { value: "Villa", label: "Built Property Model" },
   { value: "NRB", label: "Secure Ownership" },
 ];
@@ -28,7 +28,7 @@ const investmentPillars = [
 ];
 
 const investmentAdvantages = [
-  "Large-scale master planning over 807 bigha",
+  "Large-scale master-planned villa community",
   "Prime location near Purbachal New Town",
   "Low-density villa community design",
   "High-quality residential infrastructure",
@@ -53,7 +53,7 @@ const whyInvestDetails = [
     title: "Planned Scarcity and Low Density",
     text: "As cities grow denser, well-planned low-density villa communities become increasingly rare. Rosemont's structured plot distribution, open spaces, and estate amenities support long-term desirability.",
     points: [
-      "807 bigha master-planned scale",
+      "Large-scale master-planned community",
       "Controlled villa community density",
       "Large green and recreational zones",
       "Premium estate environment",

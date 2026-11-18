@@ -15,8 +15,8 @@ export default function FAQ() {
       a: "Rosemont Estate is inspired by European countryside living, featuring open landscapes, villa-based planning, wide roads, and a harmonious blend of nature and architecture.",
     },
     {
-      q: "What is the total land area of the project?",
-      a: "The estate spans across approximately 807 bigha of master-planned residential land.",
+      q: "What makes Rosemont Estate a master-planned villa community?",
+      a: "The estate is a large-scale, low-density master-planned residential community designed with duplex villas, wide avenues, parks, and waterfront spaces.",
     },
     {
       q: "What types of villas are available?",
@@ -36,7 +36,7 @@ export default function FAQ() {
     },
     {
       q: "What kind of road infrastructure is available?",
-      a: "The project features 60 ft and 40 ft wide grand avenues, along with 25 ft residential roads, ensuring spacious and organized connectivity.",
+      a: "The project features an 80 ft Grand Avenue, 60 ft Second Avenue, along with 40 ft and 30 ft artery roads, ensuring spacious and organized connectivity.",
     },
     {
       q: "How is security maintained in the estate?",

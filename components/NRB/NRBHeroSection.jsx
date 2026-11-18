@@ -95,7 +95,7 @@ export default function NRBHeroSection() {
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/anondo-rosemont-estate/contact"
+                href="/contact"
                 className="group relative inline-flex items-center justify-center gap-4 overflow-hidden bg-off_white px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-primary shadow-rosemont transition duration-500 hover:text-off_white"
               >
                 <span className="absolute inset-0 bg-secondary opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

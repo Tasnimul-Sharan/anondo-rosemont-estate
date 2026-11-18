@@ -40,17 +40,22 @@ const roadHighlights = [
   {
     value: "80 ft",
     title: "Grand Avenue",
-    text: "The primary estate boulevard designed for arrival, movement, and a generous estate impression.",
+    text: "The primary estate boulevard with a landscaped divider, designed for grand arrival and smooth movement.",
   },
   {
     value: "60 ft",
-    title: "Secondary Avenues",
-    text: "Wide internal avenues connect residential zones, amenities, landscapes, and community facilities.",
+    title: "Second Avenue",
+    text: "Wide secondary avenues connect residential zones, amenities, landscapes, and community facilities.",
   },
   {
-    value: "25 ft",
-    title: "Residential Roads",
-    text: "Smaller plot access roads support calm neighborhood movement and daily residential convenience.",
+    value: "40 ft",
+    title: "Artery Road",
+    text: "Planned artery roads distribute traffic smoothly across estate blocks while keeping residential streets calm.",
+  },
+  {
+    value: "30 ft",
+    title: "Residential Artery Road",
+    text: "Internal 30 ft artery roads serve residential plots with organized access, lighting, and daily convenience.",
   },
 ];
 
@@ -177,9 +182,8 @@ export function MainMasterPlanSection() {
           </div>
 
           <p className="max-w-3xl text-base leading-8 text-[#6b5d57] md:text-lg">
-            Anondo Rosemont Estate spans 807 bigha of land and follows a
-            structured master plan integrating residential zones, recreation
-            areas, and community facilities.
+            Anondo Rosemont Estate follows a structured master plan integrating
+            residential zones, recreation areas, and community facilities.
           </p>
         </div>
 
@@ -212,15 +216,15 @@ export function MainMasterPlanSection() {
             <div className="relative z-10">
               <p className="inline-flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.24em] text-white/58">
                 <span className="h-px w-9 bg-white/70" />
-                Land Area and Project Scale
+                Master Plan and Project Scale
               </p>
 
               <div className="mt-8 flex items-end gap-4">
                 <h3 className="text-6xl font-semibold leading-[0.82] md:text-7xl">
-                  807
+                  1,440
                 </h3>
                 <p className="mb-2 border border-white/18 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-white/68">
-                  Bigha
+                  Plots
                 </p>
               </div>
 
@@ -274,7 +278,7 @@ export function MainMasterPlanSection() {
               </div>
             </div>
 
-            <div className="grid gap-px border-t border-secondary/15 bg-secondary/15 md:grid-cols-3">
+            <div className="grid gap-px border-t border-secondary/15 bg-secondary/15 md:grid-cols-2">
               {roadHighlights.map((road, index) => (
                 <article
                   key={road.title}

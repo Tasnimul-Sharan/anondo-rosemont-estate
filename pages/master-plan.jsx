@@ -7,7 +7,7 @@ export default function MasterPlanRoute() {
   const meta = {
     title: "Master Plan | Anondo Rosemont Estate",
     description:
-      "Explore the 807 bigha Anondo Rosemont Estate master plan with villa zones, wide avenues, elevated plots, green spaces, lake, park, and estate infrastructure.",
+      "Explore the Anondo Rosemont Estate master plan with villa zones, wide avenues, elevated plots, green spaces, lake, park, and estate infrastructure.",
     url: "https://www.anondorosemontestate.com/master-plan",
     image:
       "https://www.anondorosemontestate.com/og/anondo-rosemont-estate-og.jpg",
@@ -27,7 +27,7 @@ export default function MasterPlanRoute() {
 
       <RosemontPageHero
         eyebrow="Master Plan"
-        title="807 Bigha Planned Estate"
+        title="Master Planned Villa Estate"
         copy="A disciplined estate plan shaped around villa zones, generous road networks, landscaped open spaces, community facilities, and long-term infrastructure."
       />
       <MainMasterPlanSection />

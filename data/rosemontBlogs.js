@@ -1,13 +1,13 @@
 export const rosemontBlogs = [
   {
     id: 1,
-    slug: "807-bigha-master-planned-estate",
+    slug: "master-planned-villa-estate",
     category: "Master Plan",
     readTime: "4 min read",
     date: "05 January, 2026",
     author: "Rosemont Editorial",
     image: "/10 katha villa/MAHI Final.jpeg",
-    title: "Why an 807 Bigha Master-Planned Estate Matters",
+    title: "Why a Master-Planned Villa Estate Matters",
     excerpt:
       "Rosemont is not planned as a collection of isolated plots. It is shaped as a complete estate with roads, villas, landscape, facilities, and long-term community value.",
     body: [
@@ -15,7 +15,7 @@ export const rosemontBlogs = [
       "For families, this means a clearer living environment. For investors, it creates a stronger long-term story because the estate identity is protected by planning, scale, and controlled development.",
     ],
     points: [
-      "807 bigha planned estate scale",
+      "Large-scale master-planned estate",
       "Residential zones with community facilities",
       "Road, utility, green, and lifestyle planning",
     ],
@@ -53,13 +53,13 @@ export const rosemontBlogs = [
     image: "/other/lifestyle-experience.png",
     title: "Roads, Park, Lake, and the Feel of Estate Living",
     excerpt:
-      "The 60 ft Grand Avenue, secondary avenues, central park, and estate lake work together to create a spacious lifestyle rather than a crowded housing layout.",
+      "The 80 ft Grand Avenue, 60 ft Second Avenue, 40 ft and 30 ft artery roads, central park, and estate lake work together to create a spacious lifestyle rather than a crowded housing layout.",
     body: [
-      "The road hierarchy is one of the clearest signs of estate planning. A 60 ft Grand Avenue creates arrival value, while 40 ft and 25 ft internal roads support movement across residential zones.",
+      "The road hierarchy is one of the clearest signs of estate planning. An 80 ft Grand Avenue creates arrival value, while 60 ft, 40 ft, and 30 ft internal roads support smooth movement across residential zones.",
       "The 12 bigha central park and 12 bigha estate lake add breathing room to daily life. These open spaces help families walk, gather, relax, and experience a softer rhythm close to nature.",
     ],
     points: [
-      "60 ft Grand Avenue for arrival character",
+      "80 ft Grand Avenue for arrival character",
       "12 bigha park and 12 bigha lake",
       "Open spaces for family and community life",
     ],
@@ -72,7 +72,7 @@ export const rosemontBlogs = [
     readTime: "4 min read",
     date: "12 January, 2026",
     author: "Rosemont Editorial",
-    image: "/rosemont/file_0000000010c0720789e272675640af18.png",
+    image: "/lifestyle/rosemont-master-plan.jpg",
     title: "Low-Density Living Near the Purbachal Growth Corridor",
     excerpt:
       "Ulukhola near Purbachal offers Rosemont a rare balance: peaceful estate atmosphere with access to one of Bangladesh's important future growth corridors.",

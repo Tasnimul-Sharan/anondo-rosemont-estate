@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const stats = [
   {
-    value: "807",
-    unit: "Bigha",
-    label: "A fully structured duplex township",
+    value: "80 ft",
+    unit: "Grand Avenue",
+    label: "Structured boulevard and avenue network",
   },
   {
     value: "90",
@@ -65,10 +65,10 @@ export default function MasterplanHighlight() {
             </p>
 
             <p className="mb-5 max-w-2xl leading-relaxed text-[#5f625c]">
-              Spanning 807 bigha, the estate integrates wide boulevards,
-              landscaped green zones, controlled construction guidelines, and a
-              signature lakefront - creating a refined community where design
-              meets dignity.
+              Designed as a master-planned villa community, the estate
+              integrates wide boulevards, landscaped green zones, controlled
+              construction guidelines, and a signature lakefront - creating a
+              refined community where design meets dignity.
             </p>
 
             <p className="mb-8 max-w-2xl leading-relaxed text-[#5f625c]">
