@@ -113,9 +113,9 @@ export default function Footer() {
             <div className="mt-7 flex items-center gap-3">
               <SocialIcon
                 icon={<FaFacebookF />}
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/rosemontltd"
               />
-              <SocialIcon
+              {/* <SocialIcon
                 icon={<FaLinkedinIn />}
                 href="https://www.linkedin.com/"
               />
@@ -126,7 +126,7 @@ export default function Footer() {
               <SocialIcon
                 icon={<FaInstagram />}
                 href="https://www.instagram.com/anondorosemontestate/"
-              />
+              /> */}
             </div>
           </div>
 

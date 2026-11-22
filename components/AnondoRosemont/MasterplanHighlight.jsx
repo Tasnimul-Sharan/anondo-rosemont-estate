@@ -10,9 +10,9 @@ const stats = [
     label: "Structured boulevard and avenue network",
   },
   {
-    value: "90",
-    unit: "Estate Plots",
-    label: "Limited 20 katha legacy villas",
+    value: "1,440",
+    unit: "Plots",
+    label: "Estate Development",
   },
   {
     value: "2035",
@@ -112,3 +112,4 @@ export default function MasterplanHighlight() {
     </section>
   );
 }
+   

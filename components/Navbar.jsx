@@ -221,11 +221,11 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4 text-lg">
-            <Link href="https://facebook.com/" target="_blank">
+            <Link href="https://www.facebook.com/rosemontltd" target="_blank">
               <FaFacebookF className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
-            <Link href="https://linkedin.com/" target="_blank">
+            {/* <Link href="https://linkedin.com/" target="_blank">
               <FaLinkedinIn className="text-off_white/78 transition hover:text-off_white" />
             </Link>
 
@@ -235,7 +235,7 @@ export default function Navbar() {
 
             <Link href="https://youtube.com/" target="_blank">
               <FaYoutube className="text-off_white/78 transition hover:text-off_white" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -417,13 +417,13 @@ export default function Navbar() {
 
           <div className="flex gap-5 pt-4 text-xl">
             <Link
-              href="https://facebook.com/AnondoHousing"
+              href="https://www.facebook.com/rosemontltd"
               target="_blank"
               aria-label="Facebook"
             >
               <FaFacebookF className="text-white/68 transition hover:text-white" />
             </Link>
-
+{/* 
             <Link
               href="https://linkedin.com/company/anondo-housing-society"
               target="_blank"
@@ -446,7 +446,7 @@ export default function Navbar() {
               aria-label="YouTube"
             >
               <FaYoutube className="text-white/68 transition hover:text-white" />
-            </Link>
+            </Link> */}
           </div>
 
           {/* <div className="pt-4">
