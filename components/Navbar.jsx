@@ -224,7 +224,6 @@ export default function Navbar() {
             <Link href="https://www.facebook.com/rosemontltd" target="_blank">
               <FaFacebookF className="text-off_white/78 transition hover:text-off_white" />
             </Link>
-
             {/* <Link href="https://linkedin.com/" target="_blank">
               <FaLinkedinIn className="text-off_white/78 transition hover:text-off_white" />
             </Link>
